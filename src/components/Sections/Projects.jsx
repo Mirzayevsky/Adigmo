@@ -84,35 +84,6 @@ export default function Projects() {
           </div>
         </div>
       </div>
-      <div className="lightBg">
-        <div className="container">
-          <Advertising className="flexSpaceCenter">
-            <AddLeft>
-              <AddLeftInner>
-                <ImgWrapper className="flexCenter">
-                  <img className="radius8" src={AddImage2} alt="add" />
-                </ImgWrapper>
-              </AddLeftInner>
-            </AddLeft>
-            <AddRight>
-              <h4 className="font15 semiBold">A few words about company</h4>
-              <h2 className="font40 extraBold">A Study of Creativity</h2>
-              <p className="font12">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-              </p>
-              <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
-                <div style={{ width: "190px" }}>
-                  <FullButton title="Get Started" action={() => alert("clicked")} />
-                </div>
-                <div style={{ width: "190px", marginLeft: "15px" }}>
-                  <FullButton title="Contact Us" action={() => alert("clicked")} border />
-                </div>
-              </ButtonsRow>
-            </AddRight>
-          </Advertising>
-        </div>
-      </div>
     </Wrapper>
   );
 }
