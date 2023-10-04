@@ -31,6 +31,11 @@ const ImgBtn = styled.button`
   outline: none;
   padding: 0px;
   margin: 0px;
+  height: 356px;
+  img{
+    height: 100%;
+    width: 100%;
+  }
   :hover > img {
     opacity: 0.5;
   }

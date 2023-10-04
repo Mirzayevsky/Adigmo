@@ -3,7 +3,7 @@ import Toastify from 'toastify-js'
 import "toastify-js/src/toastify.css"
 import {useNavigate} from 'react-router-dom';
 import { PatternFormat } from 'react-number-format';
-
+import { TypeAnimation } from 'react-type-animation';
 import {
     Button,
     Container,
@@ -29,20 +29,18 @@ const  Header = () => {
     const chatIds = [6090223711]; // Add the additional chat IDs you want to send the message to
     const message = `
      Name: ${nameValue},
-     Number:${numberValue},
-     Email:${emailValue},
-     Service:${selectedOption}
+     Number: ${numberValue},
+     Email: ${emailValue},
+     Service: ${selectedOption}
     `;
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
         // Check if the input values meet the required length
         if (nameValue.length < 5 || numberValue.length < 7) {
             alert("Пожалуйста, заполните форму");
             return; // Don't proceed with sending the message
         }
-
         try {
             for (const chatId of chatIds) {
                 const response = await fetch(TELEGRAM_API, {
@@ -64,9 +62,7 @@ const  Header = () => {
                             background: "linear-gradient(93.12deg, #1F5AFF 1.37%, #392ED6 54.75%, #1A2032 119.16%)",
                         }
                     }).showToast();
-                    navigate(`/success`)
                     console.log(`Message sent successfully to chat ID: `);
-
                     setNameValue("")
                     setNumberValue("")
                     setEmailValue("")
@@ -105,17 +101,36 @@ const  Header = () => {
         <Wrapper>
             <Container>
                <LeftSide>
-                   <Title>
-                       Экспертное создание
-                       сайтов <span>
-                       для увеличения
-                       продаж
-                   </span>
+                   <Title>Экспертное создание
+                       <div>
+                           <TypeAnimation
+                               sequence={[
+                                   'сайтов', // Types 'One'
+                                   2000, // Waits 1s
+                                   'Бизнес сайт', // Deletes 'One' and types 'Two'
+                                   4000, // Waits 2s
+                                   'Интернет магазин',
+                                   4000,
+                                   // Types 'Three' without deleting 'Two'
+                                   () => {
+                                       console.log('Sequence completed');
+                                   },
+                               ]}
+                               wrapper="span"
+                               speed={7}
+                               cursor={true}
+                               repeat={Infinity}
+                               style={{ fontSize: '', display: 'inline-block' }}
+                           />
+                       </div>
+                       <div>
+                           для увеличения
+                           продаж
+                       </div>
                    </Title>
                </LeftSide>
                 <RightSide>
-                    <Form>
-                            <Form>
+                            <Form onSubmit={handleSubmit} >
                                 <FormContainer>
                                     <FormTitle> Свяжитесь с нами</FormTitle>
                                     <Input className={"numb"}
@@ -123,6 +138,7 @@ const  Header = () => {
                                            type={"Name"}
                                            placeholder={"Имя"}
                                            onChange={handleNameChange}/>
+
                                     <PatternFormat
                                         className={"input-numb"}
                                         format="+998(##)###-##-##"
@@ -139,15 +155,14 @@ const  Header = () => {
                                     />
                                     <SelectInput  value={selectedOption} onChange={handleOptionChange}>
                                         <Option value="Лендинг">Лендинг</Option>
-                                        <Option value="Бизнессайт">Бизнес сайт</Option>
-                                        <Option value="Интернетмагазин">Интернет магазин</Option>
+                                        <Option value="Бизнес сайт">Бизнес сайт</Option>
+                                        <Option value="Интернет магазин">Интернет магазин</Option>
                                     </SelectInput>
 
-                                    <Button onSubmit={handleSubmit}> Отправить </Button>
                                 </FormContainer>
-                            </Form>
+                                <Button> Отправить </Button>
 
-                    </Form>
+                            </Form>
                 </RightSide>
             </Container>
         </Wrapper>

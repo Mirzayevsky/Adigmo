@@ -31,7 +31,7 @@ export default function PricingTable({ icon, price, title, text,  offers, action
   }
 
   return (
-    <Wrapper className="whiteBg radius8 shadow">
+    <Wrapper >
       <div className="flexSpaceCenter">
         {getIcon}
         <p className="font30 extraBold">{price}</p>
@@ -59,7 +59,7 @@ export default function PricingTable({ icon, price, title, text,  offers, action
           : null}
       </div>
       <div style={{ maxWidth: "120px", margin: "30px auto 0 auto" }}>
-        <FullButton title="Buy" action={action} />
+        <FullButton title="Купить" action={action} />
       </div>
     </Wrapper>
   );
