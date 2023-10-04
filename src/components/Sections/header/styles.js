@@ -34,6 +34,11 @@ export const Title = styled.div`
    font-size: 45px;
     width: 100%;
   }
+  @media screen and (max-width: 500px){
+    font-size: 28px;
+    width: 100%;
+    font-weight: 600;
+  }
   span{
     color: #0080ff;
   }
@@ -66,6 +71,9 @@ export const Form = styled.form`
   font-size: 16px;
   font-family: Mozerati,sans-serif !important;
   font-weight: 500 !important;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 export const FormContainer = styled.div`
   width: 80%;
@@ -77,6 +85,9 @@ export const FormContainer = styled.div`
     border: 0;
     border-radius: 6px;
     padding: 11px 12px;
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
 
     &::placeholder {
       color: #afafaf;
@@ -104,6 +115,9 @@ export const Input = styled.input`
   border: 0;
   border-radius: 6px;
   padding: 11px 12px;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
   &::placeholder {
     color: #afafaf;
     font-size: 15px;
@@ -123,7 +137,9 @@ export const SelectInput = styled.select`
   margin-top: 10px;
   cursor: pointer;
   line-height: 70px;
-  
+  @media screen and (max-width: 800px) {
+    width: 110%;
+  }
   &::placeholder {
     color: #afafaf;
     font-size: 15px;
