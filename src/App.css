@@ -1,0 +1,8 @@
+@font-face {
+    font-family: Mozerati;
+    src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+*{
+    font-family: Mozerati,sans-serif !important;
+}

@@ -27,10 +27,7 @@ export default function TopNavbar() {
       <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "80px" } : { height: "80px" }}>
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
-            <LogoIcon />
-            <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
-              fanatic
-            </h1>
+            <img src={LogoIcon} className="main-logo" alt="logo"/>
           </Link>
           <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
             <BurgerIcon />
@@ -38,31 +35,57 @@ export default function TopNavbar() {
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="home" spy={true} smooth={true} offset={-80}>
-                Home
+                Главная
+              </Link>
+            </li>
+            <li className="semiBold font15 pointer">
+              <Link activeClass="active" style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}>
+                Услуги
               </Link>
             </li>
 
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="projects" spy={true} smooth={true} offset={-80}>
-                Projects
+                Проекты
               </Link>
             </li>
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
-                Pricing
+                Цены
               </Link>
             </li>
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="contact" spy={true} smooth={true} offset={-80}>
-                Contact
+                 Контакт
               </Link>
             </li>
           </UlWrapper>
+          <NavbarButton>
+            Связаться
+          </NavbarButton>
         </NavInner>
       </Wrapper>
     </>
   );
 }
+const NavbarButton = styled.div`
+  font-size: 16px;
+  padding: 8px 30px;
+  font-weight: 600;
+  background-color: #0080ff;
+  border-radius: 16px;
+  cursor: pointer;
+  color: #fff;
+  &:hover {
+    background-color: #49CB86;
+  }
+  @media screen and (max-width: 800px){
+    
+  }
+  @media screen and (max-width: 800px){
+    display: none;
+  }
+`;
 
 const Wrapper = styled.nav`
   width: 100%;
@@ -70,11 +93,23 @@ const Wrapper = styled.nav`
   top: 0;
   left: 0;
   z-index: 999;
-  background-color: #1f93e5;
+  background-color: #fff;
+  @media screen and (min-width: 1500px){
+    height: 100px !important;
+  }
+  
 `;
 const NavInner = styled.div`
   position: relative;
   height: 100%;
+  .main-logo{
+    height: 45px;
+    width: fit-content;
+    @media screen and (max-width: 800px){
+      height: 35px;
+      margin-left: 10px;
+    }
+  }
 `
 const BurderWrapper = styled.button`
   outline: none;
@@ -89,6 +124,7 @@ const BurderWrapper = styled.button`
 `;
 const UlWrapper = styled.ul`
   display: flex;
+  
   @media (max-width: 760px) {
     display: none;
   }

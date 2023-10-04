@@ -3,17 +3,15 @@ import styled from "styled-components";
 import { Link } from "react-scroll";
 // Assets
 import CloseIcon from "../../assets/svg/CloseIcon";
-import LogoIcon from "../../assets/svg/Logo";
+import LogoIcon from "../../assets/logo/logo.png";
+
 
 export default function Sidebar({ sidebarOpen, toggleSidebar }) {
   return (
-    <Wrapper className="animate darkBg" sidebarOpen={sidebarOpen}>
+    <Wrapper className="animate " sidebarOpen={sidebarOpen}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
-          <LogoIcon />
-          <h1 className="whiteColor font20" style={{ marginLeft: "15px" }}>
-            fanatic
-          </h1>
+          <img src={LogoIcon} className={"sidebar-logo"} alt={"logo"}/>
         </div>
         <CloseBtn onClick={() => toggleSidebar(!sidebarOpen)} className="animate pointer">
           <CloseIcon />
@@ -25,70 +23,71 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
           <Link
             onClick={() => toggleSidebar(!sidebarOpen)}
             activeClass="active"
-            className="whiteColor"
+            className="darkColor"
+
             style={{ padding: "10px 15px" }}
             to="home"
             spy={true}
             smooth={true}
             offset={-60}
           >
-            Home
+            Главная
           </Link>
         </li>
         <li className="semiBold font15 pointer">
           <Link
             onClick={() => toggleSidebar(!sidebarOpen)}
             activeClass="active"
-            className="whiteColor"
+            className="darkColor"
             style={{ padding: "10px 15px" }}
             to="services"
             spy={true}
             smooth={true}
             offset={-60}
           >
-            Services
+            Услуги
           </Link>
         </li>
         <li className="semiBold font15 pointer">
           <Link
             onClick={() => toggleSidebar(!sidebarOpen)}
             activeClass="active"
-            className="whiteColor"
+            className="darkColor"
             style={{ padding: "10px 15px" }}
             to="projects"
             spy={true}
             smooth={true}
             offset={-60}
           >
-            Projects
+            Проекты
           </Link>
         </li>
         <li className="semiBold font15 pointer">
           <Link
             onClick={() => toggleSidebar(!sidebarOpen)}
             activeClass="active"
-            className="whiteColor"
+            className="darkColor"
             style={{ padding: "10px 15px" }}
             to="pricing"
             spy={true}
             smooth={true}
             offset={-60}
           >
-            Pricing
+            Цены
           </Link>
         </li>
         <li className="semiBold font15 pointer">
           <Link
             onClick={() => toggleSidebar(!sidebarOpen)}
             activeClass="active"
-            className="whiteColor"
+            className="darkColor"
             style={{ padding: "10px 15px" }}
             to="contact"
             spy={true}
             smooth={true}
             offset={-60}
           >
-            Contact
+            Контакт
           </Link>
         </li>
       </UlStyle>
@@ -105,6 +104,12 @@ const Wrapper = styled.nav`
   padding: 0 30px;
   right: ${(props) => (props.sidebarOpen ? "0px" : "-400px")};
   z-index: 9999;
+  background-color: #fff;
+  color: #000 !important;
+ .sidebar-logo{
+   height: 30px;
+   width: fit-content;
+ }
   @media (max-width: 400px) {
     width: 100%;
   }

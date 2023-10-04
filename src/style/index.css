@@ -39,10 +39,10 @@
   }
   a {
     text-decoration: none!important;
-    color: #0B093B;
+    color: #000;
   }
   a:hover {
-    color: #7620FF;
+    color: #0080ff;
   }
   input:-webkit-autofill {
     -webkit-box-shadow:0 0 0 50px #fff inset; /* Change the color to your own background color */
@@ -51,8 +51,8 @@
   }
   body {
     background: #fff;
-    color: #0B093B;
-    font-family: 'Khula', sans-serif;
+    color: #000;
+    font-family: Mozerati,sans-serif;
     overflow-x: hidden;
     font-size: 16px;
     font-weight: 400;
@@ -62,6 +62,9 @@
     max-width: 1220px;
     margin: 0 auto;
     padding: 0px 30px;
+    @media  screen and (min-width: 1500px){
+      max-width: 80%;
+    }
   }
   @media only screen and (max-width: 859px) {
     .container {
@@ -104,8 +107,8 @@
     width: 100%;
   }
   .active {
-    border-bottom: 2px solid #7620FF;
-    color: #7620FF;
+    border-bottom: 2px solid #0080ff;
+    color: #0080ff;
   }
   .tag {
     padding: 5px 10px;
