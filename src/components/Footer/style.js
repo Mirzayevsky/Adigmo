@@ -78,6 +78,10 @@ export const  Wrapper = styled.div`
     border-radius: 50%;
     color: #ffffff;
     transition: all 0.5s ease;
+    svg{
+      height: 100%;
+      width: 100%;
+    }
   }
 
   .footer-col .social-links a:hover {

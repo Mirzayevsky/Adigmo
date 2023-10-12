@@ -8,7 +8,7 @@ import LogoIcon from "../../assets/logo/adig.png";
 
 export default function Sidebar({ sidebarOpen, toggleSidebar }) {
   return (
-    <Wrapper className="animate " sidebarOpen={sidebarOpen}>
+    <Wrapper  sidebarOpen={sidebarOpen}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
           <img src={LogoIcon} className={"sidebar-logo"} alt={"logo"}/>
@@ -97,7 +97,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
 }
 
 const Wrapper = styled.nav`
-  width: 400px;
+  width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -106,6 +106,7 @@ const Wrapper = styled.nav`
   z-index: 9999;
   background-color: #fff;
   color: #000 !important;
+  transition: 0.3s ease;
  .sidebar-logo{
    height: 45px;
    width: fit-content;

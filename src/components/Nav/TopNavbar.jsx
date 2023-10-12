@@ -97,6 +97,9 @@ const Wrapper = styled.nav`
   @media screen and (min-width: 1500px){
     height: 100px !important;
   }
+  @media screen and (max-width: 500px){
+    height: 70px !important;
+  }
   
 `;
 const NavInner = styled.div`

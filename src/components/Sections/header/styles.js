@@ -52,9 +52,9 @@ export const Title = styled.div`
     width: 100%;
   }
   @media screen and (max-width: 500px){
-    font-size: 24px;
+    font-size: 27px;
     font-weight: 600;
-    line-height: 28px;
+    line-height: 31px;
     width: 90%;
     margin-top: 0;
   }
@@ -203,10 +203,10 @@ display: none;
 font-weight: 600;
 width: fit-content;
 background-color: #0080ff;
-border-radius: 14px;
-font-size: 16px;
-padding: 7px 30px;
-margin-top:15px;
+border-radius: 17px;
+font-size: 18px;
+padding: 11px 50px;
+margin-top:27px;
 margin-left: 16px;
 }
 

@@ -135,7 +135,7 @@ s            <Container>
                            продаж
                        </div>
                    </Title>
-                   <MobileBtn onClick={()=> setPopUp(true)}>get started</MobileBtn>
+                   <MobileBtn onClick={()=> setPopUp(true)}>начать</MobileBtn>
                    {/*<ExButton titleBtn={"начать"}/>*/}
                </LeftSide>
 

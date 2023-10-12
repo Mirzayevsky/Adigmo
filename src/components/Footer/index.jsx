@@ -1,5 +1,11 @@
 import React from "react";
 import {Wrapper} from "./style";
+import {ReactComponent as InstagramSvg} from "../../assets/main/social-icons/instagram-svgrepo-com.svg";
+import {ReactComponent as FaceBookSvg} from "../../assets/main/social-icons/facebook-svgrepo-com.svg";
+import {ReactComponent as LinkedinSvg} from "../../assets/main/social-icons/linkedin-svgrepo-com.svg";
+import {ReactComponent as TelegramSvg} from "../../assets/main/social-icons/telegram-svgrepo-com.svg";
+
+
 const Footer = () =>{
     return(
         <Wrapper>
@@ -37,10 +43,21 @@ const Footer = () =>{
                         <div class="footer-col">
                             <h4>следуйте за нами</h4>
                             <div class="social-links">
-                                <a href="#"></a>
-                                <a href="#"></a>
-                                <a href="#"></a>
-                                <a href="#"></a>
+                                <a href="#">
+                                    <InstagramSvg/>
+
+                                </a>
+                                <a href="#">
+                                    <TelegramSvg/>
+
+                                </a>
+                                <a href="#">
+                                    <LinkedinSvg/>
+
+                                </a>
+                                <a href="#">
+                                    <FaceBookSvg/>
+                                </a>
                             </div>
                         </div>
                     </div>
