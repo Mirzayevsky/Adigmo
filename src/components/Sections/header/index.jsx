@@ -4,6 +4,7 @@ import "toastify-js/src/toastify.css"
 import {useNavigate} from 'react-router-dom';
 import { PatternFormat } from 'react-number-format';
 import { TypeAnimation } from 'react-type-animation';
+
 import {
     Button,
     Container,
@@ -16,9 +17,11 @@ import {
     LeftSide,
     RightSide,
     Title,
-    Wrapper
+    Wrapper,
+    MobileBtn
 } from "./styles";
 const  Header = () => {
+
     const [nameValue, setNameValue] = useState("");
     const [numberValue, setNumberValue] = useState("");
     const [emailValue, setEmailValue] = useState("");
@@ -98,8 +101,8 @@ const  Header = () => {
     };
 
     return(
-        <Wrapper>
-            <Container>
+        <Wrapper >
+s            <Container>
                <LeftSide>
                    <Title>Экспертное создание
                        <div>
@@ -128,7 +131,9 @@ const  Header = () => {
                            продаж
                        </div>
                    </Title>
+                   <MobileBtn>get started</MobileBtn>
                </LeftSide>
+
                 <RightSide>
                             <Form onSubmit={handleSubmit} >
                                 <FormContainer>
@@ -161,7 +166,6 @@ const  Header = () => {
 
                                 </FormContainer>
                                 <Button> Отправить </Button>
-
                             </Form>
                 </RightSide>
             </Container>

@@ -1,13 +1,19 @@
 import styled from "styled-components";
-import { NumericFormat } from 'react-number-format';
 
 export const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
   background-color: #fff;
+
   @media screen and (max-width: 900px){
     height: fit-content;
     padding-bottom: 50px;
+  }
+  @media screen and (max-width: 600px){
+    height: 100vh;
+    padding-bottom: 50px;
+    background-size: contain;
+
   }
 `;
 export const Container = styled.div`
@@ -17,6 +23,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 160px;
+
+
   @media screen and (max-width: 800px){
     height: fit-content;
     display: flex;
@@ -26,12 +34,10 @@ export const Container = styled.div`
   }
   @media screen and (max-width: 600px){
     height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top:35px;
+    padding-top:0px;
     font-size: 20px;
-    width: 90%;
+    width: 100%;
+    height: 100%;
     margin: auto;
   }
 `;
@@ -69,6 +75,7 @@ export const RightSide = styled.div`
     width: 100%;
   }
   @media screen and (max-width: 600px){
+    display: none;
   }
 `;
 
@@ -186,4 +193,22 @@ export const Button = styled.button`
   &:hover{
     background-color: #49CB86;
   }
+`;
+export const MobileBtn = styled.div`
+display: none;
+@media only screen and (max-width:600px){
+  display: block;
+  color: #fff;
+font-weight: 600;
+width: fit-content;
+background-color: #0080ff;
+border-radius: 12px;
+font-size: 17px;
+padding: 7px 30px;
+margin-top:15px;
+margin-left: 16px;
+}
+
+
+
 `;
