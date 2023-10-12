@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Wrapper = styled.section`
   width: 100%;
   padding: 50px 0;
- 
 `;
 export const Container = styled.div`
   width: 75%;
@@ -13,16 +12,28 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 800px){
+    width: 90%;
+    margin-left: 10%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 export const HeaderInfo = styled.div`
   margin: 80px 0;
   text-align: center;
+  h1{
+    
+  }
   .subtitle{
     width: 50%;
     margin: auto;
     padding:15px 0;
     font-size: 16px;
     font-weight: 400;
+    @media (max-width: 860px) {
+      width: 90%;
+    }
   }
   @media (max-width: 860px) {
     text-align: center;

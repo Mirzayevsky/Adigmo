@@ -2,7 +2,10 @@ import styled from "styled-components";
 export const Wrapper =styled.div`
   width: fit-content;
   height: fit-content;
-
+  @media screen and (max-width: 600px){
+    width: 100%;
+    margin: auto;
+  }
   .card {
     margin-left: -1rem;
     margin-right: -1rem;
@@ -17,6 +20,9 @@ export const Wrapper =styled.div`
     background-color: #0080ff;
     padding: 1.5rem;
     border-radius: 16px;
+    @media screen and (max-width: 600px){
+      width: 100%;
+    }
   }
 
   .header {

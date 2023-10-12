@@ -11,7 +11,7 @@ const  Contact = () => {
       <div className="lightBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold flexCenter">Let's get in touch</h1>
+            <h1 className="font40 extraBold flexCenter">Давайте свяжемся с вами</h1>
             <p className="font19 flexCenter ">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
               <br />
@@ -19,17 +19,18 @@ const  Contact = () => {
             </p>
           </HeaderInfo>
               <Form>
-                <label className="font13">First name:</label>
+                <label className="font13">Имя и фамилия:</label>
                 <input type="text" id="fname" name="fname" className="font20 extraBold" />
-                <label className="font13">Email:</label>
+                <label className="font13">Электронная почта:</label>
                 <input type="text" id="email" name="email" className="font20 extraBold" />
-                <label className="font13">Subject:</label>
+                <label className="font13">Тема:</label>
                 <input type="text" id="subject" name="subject" className="font20 extraBold" />
                 <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" />
-                <SumbitWrapper className="flex">
-                  <ButtonInput type="submit" value="Send Message" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
-                </SumbitWrapper>
               </Form>
+          <SumbitWrapper className="flex">
+            <ButtonInput type="submit" value="Написать сообщение" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
+          </SumbitWrapper>
+
 
         </div>
       </div>
@@ -43,6 +44,9 @@ const Wrapper = styled.section`
 `;
 const HeaderInfo = styled.div`
   padding: 70px 0 30px 0;
+  h1{
+    margin: 20px 0;
+  }
   @media (max-width: 860px) {
     text-align: center;
   }
@@ -76,6 +80,8 @@ const ButtonInput = styled.input`
   padding: 15px;
   outline: none;
   color: #fff;
+  margin: 30px 0;
+  margin-left:140px;
   :hover {
     background-color: #49CB86;
   }
