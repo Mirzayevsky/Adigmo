@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import Sidebar from "./Sidebar";
 import Backdrop from "../Elements/Backdrop";
 // Assets
-import LogoIcon from "../../assets/logo/logo.png";
+import LogoIcon from "../../assets/logo/adig.png";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 
 export default function TopNavbar() {
@@ -61,7 +61,7 @@ export default function TopNavbar() {
             </li>
           </UlWrapper>
           <NavbarButton>
-            Связаться
+            <a href="tel:+998977531401">Связаться</a>
           </NavbarButton>
         </NavInner>
       </Wrapper>
@@ -103,10 +103,10 @@ const NavInner = styled.div`
   position: relative;
   height: 100%;
   .main-logo{
-    height: 45px;
+    height: 65px;
     width: fit-content;
     @media screen and (max-width: 800px){
-      height: 35px;
+      height: 45px;
       margin-left: 10px;
     }
   }

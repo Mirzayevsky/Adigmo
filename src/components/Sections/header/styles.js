@@ -16,12 +16,23 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   justify-content: space-between;
-  padding-top: 100px;
+  padding-top: 160px;
   @media screen and (max-width: 800px){
     height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top:100px;
+  }
+  @media screen and (max-width: 600px){
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top:35px;
+    font-size: 20px;
+    width: 90%;
+    margin: auto;
   }
 `;
 export const Title = styled.div`
@@ -35,9 +46,10 @@ export const Title = styled.div`
     width: 100%;
   }
   @media screen and (max-width: 500px){
-    font-size: 28px;
-    width: 100%;
+    font-size: 24px;
     font-weight: 600;
+    line-height: 28px;
+    width: 90%;
   }
   span{
     color: #0080ff;
@@ -55,6 +67,8 @@ export const RightSide = styled.div`
   padding-top: 140px;
   @media screen and (max-width: 800px){
     width: 100%;
+  }
+  @media screen and (max-width: 600px){
   }
 `;
 
@@ -86,7 +100,8 @@ export const FormContainer = styled.div`
     border-radius: 6px;
     padding: 11px 12px;
     @media screen and (max-width: 800px) {
-      width: 100%;
+      width: 90%;
+      margin: 7px auto;
     }
 
     &::placeholder {
@@ -117,6 +132,8 @@ export const Input = styled.input`
   padding: 11px 12px;
   @media screen and (max-width: 800px) {
     width: 100%;
+    width: 90%;
+      margin: 7px auto;
   }
   &::placeholder {
     color: #afafaf;
@@ -138,7 +155,8 @@ export const SelectInput = styled.select`
   cursor: pointer;
   line-height: 70px;
   @media screen and (max-width: 800px) {
-    width: 110%;
+    width: 98%;
+      margin: 7px auto;
   }
   &::placeholder {
     color: #afafaf;

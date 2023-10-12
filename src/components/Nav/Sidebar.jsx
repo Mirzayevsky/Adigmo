@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-scroll";
 // Assets
 import CloseIcon from "../../assets/svg/CloseIcon";
-import LogoIcon from "../../assets/logo/logo.png";
+import LogoIcon from "../../assets/logo/adig.png";
 
 
 export default function Sidebar({ sidebarOpen, toggleSidebar }) {
@@ -107,7 +107,7 @@ const Wrapper = styled.nav`
   background-color: #fff;
   color: #000 !important;
  .sidebar-logo{
-   height: 30px;
+   height: 45px;
    width: fit-content;
  }
   @media (max-width: 400px) {
