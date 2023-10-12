@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import {AdviceForm, AdviceWrapper, Container, Title, Input, PopUpWrapper} from "./styles";
+import {AdviceForm, AdviceWrapper, Container, Title, Input, PopUpWrapper, Cover} from "./styles";
 import { PatternFormat } from 'react-number-format';
-import Toastify from 'toastify-js'
 import "toastify-js/src/toastify.css"
-import Text from "../../language/langManager";
-import {ReactComponent as ExitSvg} from '../../source/logo/x-symbol-svgrepo-com.svg';
+import img from '../../assets/main/red-icon.png';
 import {useNavigate} from 'react-router-dom';
 const PopUp = ({popUp,setPopUp}) => {
     const [nameValue, setNameValue] = useState("");
@@ -39,14 +37,8 @@ const PopUp = ({popUp,setPopUp}) => {
                 });
                 const data = await response.json();
                 if (data.ok) {
-                    Toastify({
-                        text: "Данные успешно отправлены",
-                        className: "info",
-                        style: {
-                            background: "linear-gradient(93.12deg, #1F5AFF 1.37%, #392ED6 54.75%, #1A2032 119.16%)",
-                        }
-                    }).showToast();
-                    navigate('/success');
+
+                    // navigate('/success');
 
                     console.log(`Message sent successfully to chat ID: `);
                     setNameValue("")
@@ -76,11 +68,13 @@ const PopUp = ({popUp,setPopUp}) => {
     };
     return(
        <PopUpWrapper>
+           <Cover onClick={() => setPopUp(false)}/>
+
            <AdviceWrapper >
-               <ExitSvg className={"svg-one"} onClick={() => setPopUp(false)}/>
+               <img src={img} className={"svg-one"} alt={"Exit"} onClick={() => setPopUp(false)}/>
                <Container>
                    <Title>
-                       <Text id={"advise"}/>
+                       Заполнить форму
                    </Title>
                    <AdviceForm onSubmit={handleSubmit}>
                        <>
@@ -100,9 +94,7 @@ const PopUp = ({popUp,setPopUp}) => {
                            {/*<Text id="inputText"/>*/}
                        </>
                        <button >
-                           <Text id={"freeBtn"}
-
-                           />
+                           Отправить
                        </button>
                    </AdviceForm>
                </Container>

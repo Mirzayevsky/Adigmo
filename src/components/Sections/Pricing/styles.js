@@ -3,11 +3,23 @@ import styled from "styled-components";
 export const Wrapper = styled.section`
   width: 100%;
   padding: 50px 0;
+ 
+`;
+export const Container = styled.div`
+  width: 75%;
+  height: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `;
 export const HeaderInfo = styled.div`
-  margin-bottom: 50px;
+  margin: 80px 0;
   text-align: center;
   .subtitle{
+    width: 50%;
+    margin: auto;
     padding:15px 0;
     font-size: 16px;
     font-weight: 400;
@@ -15,10 +27,6 @@ export const HeaderInfo = styled.div`
   @media (max-width: 860px) {
     text-align: center;
   }
-
-
-
-
 `;
 export const TablesWrapper = styled.div`
   @media (max-width: 860px) {

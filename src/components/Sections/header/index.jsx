@@ -4,6 +4,7 @@ import "toastify-js/src/toastify.css"
 import {useNavigate} from 'react-router-dom';
 import { PatternFormat } from 'react-number-format';
 import { TypeAnimation } from 'react-type-animation';
+import PopUp from "../../popUp";
 
 import {
     Button,
@@ -20,12 +21,14 @@ import {
     Wrapper,
     MobileBtn
 } from "./styles";
+import ExButton from "../../Button";
 const  Header = () => {
 
     const [nameValue, setNameValue] = useState("");
     const [numberValue, setNumberValue] = useState("");
     const [emailValue, setEmailValue] = useState("");
     const [selectedOption, setSelectedOption] = useState('');
+    const [popUp, setPopUp] = useState(false);
     const navigate = useNavigate();
 
     const TELEGRAM_API = `https://api.telegram.org/bot6402829230:AAHLtsSBT4yK5ATJtwmdYcJ5M7CFjpBqpjg/sendMessage`;
@@ -102,6 +105,7 @@ const  Header = () => {
 
     return(
         <Wrapper >
+            {popUp ? <PopUp popUp={popUp} setPopUp={setPopUp}/> : ""}
 s            <Container>
                <LeftSide>
                    <Title>Экспертное создание
@@ -131,7 +135,8 @@ s            <Container>
                            продаж
                        </div>
                    </Title>
-                   <MobileBtn>get started</MobileBtn>
+                   <MobileBtn onClick={()=> setPopUp(true)}>get started</MobileBtn>
+                   {/*<ExButton titleBtn={"начать"}/>*/}
                </LeftSide>
 
                 <RightSide>

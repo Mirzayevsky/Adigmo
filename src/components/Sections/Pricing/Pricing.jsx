@@ -2,76 +2,84 @@ import React from "react";
 import styled from "styled-components";
 // Components
 import PricingTable from "../../Elements/PricingTable";
-import {HeaderInfo, TableBox, TablesWrapper, Wrapper} from "./styles";
+import {Container, HeaderInfo, TableBox, TablesWrapper, Wrapper} from "./styles";
+import Card from "../../Card";
 
-export default function Pricing() {
+const Pricing = () => {
+
+
+
+
+
+
+
+
+
+
+
+
+
+    const data = [
+        {
+            id:0,
+            title:"Лендинг",
+            price:99,
+            subtitle:"Etiam ac convallis enim, eget euismod dolor.",
+            ruleTextOne:"Анализ рынка и конкурентов",
+            ruleTextTwo:"Профессиональный дизайн",
+            ruleTextThree:"Уникальное наполнение контентом"
+        },
+        {
+            id:1,
+            title:"Бизнес сайт",
+            price:299,
+            subtitle:"Etiam ac convallis enim, eget euismod dolor.",
+            ruleTextOne:"Адаптация под бизнес-цели",
+            ruleTextTwo:"Оптимизированная структура сайта",
+            ruleTextThree:"Продвинутые инструменты для конверсии"
+        },
+        {
+            id:2,
+            title:"Интернет магазин",
+            price:499,
+            subtitle:"Etiam ac convallis enim, eget euismod dolor.",
+            ruleTextOne:"Гибкая система управления товарами",
+            ruleTextTwo:"Оптимизированная структура сайта",
+            ruleTextThree:"Интеграция с платежными системами"
+        },
+    ]
   return (
     <Wrapper id="pricing">
-      <div className="whiteBg">
-        <div className="container">
-          <HeaderInfo>
+        <HeaderInfo>
             <h1 className="font40 extraBold">Ознакомьтесь с нашими ценами</h1>
-            <p className="font13 subtitle">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+            <p className={"subtitle"}>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua.
             </p>
-          </HeaderInfo>
-          <TablesWrapper className="flexSpaceNull">
-            <TableBox>
-              <PricingTable
-                icon="roller"
-                price="$29,99/mo"
-                title="Starter"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                offers={[
-                  { name: "Анализ рынка и конкурентов", cheked: true },
-                  { name: "Профессиональный дизайн", cheked: true },
-                  { name: "Уникальное наполнение контентом", cheked: true },
-                  { name: "", cheked: false },
-                  { name: "", cheked: false },
-                ]}
-                action={() => alert("clicked")}
-              />
-            </TableBox>
-            <TableBox>
-              <PricingTable
-                icon="monitor"
-                price="$49,99/mo"
-                title="Basic"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                offers={[
-                  { name: "Product Offer", cheked: true },
-                  { name: "Offer", cheked: true },
-                  { name: "Product Offer #2", cheked: true },
-                  { name: "Product", cheked: true },
-                  { name: "Product Offer", cheked: false },
-                ]}
-                action={() => alert("clicked")}
-              />
-            </TableBox>
-            <TableBox>
-              <PricingTable
-                icon="browser"
-                price="$59,99/mo"
-                title="Golden"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                offers={[
-                  { name: "Product Offer", cheked: true },
-                  { name: "Offer", cheked: true },
-                  { name: "Product Offer #2", cheked: true },
-                  { name: "Product", cheked: true },
-                  { name: "Product Offer", cheked: true },
-                ]}
-                action={() => alert("clicked")}
-              />
-            </TableBox>
-          </TablesWrapper>
-        </div>
-      </div>
+        </HeaderInfo>
+
+
+        <Container>
+            {
+                data.map(({title,subtitle,price,ruleTextOne,ruleTextThree,ruleTextTwo})=>{
+                    return(
+                        <Card
+                            title={title}
+                            price={price}
+                            subtitle={subtitle}
+                            ruleTextOne={ruleTextOne}
+                            ruleTextThree={ruleTextThree}
+                            ruleTexTwo={ruleTextTwo}
+                        />
+                    )
+                })
+            }
+        </Container>
+
     </Wrapper>
   );
 }
+export default Pricing
 
 
 

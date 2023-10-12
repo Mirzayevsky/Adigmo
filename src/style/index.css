@@ -174,6 +174,7 @@
     font-size: 3.75rem;
     line-height: 4.5rem;
   }
+
   @media only screen and (max-width: 859px) {
     .font11 {
       font-size: 0.688rem;
@@ -203,7 +204,7 @@
       font-size: 1.5rem;
     }
     .font40 {
-      font-size: 1.875rem;
+      font-size: 1.375rem;
     }
     .font60 {
       font-size: 2.8rem;

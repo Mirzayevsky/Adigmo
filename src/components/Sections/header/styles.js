@@ -56,6 +56,7 @@ export const Title = styled.div`
     font-weight: 600;
     line-height: 28px;
     width: 90%;
+    margin-top: 0;
   }
   span{
     color: #0080ff;
@@ -202,8 +203,8 @@ display: none;
 font-weight: 600;
 width: fit-content;
 background-color: #0080ff;
-border-radius: 12px;
-font-size: 17px;
+border-radius: 14px;
+font-size: 16px;
 padding: 7px 30px;
 margin-top:15px;
 margin-left: 16px;
