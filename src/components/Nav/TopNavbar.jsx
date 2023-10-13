@@ -48,6 +48,12 @@ export default function TopNavbar() {
             </li>
 
             <li className="semiBold font15 pointer">
+              <Link activeClass="active" style={{ padding: "10px 15px" }} to="AboutUs" spy={true} smooth={true} offset={-80}>
+                О нас
+              </Link>
+            </li>
+
+            <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="projects" spy={true} smooth={true} offset={-80}>
                 Проекты
               </Link>
@@ -78,7 +84,9 @@ const NavbarButton = styled.div`
   background-color: #0080ff;
   border-radius: 16px;
   cursor: pointer;
-  color: #fff;
+  a{
+    color: #fff ;
+  }
   &:hover {
     background-color: #49CB86;
   }

@@ -13,7 +13,7 @@ import {ReactComponent as BoxSvg} from "../../assets/serviceItems/box.svg";
 
 const AboutUs = () => {
     return(
-        <Wrapper id={"aboutUs"}>
+        <Wrapper id={"AboutUs"}>
             <Container>
                 <Title>
                     <h1 className="font40 extraBold flexCenter">Почему выбирают нас ?</h1>

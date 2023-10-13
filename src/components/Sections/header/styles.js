@@ -86,12 +86,12 @@ export const RightSide = styled.div`
 
 export const Form = styled.form`
   width: 400px;
-  background-color: #e1e1e1;
+  background-color: #e8e7e7;
   padding: 15px 0;
   border-radius: 15px;
   margin: auto;
   font-size: 16px;
-  font-family: Mozerati,sans-serif !important;
+  font-family: Mozerati, sans-serif !important;
   font-weight: 500 !important;
   @media screen and (max-width: 800px) {
     width: 100%;
@@ -127,7 +127,8 @@ export const FormTitle = styled.div`
     font-weight: 700;
     font-family: Mozerati,sans-serif;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px 0;
+  
   
   
 `;

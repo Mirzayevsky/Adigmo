@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   height: fit-content;
   width: 100%;
-  padding: 50px 0;
-  margin-top: 100px;
+  padding: 100px 0;
+  padding-top: 0;
   @media screen and (max-width: 700px){
     padding:0;
     margin: 0;

@@ -104,7 +104,7 @@ const  Header = () => {
     };
 
     return(
-        <Wrapper >
+        <Wrapper id={"home"}>
             {popUp ? <PopUp popUp={popUp} setPopUp={setPopUp}/> : ""}
 s            <Container>
                <LeftSide>

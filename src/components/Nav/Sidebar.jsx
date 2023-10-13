@@ -98,10 +98,11 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
 
 const Wrapper = styled.nav`
   height: 100vh;
+  width: 100vw;
   position: fixed;
   top: 0;
   padding: 0 30px;
-  right: ${(props) => (props.sidebarOpen ? "0px" : "-400px")};
+  right: ${(props) => (props.sidebarOpen ? "0px" : "-100vw")};
   z-index: 9999;
   background-color: #fff;
   color: #000 !important;
