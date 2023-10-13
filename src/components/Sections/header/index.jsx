@@ -136,7 +136,6 @@ s            <Container>
                        </div>
                    </Title>
                    <MobileBtn onClick={()=> setPopUp(true)}>начать</MobileBtn>
-                   {/*<ExButton titleBtn={"начать"}/>*/}
                </LeftSide>
 
                 <RightSide>

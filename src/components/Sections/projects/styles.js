@@ -6,6 +6,9 @@ export const Wrapper = styled.section`
 export const HeaderInfo = styled.div`
   text-align: center;
   padding-bottom: 50px;
+  @media (max-width: 600px) {
+    padding-bottom: 0;
+  }
   .subtitle{
     width: 50%;
     margin: auto;
@@ -13,7 +16,8 @@ export const HeaderInfo = styled.div`
     font-size: 16px;
     font-weight: 400;
     @media (max-width: 860px) {
-      width: 90%;
+      font-size: 14px;
+      width: 100%;
     }
   }
 `;

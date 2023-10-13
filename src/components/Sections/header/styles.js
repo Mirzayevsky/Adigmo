@@ -88,7 +88,7 @@ export const Form = styled.form`
   width: 400px;
   background-color: #e8e7e7;
   padding: 15px 0;
-  border-radius: 15px;
+  border-radius: 20px;
   margin: auto;
   font-size: 16px;
   font-family: Mozerati, sans-serif !important;
@@ -126,8 +126,8 @@ export const FormTitle = styled.div`
     font-size: 25px;
     font-weight: 700;
     font-family: Mozerati,sans-serif;
-  text-align: center;
-  margin: 20px 0;
+    text-align: center;
+     margin: 20px 0;
   
   
   
@@ -137,7 +137,7 @@ export const Input = styled.input`
   width: 295px;
   margin: 7px 0;
   border: 0;
-  border-radius: 6px;
+  border-radius: 5px;
   padding: 11px 12px;
   @media screen and (max-width: 800px) {
     width: 100%;
@@ -155,14 +155,16 @@ export const Input = styled.input`
 `;
 export const SelectInput = styled.select`
   margin-bottom: 10px;
-  border: 0px ;
+  border: 0px;
   height: fit-content;
   width: 100%;
   padding: 11px 12px;
-  border-radius: 6px;
+  border-radius: 5px;
   margin-top: 10px;
   cursor: pointer;
   line-height: 70px;
+  font-size: 15px;
+  font-weight: 500;
   @media screen and (max-width: 800px) {
     width: 98%;
       margin: 7px auto;
@@ -182,19 +184,53 @@ export const Option = styled.option`
 `;
 
 export const Button = styled.button`
-    background-color: #0080ff;
-    padding: 10px 47px;
-  border-radius: 15px;
-  border: 0;
-  width: fit-content;
+  //background-color: ;
+  padding: 11px 30px;
+  border: unset;
+  border-radius: 20px;
   color: #fff;
-  margin: auto;
-  margin-top: 15px;
-  cursor: pointer;
+  z-index: 1;
+  background: #0080ff;
+  position: relative;
+  font-weight: 600;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  overflow: hidden;
   display: block;
-  &:hover{
-    background-color: #49CB86;
+  margin: 10px auto;
+  transition: all 450ms;
+  letter-spacing: .5px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgb(0, 89, 255);
+    //background-color: #222222;
+    background-color: #0dc569;
+
+    width: 0;
+    border-radius: 15px;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 450ms;
+
   }
+
+  &:hover {
+    cursor: pointer;
+
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+
 `;
 export const MobileBtn = styled.div`
 display: none;
@@ -204,9 +240,9 @@ display: none;
 font-weight: 600;
 width: fit-content;
 background-color: #0080ff;
-border-radius: 17px;
-font-size: 18px;
-padding: 11px 50px;
+border-radius: 20px;
+font-size: 20px;
+padding: 11px 60px;
 margin-top:27px;
 margin-left: 16px;
 }

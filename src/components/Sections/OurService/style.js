@@ -21,6 +21,10 @@ export const Container = styled.div`
   }
   h1{
     text-align: center;
+    @media (max-width: 600px) {
+      width: 90%;
+      margin: auto;
+    }
   }
   .subtitle{
     width: 60%;
@@ -31,6 +35,10 @@ export const Container = styled.div`
     text-align: center;
     @media (max-width: 860px) {
       width: 90%;
+    }
+    @media (max-width: 600px) {
+      width: 100%;
+      font-size: 14px;
     }
   }
 `;
@@ -43,6 +51,9 @@ export const ServiceWrapper =styled.div`
   @media screen and (max-width: 1600px) {
     flex-wrap: wrap;
     justify-content: center;
+  }
+  @media screen and (max-width: 600px) {
+    padding-bottom: 80px;
   }
 `;
 export const Title =styled.div`
@@ -79,7 +90,7 @@ export const ServiceBox =styled.div`
   width: 30%;
   @media screen and (max-width: 700px) {
     width: 80%;
-    margin-top: 50px;
+    margin-top: 0px;
   }
 
   align-items: center;
@@ -88,12 +99,9 @@ export const ServiceBox =styled.div`
     height: 90px;
     width: fit-content;
     @media screen and (max-width:1200px){
-      height: 50px;
+      height: 80px;
     }
-    @media screen and (max-width:700px){
-      height: 40px;
-    }
-    svg {
+    svg{
       height: 100%;
       width: fit-content;
     }
@@ -106,6 +114,10 @@ export const ServiceBox =styled.div`
     @media screen and (max-width:1200px){
       font-size: 22px;
       text-align: center;
+    }
+    @media screen and (max-width:1200px){
+      font-size: 19px;
+      font-weight: 600;
     }
   }
   .text {

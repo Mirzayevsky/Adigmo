@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   @media screen and (max-width: 700px){
     padding:0;
     margin: 0;
-    margin-top: 40px;
+    padding-bottom: 80px;
   }
   
 `;
@@ -58,6 +58,9 @@ text-align: center;
     .box-title{
       margin: 10px auto;
       font-weight: 700;
+      @media screen and (max-width:1200px){
+        font-size: 14px;
+      }
     }
     .box-text{
       font-size: 16px;
@@ -80,7 +83,5 @@ export const  SvgContainer= styled.div`
   svg{
     height: 100%;
     width: fit-content;
-
-
   }
 `;

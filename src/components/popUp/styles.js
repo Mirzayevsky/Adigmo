@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { NumericFormat } from 'react-number-format';
 export const PopUpWrapper = styled.div`
-  height: 100vh;
+  height: 100vh;s
   width: 100vw;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 128, 255, 0.26);
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 128, 255, 0.07);
   position: fixed;
   left: 0;
   bottom: 0;
@@ -33,8 +33,16 @@ export const Form = styled.form`
   font-size: 16px;
   font-family: Mozerati, sans-serif !important;
   font-weight: 500 !important;
+  position: relative;
   @media screen and (max-width: 800px) {
     width: 90%;
+  }
+  .exit-btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 30px;
+    width: fit-content;
   }
 `;
 export const FormContainer = styled.div`

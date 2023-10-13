@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 // Components
 import ProjectBox from "../../Elements/ProjectBox";
-import FullButton from "../../Buttons/FullButton";
 // Assets
 import ProjectImg1 from "../../../assets/img/projects/1.png";
 import imgOne from "../../../assets/main/mock.jpg"
@@ -72,7 +71,7 @@ export default function Projects() {
             </div>
             <div className="row flexCenter">
               <div style={{ margin: "50px 0", width: "200px" }}>
-                <FullButton title="Загрузить Подробнее" action={() => alert("clicked")} />
+                <div title="Загрузить Подробнее" action={() => alert("clicked")} />
               </div>
             </div>
           </div>

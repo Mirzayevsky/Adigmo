@@ -1,13 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import {Button, Container, ServiceBox, ServiceWrapper, Title, Wrapper} from "./style";
 import {ReactComponent as ScreenSvg} from "../../../assets/svg/idea.svg";
 import {ReactComponent as TopSvg} from "../../../assets/svg/to top.svg";
 import {ReactComponent as ShopSvg} from "../../../assets/svg/online shopping.svg";
+import PopUp from "../../popUp";
 
 const OurService = () => {
+    const [popUp, setPopUp] = useState(false);
+
 
     return(
         <Wrapper id={"our-service"}>
+            {popUp ? <PopUp popUp={popUp} setPopUp={setPopUp}/> : ""}
+
             <Container>
                 <h1 className="font40 extraBold">Создание сайтов <span>от Adigmo!</span></h1>
                 <p className={"subtitle"}>
@@ -25,7 +30,7 @@ const OurService = () => {
                         <p className={"text"}>
                             Преобразуем идею в лендинг с высокой конверсией
                         </p>
-                        <Button>Заказать</Button>
+                        <Button onClick={()=> setPopUp(true)}>Заказать</Button>
                     </ServiceBox>
                     <ServiceBox>
                         <div className={"svg-wrapper"}>
@@ -37,7 +42,7 @@ const OurService = () => {
                         <p className={"text"}>
                             Корпоративные сайты, усиливающие ваш бренд онлайн
                         </p>
-                        <Button>Заказать</Button>
+                        <Button onClick={()=> setPopUp(true)}>Заказать</Button>
                     </ServiceBox>
                     <ServiceBox>
                         <div className={"svg-wrapper"}>
@@ -49,7 +54,7 @@ const OurService = () => {
                         <p className={"text"}>
                             Интернет-магазины, созданные для максимальных продаж
                         </p>
-                        <Button>Заказать</Button>
+                        <Button onClick={()=> setPopUp(true)}>Заказать</Button>
                     </ServiceBox>
                 </ServiceWrapper>
             </Container>
