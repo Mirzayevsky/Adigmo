@@ -6,12 +6,12 @@ import {ReactComponent as ShopSvg} from "../../../assets/svg/online shopping.svg
 import PopUp from "../../popUp";
 
 const OurService = () => {
-    const [popUp, setPopUp] = useState(false);
+    const [popUp, setPopUp] = useState({toggle:false,data:""});
 
 
     return(
         <Wrapper id={"our-service"}>
-            {popUp ? <PopUp popUp={popUp} setPopUp={setPopUp}/> : ""}
+            {popUp.toggle ? <PopUp popUp={popUp} setPopUp={setPopUp}/> : ""}
 
             <Container>
                 <h1 className="font40 extraBold">Создание сайтов <span>от Adigmo!</span></h1>
@@ -54,7 +54,7 @@ const OurService = () => {
                         <p className={"text"}>
                             Интернет-магазины, созданные для максимальных продаж
                         </p>
-                        <Button onClick={()=> setPopUp(true)}>Заказать</Button>
+                        <Button onClick={()=> setPopUp(false)}>Заказать</Button>
                     </ServiceBox>
                 </ServiceWrapper>
             </Container>

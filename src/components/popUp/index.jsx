@@ -6,12 +6,14 @@ import {useNavigate} from 'react-router-dom';
 import {Button, Form, FormContainer, FormTitle, Option, SelectInput} from "./styles";
 import {Cover, Input, PopUpWrapper} from "./styles";
 import Toastify from "toastify-js";
-const PopUp = ({setPopUp}) => {
+const PopUp = ({setPopUp,popUp}) => {
     const [nameValue, setNameValue] = useState("");
     const [numberValue, setNumberValue] = useState("");
     const [emailValue, setEmailValue] = useState("");
     const [selectedOption, setSelectedOption] = useState('');
     const navigate = useNavigate();
+    const {toggle,data} =popUp
+    console.log(data)
 
     const TELEGRAM_API = `https://api.telegram.org/bot6402829230:AAHLtsSBT4yK5ATJtwmdYcJ5M7CFjpBqpjg/sendMessage`;
     const chatIds = [6090223711]; // Add the additional chat IDs you want to send the message to
@@ -114,10 +116,10 @@ const PopUp = ({setPopUp}) => {
                             value={emailValue}
                             onChange={handleEmailChange}
                         />
-                        <SelectInput  value={selectedOption} onChange={handleOptionChange}>
-                            <Option value="Лендинг">Лендинг</Option>
-                            <Option value="Бизнес сайт">Бизнес сайт</Option>
-                            <Option value="Интернет магазин">Интернет магазин</Option>
+                        <SelectInput   value={selectedOption } onChange={handleOptionChange}>
+                            <Option value={data ? `data.value` : "Лендинг"} >Лендинг</Option>
+                            <Option value={data ? data.value : "Бизнес сайт"}>Бизнес сайт</Option>
+                            <Option value={data ? data.value : "Интернет магазин"}>Интернет магазин</Option>
                         </SelectInput>
 
                     </FormContainer>
