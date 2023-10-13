@@ -16,6 +16,7 @@ export default function ProjectBox({ img, title, text, action}) {
 const Wrapper = styled.div`
   width: 100%;
   margin-top: 30px;
+  
   img {
     width: 100%;
     height: auto;
@@ -26,12 +27,13 @@ const Wrapper = styled.div`
   }
 `;
 const ImgBtn = styled.button`
+  
   background-color: transparent;
   border: 0px;
   outline: none;
   padding: 0px;
   margin: 0px;
-  height: 356px;
+  height: 300px;
   img{
     height: 100%;
     width: 100%;

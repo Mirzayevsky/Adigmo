@@ -24,7 +24,10 @@ export default function TopNavbar() {
     <>
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
-      <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "80px" } : { height: "80px" }}>
+      <Wrapper
+          className="flexCenter animate whiteBg"
+          style={y > 100 ? { boxShadow: "0 2px 4px 0 rgba(0,0,0,.2)"} : { height: "80px" }}
+      >
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             <img src={LogoIcon} className="main-logo" alt="logo"/>
@@ -39,7 +42,7 @@ export default function TopNavbar() {
               </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}>
+              <Link activeClass="active" style={{ padding: "10px 15px" }} to="our-service" spy={true} smooth={true} offset={-80}>
                 Услуги
               </Link>
             </li>
@@ -88,12 +91,14 @@ const NavbarButton = styled.div`
 `;
 
 const Wrapper = styled.nav`
+  
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
   background-color: #fff;
+ 
   @media screen and (min-width: 1500px){
     height: 100px !important;
   }

@@ -22,6 +22,17 @@ export const Container = styled.div`
   h1{
     text-align: center;
   }
+  .subtitle{
+    width: 60%;
+    margin: auto;
+    padding:15px 0;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    @media (max-width: 860px) {
+      width: 90%;
+    }
+  }
 `;
 export const ServiceWrapper =styled.div`
     width: 100%;

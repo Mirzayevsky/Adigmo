@@ -7,9 +7,13 @@ import {ReactComponent as ShopSvg} from "../../../assets/svg/online shopping.svg
 const OurService = () => {
 
     return(
-        <Wrapper>
+        <Wrapper id={"our-service"}>
             <Container>
                 <h1 className="font40 extraBold">Создание сайтов <span>от Adigmo!</span></h1>
+                <p className={"subtitle"}>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua.
+                </p>
                 <ServiceWrapper>
                     <ServiceBox>
                         <div className={"svg-wrapper"}>
