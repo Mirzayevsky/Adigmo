@@ -8,6 +8,7 @@ import Header from "../components/Sections/header";
 import {BrowserRouter,Router} from "react-router-dom";
 import OurService from "../components/Sections/OurService";
 import Footer from "../components/Footer";
+import AboutUs from "../components/AboutUs";
 
 const Landing = () => {
     return(
@@ -16,9 +17,9 @@ const Landing = () => {
             <Header/>
             <OurService/>
             <Projects />
+            <AboutUs/>
             <Pricing />
             <Contact />
-            <Footer/>
         </>
     )
 }

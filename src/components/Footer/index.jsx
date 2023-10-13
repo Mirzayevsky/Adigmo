@@ -6,7 +6,7 @@ import {ReactComponent as LinkedinSvg} from "../../assets/main/social-icons/link
 import {ReactComponent as TelegramSvg} from "../../assets/main/social-icons/telegram-svgrepo-com.svg";
 
 
-const Footer = () =>{
+const Footer = () => {
     return(
         <Wrapper>
             <footer className="footer">

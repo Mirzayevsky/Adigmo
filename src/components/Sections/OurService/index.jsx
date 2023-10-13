@@ -5,6 +5,7 @@ import {ReactComponent as TopSvg} from "../../../assets/svg/to top.svg";
 import {ReactComponent as ShopSvg} from "../../../assets/svg/online shopping.svg";
 
 const OurService = () => {
+
     return(
         <Wrapper>
             <Container>
