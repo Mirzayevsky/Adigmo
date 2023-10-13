@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const Wrapper = styled.section`
   width: 100%;
   padding: 50px 0;
+  @media screen and (max-width: 600px){
+    padding-top: 0;
+  }
 `;
 export const Container = styled.div`
   width: 75%;
@@ -22,6 +25,11 @@ export const Container = styled.div`
 export const HeaderInfo = styled.div`
   margin: 80px 0;
   text-align: center;
+  @media screen and (max-width: 800px){
+    margin: 30px 0;
+    margin-top: 0;
+    
+  }
   h1{
     
   }

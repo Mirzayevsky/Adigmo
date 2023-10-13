@@ -1,6 +1,6 @@
 import React from "react";
 import {Wrapper} from "./style";
-const Card = ({title,price,subtitle,ruleTextOne,ruleTexTwo,ruleTextThree}) => {
+const Card = ({title,price,subtitle,ruleTextOne,ruleTexTwo,ruleTextThree,click}) => {
     return(
         <Wrapper>
             <div className="card">
@@ -33,7 +33,7 @@ const Card = ({title,price,subtitle,ruleTextOne,ruleTexTwo,ruleTextThree}) => {
                         </span>
                     </li>
                 </ul>
-                <button type="button" class="action">Заказать</button>
+                <button type="button" onClick={click} class="action">Заказать</button>
             </div>
 
         </Wrapper>

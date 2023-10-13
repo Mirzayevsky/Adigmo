@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { NumericFormat } from 'react-number-format';
 export const PopUpWrapper = styled.div`
-  height: 100vh;s
+  height: 100vh;
   width: 100vw;
   backdrop-filter: blur(8px);
   background-color: rgba(0, 128, 255, 0.07);
@@ -43,6 +43,7 @@ export const Form = styled.form`
     right: 5px;
     height: 30px;
     width: fit-content;
+    cursor: pointer;
   }
 `;
 export const FormContainer = styled.div`

@@ -1,13 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 // Components
 import PricingTable from "../../Elements/PricingTable";
 import {Container, HeaderInfo, TableBox, TablesWrapper, Wrapper} from "./styles";
 import Card from "../../Card";
+import PopUp from "../../popUp";
 
 const Pricing = () => {
 
 
+    const [popUp, setPopUp] = useState(false);
 
 
 
@@ -50,6 +52,8 @@ const Pricing = () => {
     ]
   return (
     <Wrapper id="pricing">
+        {popUp ? <PopUp popUp={popUp} setPopUp={setPopUp}/> : ""}
+
         <HeaderInfo>
             <h1 className="font40 extraBold">Ознакомьтесь с нашими ценами</h1>
             <p className={"subtitle"}>
@@ -70,6 +74,7 @@ const Pricing = () => {
                             ruleTextOne={ruleTextOne}
                             ruleTextThree={ruleTextThree}
                             ruleTexTwo={ruleTextTwo}
+                            click={()=> setPopUp(true)}
                         />
                     )
                 })
