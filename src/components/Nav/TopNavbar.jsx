@@ -48,8 +48,8 @@ export default function TopNavbar() {
             </li>
 
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="AboutUs" spy={true} smooth={true} offset={-80}>
-                О нас
+              <Link activeClass="active" style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
+                Цены
               </Link>
             </li>
 
@@ -58,9 +58,10 @@ export default function TopNavbar() {
                 Проекты
               </Link>
             </li>
+
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
-                Цены
+              <Link activeClass="active" style={{ padding: "10px 15px" }} to="AboutUs" spy={true} smooth={true} offset={-80}>
+                О нас
               </Link>
             </li>
             <li className="semiBold font15 pointer">

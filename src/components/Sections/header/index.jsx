@@ -111,9 +111,9 @@ s            <Container>
                        <div>
                            <TypeAnimation
                                sequence={[
-                                   'сайтов', // Types 'One'
+                                   'сайтоа', // Types 'One'
                                    2000, // Waits 1s
-                                   'Бизнес сайт', // Deletes 'One' and types 'Two'
+                                   'Бизнес сайта', // Deletes 'One' and types 'Two'
                                    4000, // Waits 2s
                                    'Интернет магазин',
                                    4000,
