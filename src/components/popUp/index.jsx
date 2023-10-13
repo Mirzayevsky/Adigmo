@@ -55,6 +55,8 @@ const PopUp = ({setPopUp}) => {
                     setNumberValue("")
                     setEmailValue("")
                     setSelectedOption("")
+                    setPopUp(false)
+
                 } else {
                     alert("Данные не отправляются")
                     console.log(
