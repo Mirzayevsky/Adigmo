@@ -72,21 +72,52 @@ export const Wrapper =styled.div`
   }
 
   .action {
-    border: none;
-    outline: none;
-    display: inline-block;
-    border-radius: 0.25rem;
-    background-color: #fff;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    text-align: center;
+    //background-color: ;
+    padding: 11px 30px;
+    border: unset;
+    border-radius: 20px;
+    color: #222;
+    z-index: 1;
+    background: #fff;
+    position: relative;
     font-weight: 600;
-    letter-spacing: 0.05em;
-    color: rgba(17, 24, 39, 1);
-    cursor: pointer;
-    transition: 0.5s ease;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    overflow: hidden;
+    display: block;
+    margin: 10px auto;
+    transition: all 450ms;
+    letter-spacing: .5px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: rgb(0, 89, 255);
+      //background-color: #222222;
+      background-color: #0dc569;
+
+      width: 0;
+      border-radius: 15px;
+      z-index: -1;
+      -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+      box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+      transition: all 450ms;
+
+    }
+
+    &:hover {
+      cursor: pointer;
+
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+    
 
     &:hover {
       background-color: #49CB86;

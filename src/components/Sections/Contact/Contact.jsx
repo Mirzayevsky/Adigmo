@@ -28,7 +28,7 @@ const  Contact = () => {
                 <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" />
               </Form>
           <SumbitWrapper className="flex">
-            <ButtonInput type="submit" value="Написать сообщение" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
+            <Button>Отправить сообщение</Button>
           </SumbitWrapper>
 
 
@@ -73,28 +73,59 @@ const Form = styled.form`
     padding: 30px 0;
   }
 `;
-const ButtonInput = styled.input`
-  background-color: #0080ff;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  outline: none;
+
+const Button = styled.div`
+  //background-color: ;
+  padding: 13px 30px;
+  border: unset;
+  border-radius: 20px;
   color: #fff;
-  margin: 30px 0;
-  margin-left:140px;
-  :hover {
-    background-color: #49CB86;
+  z-index: 1;
+  background: #0080ff;
+  position: relative;
+  font-weight: 600;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  overflow: hidden;
+  display: block;
+  margin-left: 60px;
+  transition: all 450ms;
+  letter-spacing: .5px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    //background-color: #222222;
+    background-color: #0dc569;
+
+    width: 0;
+    border-radius: 15px;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 450ms;
+
   }
-  @media (max-width: 991px) {
-    margin: 0 auto;
+
+  &:hover {
+    cursor: pointer;
+
   }
-`;
-const ContactImgBox = styled.div`
-  max-width: 180px; 
-  align-self: flex-end; 
-  margin: 10px 30px 10px 0;
+
+  &:hover::before {
+    width: 100%;
+  }
 `;
 const SumbitWrapper = styled.div`
+  width: 90%;
+  margin: auto;
+  display: flex;
+  padding: 10px 0;
+  padding-bottom: 40px;
   @media (max-width: 991px) {
     width: 100%;
     margin-bottom: 50px;

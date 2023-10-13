@@ -21,7 +21,6 @@ import {
     Wrapper,
     MobileBtn
 } from "./styles";
-import ExButton from "../../Button";
 const  Header = () => {
 
     const [nameValue, setNameValue] = useState("");
