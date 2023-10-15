@@ -115,7 +115,7 @@ export const ServiceBox =styled.div`
       font-size: 22px;
       text-align: center;
     }
-    @media screen and (max-width:1200px){
+    @media screen and (max-width:900px){
       font-size: 19px;
       font-weight: 600;
     }
@@ -127,6 +127,11 @@ export const ServiceBox =styled.div`
     font-weight: 500;
     text-align: center;
     padding-top: 10px;
+    @media screen and (max-width:600px){
+      width: 100%;
+      font-size: 15px;
+      font-weight: 600;
+    }
 
   }
 `;
@@ -148,6 +153,11 @@ export const Button = styled.div`
   margin: 10px auto;
   transition: all 450ms;
   letter-spacing: .5px;
+  @media only screen and (max-width: 600px) {
+    margin: 20px auto;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
 
   &:before {
     content: "";

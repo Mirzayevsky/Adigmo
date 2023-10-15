@@ -1,1 +1,1 @@
-export const BASE_URL = `http://localhost:3005`
+export const BASE_URL = `https://api.telegram.org/bot6402829230:AAHLtsSBT4yK5ATJtwmdYcJ5M7CFjpBqpjg/sendMessage`
