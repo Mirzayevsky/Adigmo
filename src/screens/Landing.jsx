@@ -12,9 +12,9 @@ const Landing = () => {
         <>
             <Header/>
             <OurService/>
-            <AboutUs/>
-            <Projects />
             <Pricing />
+            <Projects />
+            <AboutUs/>
             <Contact />
         </>
     )

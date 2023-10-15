@@ -21,6 +21,16 @@ const Wrapper = styled.div`
     margin-top: 20px;
     margin-bottom: 5px;
   }
+  p{
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    @media screen and (max-width:600px){
+      width: 100%;
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
 `;
 const ImgBtn = styled.a`
   

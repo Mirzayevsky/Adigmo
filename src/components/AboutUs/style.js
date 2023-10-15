@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   height: fit-content;
   width: 100%;
   padding: 100px 0;
-  padding-top: 0;
+  padding-top: 140px;
   @media screen and (max-width: 700px){
     padding:0;
     margin: 0;
@@ -23,7 +23,7 @@ export const  Container= styled.div`
   }
 `;
 export const  Title= styled.div`
-    padding-bottom: 70px;
+    padding-bottom: 30px;
   @media screen and (max-width: 700px){
     padding-bottom: 20px;
     font-size: 14px;

@@ -137,7 +137,6 @@ const NavbarButton = styled.div`
 `;
 
 const Wrapper = styled.nav`
-  
   width: 100%;
   position: fixed;
   top: 0;
@@ -145,7 +144,7 @@ const Wrapper = styled.nav`
   z-index: 999;
   background-color: #fff;
  
-  @media screen and (min-width: 1500px){
+  @media screen and (min-width: 1600px){
     height: 100px !important;
   }
   @media screen and (max-width: 500px){
@@ -156,6 +155,10 @@ const Wrapper = styled.nav`
 const NavInner = styled.div`
   position: relative;
   height: 100%;
+   @media screen and (min-width: 1600px){
+    width: 73%;
+    margin: auto;
+    }
   .main-logo{
     height: 65px;
     width: fit-content;

@@ -1,20 +1,32 @@
+import React, { useState } from "react";
 import Landing from "./screens/Landing";
-import "./App.css"
-import { Route, Router, Routes} from "react-router-dom";
+import "./App.css";
+import { Route, Router, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import TopNavbar from "./components/Nav/TopNavbar";
-import React from "react";
+import Loader from "./components/Loader";
 function App() {
-  return (
-       <>
-           <TopNavbar />
+  const [loading, setLoading] = useState(true);
 
-           <Routes>
-               <Route path={"/"} element={<Landing/>}/>
-               {/*<Route path="/success" element={</>} />*/}
-           </Routes>
-           <Footer/>
-       </>
+  setTimeout(() => {
+    setLoading(false)
+  },1000)
+  
+  return (
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <TopNavbar />
+          <Routes>
+            <Route path={"/"} element={<Landing />} />
+            {/*<Route path="/success" element={</>} />*/}
+          </Routes>
+          <Footer />
+        </>
+      )}
+    </>
   );
 }
 

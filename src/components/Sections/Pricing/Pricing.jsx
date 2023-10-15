@@ -7,16 +7,7 @@ import Card from "../../Card";
 import PopUp from "../../popUp";
 
 const Pricing = () => {
-
-
     const [popUp, setPopUp] = useState(false);
-
-
-
-
-
-
-
 
 
 

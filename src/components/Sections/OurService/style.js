@@ -13,9 +13,7 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 1600px){
-    width: 70%;
-  }
+ 
   @media screen and (max-width: 800px){
     width: 90%;
   }
@@ -47,7 +45,6 @@ export const ServiceWrapper =styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-  padding-bottom: 160px;
   @media screen and (max-width: 1600px) {
     flex-wrap: wrap;
     justify-content: center;
@@ -121,9 +118,9 @@ export const ServiceBox =styled.div`
     }
   }
   .text {
-    width: 70%;
+    width: 80%;
     margin: auto;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     text-align: center;
     padding-top: 10px;

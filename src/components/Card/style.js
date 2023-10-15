@@ -1,12 +1,5 @@
 import styled from "styled-components";
 export const Wrapper =styled.div`
-  width: fit-content;
-  height: fit-content;
-  @media screen and (max-width: 600px){
-    width: 100%;
-    margin: auto;
-  }
-  .card {
     margin-left: -1rem;
     margin-right: -1rem;
     display: flex;
@@ -23,7 +16,6 @@ export const Wrapper =styled.div`
     @media screen and (max-width: 600px){
       width: 100%;
     }
-  }
 
   .header {
     display: flex;
