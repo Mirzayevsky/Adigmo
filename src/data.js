@@ -1,10 +1,12 @@
 
 import img1 from "./assets/main/portfolio/photo_2023-10-15_13-35-44.jpg";
-import img2 from "./assets/main/portfolio/photo_2023-10-15_13-35-49.jpg";
+import img2 from "./assets/main/portfolio/01.jpg";
 import img3 from "./assets/main/portfolio/photo_2023-10-15_13-35-53.jpg";
 import img4 from "./assets/main/portfolio/photo_2023-10-15_13-36-01.jpg";
 import img5 from "./assets/main/portfolio/photo_2023-10-15_13-36-05.jpg";
 import img6 from "./assets/main/portfolio/612.png";
+import img7 from "./assets/main/portfolio/02.jpg";
+
 
 export const data = {
     price:[
@@ -88,28 +90,13 @@ export const data = {
         },
         {
           id: 7,
-          img: img4,
+          img: img7,
           title: "AllHDD",
           description:
             "Используем передовые решения для быстрой и безопасной работы ваших",
           link: "https://www.allhdd.com/",
         },
-        {
-          id: 8,
-          img: img5,
-          title: "AVATRADE",
-          description:
-            "Получите возможность торговать CFD на FX, индивидуальную поддержку, бескомпромиссную безопасность",
-          link: "https://www.avatrade.com/",
-        },
-        {
-          id: 9,
-          img: img2,
-          title: "LEGEND",
-          description:
-            "Используем передовые решения для быстрой и безопасной работы ваших",
-          link: "https://www.legendlondon.co/",
-        },
+      
       ]
 
 }

@@ -66,7 +66,7 @@ export default function TopNavbar() {
             </li>
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="contact" spy={true} smooth={true} offset={-80}>
-                 Контакт
+              Контакты
               </Link>
             </li>
           </UlWrapper>
@@ -181,15 +181,14 @@ const BurderWrapper = styled.button`
 `;
 const UlWrapper = styled.ul`
   display: flex;
+  li{
+    font-size: 16px;
+  }
   
   @media (max-width: 760px) {
     display: none;
   }
 `;
-const UlWrapperRight = styled.ul`
-  @media (max-width: 760px) {
-    display: none;
-  }
-`;
+
 
 
