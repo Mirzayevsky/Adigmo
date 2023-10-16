@@ -97,7 +97,6 @@ const Projects = () => {
     }
   };
 
-
   return (
     <Wrapper id="projects">
       <div className="whiteBg">
@@ -129,7 +128,9 @@ const Projects = () => {
           </div>
           <div className="row flexCenter">
             {
-             posts.length === 0 ? "" : <Button onClick={handleLoadMore}>Загрузить Еще</Button>
+             showSeeMore && (
+              <Button onClick={handleLoadMore}> Загрузить Еще </Button>
+             )
             }
           </div>
         </div>

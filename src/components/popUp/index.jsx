@@ -2,92 +2,25 @@ import React, { useEffect, useState } from "react";
 import { PatternFormat } from 'react-number-format';
 import "toastify-js/src/toastify.css"
 import img from '../../assets/main/red-icon.png';
-import {useNavigate} from 'react-router-dom';
 import {Button, Form, FormContainer, FormTitle, Option, SelectInput} from "./styles";
 import {Cover, Input, PopUpWrapper} from "./styles";
-import Toastify from "toastify-js";
+import { HttpRequest } from "../../hooks/httpRequest";
+import { serviceData } from "../../Constants/serviceType";
 const PopUp = ({setPopUp,popUp}) => {
-    const [nameValue, setNameValue] = useState("");
-    const [numberValue, setNumberValue] = useState("");
-    const [emailValue, setEmailValue] = useState("");
-    const [selectedOption, setSelectedOption] = useState('');
-    const navigate = useNavigate();
-    const {toggle,data} =popUp
-    console.log(data)
-
-    const TELEGRAM_API = `https://api.telegram.org/bot6402829230:AAHLtsSBT4yK5ATJtwmdYcJ5M7CFjpBqpjg/sendMessage`;
-    const chatIds = [6090223711]; // Add the additional chat IDs you want to send the message to
-    const message = `
-     Name: ${nameValue},
-     Number: ${numberValue},
-     Email: ${emailValue},
-     Service: ${selectedOption}
-    `;
-
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        // Check if the input values meet the required length
-        if (nameValue.length < 5 || numberValue.length < 7) {
-            alert("Пожалуйста, заполните форму");
-            return; // Don't proceed with sending the message
-        }
-        try {
-            for (const chatId of chatIds) {
-                const response = await fetch(TELEGRAM_API, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: message,
-                    }),
-                });
-                const data = await response.json();
-                if (data.ok) {
-                    Toastify({
-                        text: "Данные успешно отправлены",
-                        className: "info",
-                        style: {
-                            background: "linear-gradient(93.12deg, #1F5AFF 1.37%, #392ED6 54.75%, #1A2032 119.16%)",
-                        }
-                    }).showToast();
-                    console.log(`Message sent successfully to chat ID: `);
-                    setNameValue("")
-                    setNumberValue("")
-                    setEmailValue("")
-                    setSelectedOption("")
-                    setPopUp(false)
-
-                } else {
-                    alert("Данные не отправляются")
-                    console.log(
-                        Error (`sending message to chat ID ${chatId}: ${data.description}`)
-                    );
-                }
-            }
-        } catch (error) {
-            console.log("Error:", error);
-        }
-    };
-
-    const handleNameChange = (e) => {
-        const newValue = e.target.value;
-        setNameValue(newValue);
-    };
-
-    const handleNumberChange = (e) => {
-        const newValue = e.target.value;
-        setNumberValue(newValue);
-    };
-    const handleEmailChange = (e) => {
-        const newValue = e.target.value;
-        setEmailValue(newValue);
-    };
-    const handleOptionChange = (e) => {
-        const  newValue = e.target.value;
-        setSelectedOption(newValue)
-    };
+    const [state, setState] = useState({
+        name: "",
+        number:null,
+        email:"",
+        service:""
+      });
+     
+      const handleSubmit = (e) => {
+        HttpRequest(
+          {
+            e,state,setState
+          }
+        )
+      }
     return(
         <PopUpWrapper>
             <Cover onClick={() => setPopUp(false)}/>
@@ -97,29 +30,39 @@ const PopUp = ({setPopUp,popUp}) => {
                     <FormContainer>
                         <FormTitle> Свяжитесь с нами</FormTitle>
                         <Input className={"numb"}
-                               value={nameValue}
+                               value={state.name}
                                type={"Name"}
                                placeholder={"Имя"}
-                               onChange={handleNameChange}/>
+                               onChange={(e) => setState({ ...state, name: e.target.value })}
+
+                               />
 
                         <PatternFormat
                             className={"input-numb"}
                             format="+998(##)###-##-##"
                             placeholder={"Телефон"}
-                            value={numberValue}
-                            onChange={handleNumberChange}
+                            value={state.number}
+                            onChange={(e) => setState({ ...state, number: e.target.value })}
                         />
                         <Input
                             className={"numb"}
                             type="email"
                             placeholder={"Электронная почта "}
-                            value={emailValue}
-                            onChange={handleEmailChange}
+                            value={state.email}
+                            onChange={(e) => setState({ ...state, email: e.target.value })}
                         />
-                        <SelectInput   value={selectedOption } onChange={handleOptionChange}>
-                            <Option value={data ? `data.value` : "Лендинг"} >Лендинг</Option>
-                            <Option value={data ? data.value : "Бизнес сайт"}>Бизнес сайт</Option>
-                            <Option value={data ? data.value : "Интернет магазин"}>Интернет магазин</Option>
+                        <SelectInput 
+                        onChange={(e) =>
+                            setState({ ...state, service: e.target.value })
+                          }
+                        > 
+                        
+                {serviceData.map(({id,name}) => (
+                  <Option key={id} value={`${name}`}>
+                    {" "}
+                    {name}
+                  </Option>
+                ))}
                         </SelectInput>
 
                     </FormContainer>
