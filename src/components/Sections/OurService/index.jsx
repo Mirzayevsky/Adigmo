@@ -16,8 +16,7 @@ const OurService = () => {
             <Container>
                 <h1 className="font40 extraBold">Создание сайтов <span>от Adigmo!</span></h1>
                 <p className={"subtitle"}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua.
+                В эпоху цифровых технологий, онлайн-присутствие вашего бизнеса перестало быть просто желательным – это стало неотъемлемой необходимостью. В Adigmo, мы убеждены, что профессионально разработанный веб-сайт является визитной карточкой вашего бизнеса в интернете, мощным инструментом для привлечения новых и удержания текущих клиентов.
                 </p>
                 <ServiceWrapper>
                     <ServiceBox>

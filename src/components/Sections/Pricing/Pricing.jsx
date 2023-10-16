@@ -15,8 +15,7 @@ const Pricing = () => {
         <HeaderInfo>
             <h1 className="font40 extraBold">Ознакомьтесь с нашими ценами</h1>
             <p className={"subtitle"}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua.
+            В Adigmo, мы предлагаем конкурентоспособные цены и гибкие тарифные планы для всех наших услуг веб-разработки. Наша цель — предложить вам оптимальные решения, которые обеспечат вам высокий возврат инвестиций
             </p>
         </HeaderInfo>
         <Container>

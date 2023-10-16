@@ -26,9 +26,7 @@ const Projects = () => {
           <HeaderInfo>
             <h1 className="font40 extraBold">Наши замечательные проекты</h1>
             <p className={"subtitle"}>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua.
+            В Adigmo мы стремимся к тому, чтобы каждый веб-сайт был не просто функциональным и привлекательным, но и отражал уникальность бренда нашего клиента. Ниже представлены некоторые из наших замечательных проектов, которые мы создали в тесном сотрудничестве с нашими клиентами, превратив их идеи в успешные онлайн-платформы.
             </p>
           </HeaderInfo>
           <div className="row textCenter">

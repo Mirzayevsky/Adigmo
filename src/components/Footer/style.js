@@ -4,7 +4,7 @@ export const  Wrapper = styled.div`
   width: 100%;
   font-family: Mozerati,sans-serif !important;
   .container {
-    max-width: 1170px;
+    max-width: 1200px;
     margin: auto;
     @media only screen and (max-width: 600px) {
       width: 80%;

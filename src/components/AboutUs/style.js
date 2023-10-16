@@ -32,6 +32,8 @@ export const  Title= styled.div`
     margin: auto;
     text-align: center;
     padding-top: 30px;
+    font-weight: 500;
+    line-height: 22px;
     @media screen and (max-width: 700px){
       width: 90%;
       font-size: 14px;

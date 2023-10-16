@@ -63,7 +63,8 @@ export const HeaderInfo = styled.div`
     margin: auto;
     padding:15px 0;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
+    line-height: 22px;
     @media (max-width: 860px) {
       width: 90%;
     }

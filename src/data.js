@@ -14,7 +14,7 @@ export const data = {
             id:0,
             title:"Лендинг",
             price:99,
-            subtitle:"Etiam ac convallis enim, eget euismod dolor.",
+            subtitle:"",
             ruleTextOne:"Анализ рынка и конкурентов",
             ruleTextTwo:"Профессиональный дизайн",
             ruleTextThree:"Уникальное наполнение контентом"
@@ -23,7 +23,7 @@ export const data = {
             id:1,
             title:"Бизнес сайт",
             price:299,
-            subtitle:"Etiam ac convallis enim, eget euismod dolor.",
+            subtitle:"",
             ruleTextOne:"Адаптация под бизнес-цели",
             ruleTextTwo:"Оптимизированная структура сайта",
             ruleTextThree:"Продвинутые инструменты для конверсии"
@@ -32,7 +32,7 @@ export const data = {
             id:2,
             title:"Интернет магазин",
             price:499,
-            subtitle:"Etiam ac convallis enim, eget euismod dolor.",
+            subtitle:"",
             ruleTextOne:"Гибкая система управления товарами",
             ruleTextTwo:"Оптимизированная структура сайта",
             ruleTextThree:"Интеграция с платежными системами"

@@ -13,7 +13,6 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   flex-direction: column;
- 
   @media screen and (max-width: 800px){
     width: 90%;
   }
@@ -25,11 +24,13 @@ export const Container = styled.div`
     }
   }
   .subtitle{
-    width: 60%;
+    width: 80%;
     margin: auto;
     padding:15px 0;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
+    line-height: 22px;
+
     text-align: center;
     @media (max-width: 860px) {
       width: 90%;
