@@ -6,9 +6,8 @@ export const Wrapper = styled.div`
   padding: 100px 0;
   padding-top: 140px;
   @media screen and (max-width: 700px){
-    padding:0;
+    padding:80px 0;
     margin: 0;
-    padding-bottom: 80px;
   }
   
 `;
@@ -34,7 +33,9 @@ export const  Title= styled.div`
     text-align: center;
     padding-top: 30px;
     @media screen and (max-width: 700px){
-      width: 100%;
+      width: 90%;
+      font-size: 14px;
+      font-weight: 500;
       margin: auto;
       padding-top: 15px;
     }

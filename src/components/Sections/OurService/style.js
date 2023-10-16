@@ -35,8 +35,9 @@ export const Container = styled.div`
       width: 90%;
     }
     @media (max-width: 600px) {
-      width: 100%;
+      width: 90%;
       font-size: 14px;
+      font-weight: 500;
     }
   }
 `;

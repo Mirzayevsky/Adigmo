@@ -27,14 +27,18 @@ export const Wrapper =styled.div`
     line-height: 2.2rem;
     font-weight: 700;
     margin-bottom: 10px;
-    color: #fff
+    color: #fff;
+   
   }
 
   .price {
     font-size: 3.75rem;
     line-height: 1;
     font-weight: 700;
-    color: #fff
+    color: #fff;
+    @media only screen and (max-width: 600px) {
+      font-size: 40px;
+    }
   }
 
   .desc {
@@ -81,6 +85,9 @@ export const Wrapper =styled.div`
     margin: 10px auto;
     transition: all 450ms;
     letter-spacing: .5px;
+    @media only screen and (max-width: 600px) {
+      margin-bottom: 0;
+    }
 
     &:before {
       content: "";
@@ -91,7 +98,6 @@ export const Wrapper =styled.div`
       background: rgb(0, 89, 255);
       //background-color: #222222;
       background-color: #0dc569;
-
       width: 0;
       border-radius: 15px;
       z-index: -1;

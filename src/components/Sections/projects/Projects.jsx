@@ -129,9 +129,7 @@ const Projects = () => {
           </div>
           <div className="row flexCenter">
             {
-              showSeeMore && (
-                <Button onClick={handleLoadMore}>Загрузить Еще</Button>
-              )
+             posts.length === 0 ? "" : <Button onClick={handleLoadMore}>Загрузить Еще</Button>
             }
           </div>
         </div>

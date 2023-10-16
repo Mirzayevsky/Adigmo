@@ -20,6 +20,7 @@ export const HeaderInfo = styled.div`
     font-weight: 400;
     @media (max-width: 860px) {
       font-size: 14px;
+      font-weight: 500;
       width: 100%;
     }
   }
@@ -57,7 +58,6 @@ export const Button = styled.div`
   letter-spacing: .5px;
   @media only screen and (max-width: 600px) {
     margin: 20px auto;
-    margin-bottom: 80px;
     font-size: 16px;
   }
   &:before {
@@ -69,7 +69,6 @@ export const Button = styled.div`
     background: rgb(0, 89, 255);
     //background-color: #222222;
     background-color: #0dc569;
-
     width: 0;
     border-radius: 15px;
     z-index: -1;

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { PatternFormat } from "react-number-format";
 import { TypeAnimation } from "react-type-animation";
 import PopUp from "../../popUp";
-
+import {TELEGRAM_API,chatIds} from "../../../Constants/api"
 import {
   Button,
   Container,
@@ -22,85 +22,94 @@ import {
   MobileBtn,
 } from "./styles";
 const Header = () => {
-  const [nameValue, setNameValue] = useState("");
-  const [numberValue, setNumberValue] = useState("");
-  const [emailValue, setEmailValue] = useState("");
-  const [selectedOption, setSelectedOption] = useState("");
   const [popUp, setPopUp] = useState(false);
-  const navigate = useNavigate();
+  const [state, setState] = useState({
+    name: "",
+    number:null,
+    email:"",
+    service:""
+  });
+  const { name, number,email, service} = state;
 
-  const TELEGRAM_API = `https://api.telegram.org/bot6402829230:AAHLtsSBT4yK5ATJtwmdYcJ5M7CFjpBqpjg/sendMessage`;
-  const chatIds = [6090223711]; // Add the additional chat IDs you want to send the message to
-  const message = `
-     Name: ${nameValue},
-     Number: ${numberValue},
-     Email: ${emailValue},
-     Service: ${selectedOption}
-    `;
+  const FormData = `
+  Name: ${name},
+  Number: ${number},
+  Email: ${email},
+  Service: ${service}
+ `;
+ 
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    // Check if the input values meet the required length
-    if (nameValue.length < 5 || numberValue.length < 7) {
-      alert("Пожалуйста, заполните форму");
-      return; // Don't proceed with sending the message
-    }
-    try {
-      for (const chatId of chatIds) {
-        const response = await fetch(TELEGRAM_API, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            chat_id: chatId,
-            text: message,
-          }),
-        });
-        const data = await response.json();
-        if (data.ok) {
-          Toastify({
-            text: "Данные успешно отправлены",
-            className: "info",
-            style: {
-              background:
-                "linear-gradient(93.12deg, #1F5AFF 1.37%, #392ED6 54.75%, #1A2032 119.16%)",
+  const serviceData = [
+    {
+      id:0,
+      name:"Лендинг",
+    },
+    {
+      id:1,
+      name:"Бизнес сайт",
+    },
+    {
+      id:2,
+      name:"Интернет магазин",
+    },
+  ]
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (
+      (name === "") |
+      (number === null) |
+      (email === "") |
+      (service === "") 
+    ) {
+      console.log("formData is Empty");
+    } else{
+      try{
+        for (const chatId of chatIds) {
+          const response = await fetch(TELEGRAM_API, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
             },
-          }).showToast();
-          console.log(`Message sent successfully to chat ID: `);
-          setNameValue("");
-          setNumberValue("");
-          setEmailValue("");
-          setSelectedOption("");
-        } else {
-          alert("Данные не отправляются");
-          console.log(
-            Error(`sending message to chat ID ${chatId}: ${data.description}`)
-          );
+            body: JSON.stringify({
+              chat_id: chatId,
+              text: FormData,
+            }),
+          });
+          const data = await response.json();
+          if (data.ok) {
+            Toastify({
+              text: "Данные успешно отправлены",
+              className: "info",
+              style: {
+                background: "linear-gradient(93.12deg, #1F5AFF 1.37%, #392ED6 54.75%, #1A2032 119.16%)",
+              }
+            }).showToast();
+            console.log(`Message sent successfully to chat ID: `);
+           
+          } else {
+            alert("Данные не отправляются")
+            console.log(
+                Error (`sending message to chat ID ${chatId}: ${data.description}`)
+            );
+          }
         }
-      }
-    } catch (error) {
-      console.log("Error:", error);
+    
+       }
+       catch (error){
+        console.log("Error:", error);
+       }
     }
+
+  
+   
+  
+
+    
   };
 
-  const handleNameChange = (e) => {
-    const newValue = e.target.value;
-    setNameValue(newValue);
-  };
-
-  const handleNumberChange = (e) => {
-    const newValue = e.target.value;
-    setNumberValue(newValue);
-  };
-  const handleEmailChange = (e) => {
-    const newValue = e.target.value;
-    setEmailValue(newValue);
-  };
-  const handleOptionChange = (e) => {
-    const newValue = e.target.value;
-    setSelectedOption(newValue);
-  };
+ 
 
   return (
     <Wrapper id={"home"}>
@@ -141,30 +150,39 @@ const Header = () => {
               <FormTitle> Свяжитесь с нами</FormTitle>
               <Input
                 className={"numb"}
-                value={nameValue}
+                value={state.name}
                 type={"Name"}
                 placeholder={"Имя"}
-                onChange={handleNameChange}
+                onChange={(e) => setState({ ...state, name: e.target.value })}
               />
 
               <PatternFormat
                 className={"input-numb"}
                 format="+998(##)###-##-##"
                 placeholder={"Телефон"}
-                value={numberValue}
-                onChange={handleNumberChange}
+                value={state.number}
+                onChange={(e) => setState({ ...state, number: e.target.value })}
               />
               <Input
                 className={"numb"}
                 type="email"
                 placeholder={"Электронная почта "}
-                value={emailValue}
-                onChange={handleEmailChange}
+                value={state.email}
+                onChange={(e) => setState({ ...state, email: e.target.value })}
               />
-              <SelectInput value={selectedOption} onChange={handleOptionChange}>
-                <Option value="Лендинг">Лендинг</Option>
-                <Option value="Бизнес сайт">Бизнес сайт</Option>
-                <Option value="Интернет магазин">Интернет магазин</Option>
+              <SelectInput 
+               onChange={(e) =>
+                  setState({ ...state, service: e.target.value })
+                }
+                >
+
+                {serviceData.map(({id,name}) => (
+                  <option key={id} value={`${name}`}>
+                    {" "}
+                    {name}
+                  </option>
+                ))}
+
               </SelectInput>
             </FormContainer>
             <Button> Отправить </Button>

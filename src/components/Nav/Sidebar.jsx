@@ -54,6 +54,20 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="darkColor"
             style={{ padding: "10px 15px" }}
+            to="pricing"
+            spy={true}
+            smooth={true}
+            offset={-60}
+          >
+            Цены
+          </Link>
+        </li>
+        <li className="semiBold font15 pointer">
+          <Link
+            onClick={() => toggleSidebar(!sidebarOpen)}
+            activeClass="active"
+            className="darkColor"
+            style={{ padding: "10px 15px" }}
             to="projects"
             spy={true}
             smooth={true}
@@ -68,12 +82,12 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="darkColor"
             style={{ padding: "10px 15px" }}
-            to="pricing"
+            to="AboutUs"
             spy={true}
             smooth={true}
             offset={-60}
           >
-            Цены
+            О нас
           </Link>
         </li>
         <li className="semiBold font15 pointer">
@@ -128,5 +142,9 @@ const UlStyle = styled.ul`
   padding: 40px;
   li {
     margin: 20px 0;
+    @media only screen and (max-width:600px) {
+      font-size: 18px;
+      font-weight: 600;
+    }
   }
 `;

@@ -6,6 +6,9 @@ export const  Wrapper = styled.div`
   .container {
     max-width: 1170px;
     margin: auto;
+    @media only screen and (max-width: 600px) {
+      width: 80%;
+    }
   }
 
   .row {
