@@ -6,7 +6,7 @@ const Card = ({title,price,subtitle,ruleTextOne,ruleTexTwo,ruleTextThree,click})
             <div className="card">
                 <div className="header">
                     <span className="title">{title}</span>
-                    <span className="price">${price}/mo</span>
+                    <span className="price">${price}</span>
                 </div>
                 <p className="desc">{subtitle}</p>
                 <ul className="lists">

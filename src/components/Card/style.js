@@ -85,6 +85,7 @@ export const Wrapper =styled.div`
     margin: 10px auto;
     transition: all 450ms;
     letter-spacing: .5px;
+    margin-bottom: 0;
     @media only screen and (max-width: 600px) {
       margin-bottom: 0;
     }

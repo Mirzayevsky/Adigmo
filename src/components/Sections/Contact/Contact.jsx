@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 import { HttpRequest } from "../../../hooks/httpRequest";
+import { PatternFormat } from 'react-number-format';
 
 const  Contact = () => {
   const [state, setState] = useState({
@@ -25,10 +26,8 @@ const  Contact = () => {
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold flexCenter">Давайте свяжемся с вами</h1>
-            <p className="font19 flexCenter ">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+            <p className="font19 flexCenter subtitle ">
+            Ваши идеи и бизнес-цели заслуживают выдающегося воплощения в цифровом мире. В Adigmo мы готовы помочь вам в этом.Оставьте свои контактные данные в форме ниже, и наш специалист свяжется с вами в ближайшее время для обсуждения вашего проекта.
             </p>
           </HeaderInfo>
               <Form onSubmit={handleSubmit} >
@@ -38,20 +37,16 @@ const  Contact = () => {
                 value={state.name} 
                 onChange={(e) => setState({ ...state, name: e.target.value })}
                 />
+
                 <label className="font13">Номер телефона :</label>
-                <input 
-                type="number"  pattern="+998(##)###-##-##"  className="font20 extraBold" 
-                 value={state.number}
-                 onChange={(e) => setState({ ...state, number: e.target.value })}
-                 />
-                <label className="font13">Текс:</label>
-                <input
-                 type="text" id="subject" name="subject" className="font20 extraBold" 
-                 value={state.text}
-                 onChange={(e) => setState({ ...state, text: e.target.value })}
-                  />
+                 <PatternFormat
+                  className="font20 extraBold"
+                            format="+998(##)###-##-##"
+                            value={state.number}
+                            onChange={(e) => setState({ ...state, number: e.target.value })}
+                        />
                 <SumbitWrapper className="flex">
-                  <Button >Отправить сообщение</Button>
+                  <Button >Отправить </Button>
                 </SumbitWrapper>
               </Form>
 
@@ -74,6 +69,24 @@ const HeaderInfo = styled.div`
   }
   @media (max-width: 860px) {
     text-align: center;
+  }
+  .subtitle{
+    width: 80%;
+    margin: auto;
+    padding:15px 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+
+    text-align: center;
+    @media (max-width: 860px) {
+      width: 90%;
+    }
+    @media (max-width: 600px) {
+      width: 90%;
+      font-size: 14px;
+      font-weight: 500;
+    }
   }
 `;
 const Form = styled.form`

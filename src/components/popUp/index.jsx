@@ -17,7 +17,7 @@ const PopUp = ({setPopUp,popUp}) => {
       const handleSubmit = (e) => {
         HttpRequest(
           {
-            e,state,setState
+            e,state,setState,setPopUp
           }
         )
       }
@@ -33,8 +33,8 @@ const PopUp = ({setPopUp,popUp}) => {
                                value={state.name}
                                type={"Name"}
                                placeholder={"Имя"}
+                               required={"true"}
                                onChange={(e) => setState({ ...state, name: e.target.value })}
-
                                />
 
                         <PatternFormat
@@ -42,6 +42,7 @@ const PopUp = ({setPopUp,popUp}) => {
                             format="+998(##)###-##-##"
                             placeholder={"Телефон"}
                             value={state.number}
+                            required={"true"}
                             onChange={(e) => setState({ ...state, number: e.target.value })}
                         />
                         <Input

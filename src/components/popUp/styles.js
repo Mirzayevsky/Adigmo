@@ -116,6 +116,9 @@ export const SelectInput = styled.select`
   margin-top: 10px;
   cursor: pointer;
   line-height: 70px;
+  font-size: 15px;
+  font-weight: 500;
+
   @media screen and (max-width: 800px) {
     width: 98%;
       margin: 7px auto;
@@ -133,7 +136,6 @@ export const SelectInput = styled.select`
 `;
 export const Option = styled.option`
   cursor: pointer;
-  //font-size: 16px;
   @media screen and (max-width: 600px) {
     background-color: #0080ff;
     line-height: 30px;
@@ -147,10 +149,13 @@ export const Button = styled.button`
   border: 0;
   width: fit-content;
   color: #fff;
-  margin: auto;
+  margin: 10px auto;
   margin-top: 15px;
   cursor: pointer;
   display: block;
+  font-size: 16px;
+  font-weight: 600;
+
   &:hover{
     background-color: #49CB86;
   }
