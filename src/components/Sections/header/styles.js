@@ -43,7 +43,7 @@ export const Container = styled.div`
     height: fit-content;
     padding-top: 0px;
     font-size: 20px;
-    width: 100%;
+    width: 90%;
     height: 100%;
     margin: auto;
   }
@@ -79,9 +79,9 @@ export const Title = styled.div`
     width: 100%;
   }
   @media screen and (max-width: 500px) {
-    font-size: 27px;
+    font-size: 26px;
     font-weight: 600;
-    line-height: 31px;
+    line-height: 30px;
     width: 90%;
     margin-top: 0;
   }
