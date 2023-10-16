@@ -21,7 +21,7 @@ const Footer = () => {
                                 <li><a href="#">Все проекты </a></li>
                             </ul>
                         </div>
-                        <div className="footer-col">
+                        {/* <div className="footer-col">
                             <h4>Разработка</h4>
                             <ul>
                                 <li><a href="#">FAQ</a></li>
@@ -30,7 +30,7 @@ const Footer = () => {
                                 <li><a href="#">статус заказа</a></li>
                                 <li><a href="#">варианты оплаты</a></li>
                             </ul>
-                        </div>
+                        </div> */}
                         <div className="footer-col">
                             <h4>Интернет-магазин</h4>
                             <ul>
@@ -40,7 +40,7 @@ const Footer = () => {
                                 <li><a href="#">Интернет магазин</a></li>
                             </ul>
                         </div>
-                        <div class="footer-col">
+                        {/* <div class="footer-col">
                             <h4>следуйте за нами</h4>
                             <div class="social-links">
                                 <a href="#">
@@ -59,7 +59,7 @@ const Footer = () => {
                                     <FaceBookSvg/>
                                 </a>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </footer>
