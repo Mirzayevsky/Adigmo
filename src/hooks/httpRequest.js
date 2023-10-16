@@ -6,17 +6,18 @@ export const HttpRequest = async ({
   state,
   setState
 }) => {
-  const { name, number, email, service } = state;
+  e.preventDefault();
+  const { name, number, email, service,text } = state;
 
   const FormData = `
     Name: ${name},
     Number: ${number},
-    Email: ${email},
-    Service: ${service}
+    Email: ${email ? email: "unknown" },
+    Service: ${service ? service: "unknown" },
+    text: ${text}
     `;
-  e.preventDefault();
 
-  if ((name === "") | (number === null) | (email === "") | (service === "")) {
+  if ((name === "") | (number === null)) {
     console.log("formData is Empty");
   } else {
     try {
@@ -44,7 +45,8 @@ export const HttpRequest = async ({
             name: "",
             number:"",
             email:"",
-            service:""
+            service:"",
+            text:""
           })
           
           console.log(`Message sent successfully to chat ID: `);
