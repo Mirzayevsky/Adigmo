@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import Toastify from "toastify-js";
+import React, { useState } from "react";
 import "toastify-js/src/toastify.css";
-import { useNavigate } from "react-router-dom";
 import { PatternFormat } from "react-number-format";
 import { TypeAnimation } from "react-type-animation";
 import PopUp from "../../popUp";
-import {TELEGRAM_API,chatIds} from "../../../Constants/api"
+import { HttpRequest } from "../../../hooks/httpRequest";
+import { serviceData } from "../../../Constants/serviceType";
+
 import {
   Button,
   Container,
@@ -29,87 +29,15 @@ const Header = () => {
     email:"",
     service:""
   });
-  const { name, number,email, service} = state;
-
-  const FormData = `
-  Name: ${name},
-  Number: ${number},
-  Email: ${email},
-  Service: ${service}
- `;
- 
-
-  const serviceData = [
-    {
-      id:0,
-      name:"Лендинг",
-    },
-    {
-      id:1,
-      name:"Бизнес сайт",
-    },
-    {
-      id:2,
-      name:"Интернет магазин",
-    },
-  ]
-
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (
-      (name === "") |
-      (number === null) |
-      (email === "") |
-      (service === "") 
-    ) {
-      console.log("formData is Empty");
-    } else{
-      try{
-        for (const chatId of chatIds) {
-          const response = await fetch(TELEGRAM_API, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              chat_id: chatId,
-              text: FormData,
-            }),
-          });
-          const data = await response.json();
-          if (data.ok) {
-            Toastify({
-              text: "Данные успешно отправлены",
-              className: "info",
-              style: {
-                background: "linear-gradient(93.12deg, #1F5AFF 1.37%, #392ED6 54.75%, #1A2032 119.16%)",
-              }
-            }).showToast();
-            console.log(`Message sent successfully to chat ID: `);
-           
-          } else {
-            alert("Данные не отправляются")
-            console.log(
-                Error (`sending message to chat ID ${chatId}: ${data.description}`)
-            );
-          }
-        }
-    
-       }
-       catch (error){
-        console.log("Error:", error);
-       }
-    }
-
-  
-   
-  
-
-    
-  };
 
  
+  const handleSubmit = (e) => {
+    HttpRequest(
+      {
+        e,state,setState
+      }
+    )
+  }
 
   return (
     <Wrapper id={"home"}>
@@ -177,10 +105,10 @@ const Header = () => {
                 >
 
                 {serviceData.map(({id,name}) => (
-                  <option key={id} value={`${name}`}>
+                  <Option key={id} value={`${name}`}>
                     {" "}
                     {name}
-                  </option>
+                  </Option>
                 ))}
 
               </SelectInput>
