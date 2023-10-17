@@ -26,7 +26,9 @@ const PopUp = ({setPopUp,popUp}) => {
             <Cover onClick={() => setPopUp(false)}/>
 
                 <Form onSubmit={handleSubmit} >
-                    <img src={img} alt={"exit"} className={"exit-btn"} onClick={() => setPopUp(false)}/>
+                   <div className="exit-button">
+                   <img src={img} alt={"exit"} className={"exit-btn"} onClick={() => setPopUp(false)}/>
+                   </div>
                     <FormContainer>
                         <FormTitle> Свяжитесь с нами</FormTitle>
                         <Input className={"numb"}

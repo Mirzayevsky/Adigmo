@@ -30,7 +30,9 @@ export default function TopNavbar() {
       >
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
+            <div className="nav-logo">
             <img src={LogoIcon} className="main-logo" alt="logo"/>
+            </div>
           </Link>
           <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
             <BurgerIcon />
@@ -159,12 +161,16 @@ const NavInner = styled.div`
     width: 73%;
     margin: auto;
     }
-  .main-logo{
+  .nav-logo{
     height: 65px;
     width: fit-content;
     @media screen and (max-width: 800px){
       height: 45px;
       margin-left: 10px;
+    }
+    img{
+      height: 100%;
+      width: 100%;
     }
   }
 `

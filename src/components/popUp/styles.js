@@ -37,13 +37,17 @@ export const Form = styled.form`
   @media screen and (max-width: 800px) {
     width: 90%;
   }
-  .exit-btn{
+  .exit-button{
     position: absolute;
     top: 5px;
     right: 5px;
     height: 30px;
     width: fit-content;
     cursor: pointer;
+    img{
+      height: 100%;
+      width: 100%;
+    }
   }
 `;
 export const FormContainer = styled.div`
