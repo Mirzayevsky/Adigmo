@@ -6,6 +6,10 @@ import img4 from "./assets/main/portfolio/photo_2023-10-15_13-36-01.jpg";
 import img5 from "./assets/main/portfolio/photo_2023-10-15_13-36-05.jpg";
 import img6 from "./assets/main/portfolio/612.png";
 import img7 from "./assets/main/portfolio/02.jpg";
+import img8 from "./assets/main/portfolio/11.jpg";
+import img9 from "./assets/main/portfolio/photo_2023-10-17_15-41-15.jpg";
+
+
 
 
 export const data = {
@@ -40,22 +44,23 @@ export const data = {
     ],
 
     projects:[
-        {
-          id: 0,
-          img: img1,
-          title: "UNHCR",
-          description:
-            "Используем передовые решения для быстрой и безопасной работы ваших",
-          link: "https://www.unhcr.org/",
-        },
-        {
-          id: 1,
-          img: img6,
-          title: "TRUSTPILOT",
-          description:
-            "Используем передовые решения для быстрой и безопасной работы ваших",
-          link: "https://www.trustpilot.com/",
-        },
+      {
+        id: 0,
+        img: img8,
+        title: "Agro Finans Lizing",
+        description:
+          "Используем передовые решения для быстрой и безопасной работы ваших",
+        link: "https://agrofinanslizing.uz/",
+      },
+      {
+        id: 1,
+        img: img9,
+        title: "Pomodoro",
+        description:
+          "Используем передовые решения для быстрой и безопасной работы ваших",
+        link: "https://www.chefpomodoro.com/",
+      },
+       
         {
           id: 2,
           img: img3,
@@ -96,7 +101,23 @@ export const data = {
             "Используем передовые решения для быстрой и безопасной работы ваших",
           link: "https://www.home.saxo/",
         },
-      
+        {
+          id: 8,
+          img: img1,
+          title: "UNHCR",
+          description:
+            "Используем передовые решения для быстрой и безопасной работы ваших",
+          link: "https://www.unhcr.org/",
+        },
+        {
+          id: 9,
+          img: img6,
+          title: "TRUSTPILOT",
+          description:
+            "Используем передовые решения для быстрой и безопасной работы ваших",
+          link: "https://www.trustpilot.com/",
+        },
+        
       ]
 
 }
