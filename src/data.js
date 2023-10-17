@@ -57,7 +57,7 @@ export const data = {
         img: img9,
         title: "Pomodoro",
         description:
-          "Используем передовые решения для быстрой и безопасной работы ваших",
+          "Chef Pomodoro - Компания специализируется на продаже товаров для приготовления пиццы по всему миру.",
         link: "https://www.chefpomodoro.com/",
       },
        
