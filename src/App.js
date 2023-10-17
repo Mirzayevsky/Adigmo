@@ -3,11 +3,10 @@ import Landing from "./screens/Landing";
 import "./App.css";
 import { Route, Router, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
-import TopNavbar from "./components/Nav/TopNavbar";
 import Loader from "./components/Loader";
+import Navigationbar from "./components/navbar";
 function App() {
   const [loading, setLoading] = useState(true);
-
   setTimeout(() => {
     setLoading(false)
   },1000)
@@ -18,7 +17,7 @@ function App() {
         <Loader />
       ) : (
         <>
-          <TopNavbar />
+        <Navigationbar/>
           <Routes>
             <Route path={"/"} element={<Landing />} />
             {/*<Route path="/success" element={</>} />*/}
