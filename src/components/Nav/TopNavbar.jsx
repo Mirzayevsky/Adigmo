@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import Sidebar from "./Sidebar";
 import Backdrop from "../Elements/Backdrop";
 // Assets
-import LogoIcon from "../../assets/logo/adig.png";
+import {ReactComponent as LogoSvg }from "../../assets/logo/adig.svg";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 
 export default function TopNavbar() {
@@ -31,7 +31,7 @@ export default function TopNavbar() {
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             <div className="nav-logo">
-            <img src={LogoIcon} className="main-logo" alt="logo"/>
+              <LogoSvg/>
             </div>
           </Link>
           <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
@@ -168,7 +168,7 @@ const NavInner = styled.div`
       height: 45px;
       margin-left: 10px;
     }
-    img{
+    svg{
       height: 100%;
       width: 100%;
     }
