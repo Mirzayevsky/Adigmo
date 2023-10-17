@@ -9,7 +9,7 @@ import {ReactComponent as LogoSvg }from "../../assets/logo/adig.svg";
 export default function Sidebar({ sidebarOpen, toggleSidebar }) {
   return (
     <Wrapper  className={"animate"} sidebarOpen={sidebarOpen}>
-      <SidebarHeader className="flexSpaceCenter">
+      <SidebarHeader >
           <LogoSvg className="sidebar-logo"/>
         <CloseBtn onClick={() => toggleSidebar(!sidebarOpen)} className="animate pointer">
           <CloseIcon />
@@ -122,7 +122,6 @@ const Wrapper = styled.nav`
    height: 50px;
    width: fit-content;
    @media (max-width: 600px) {
-margin-right: auto;
   }
  }
   @media (max-width: 400px) {
@@ -130,7 +129,12 @@ margin-right: auto;
   }
 `;
 const SidebarHeader = styled.div`
-  padding: 20px 0;
+background-color: rebeccapurple;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+  padding: 10px 0;
 `;
 const CloseBtn = styled.button`
   border: 0px;

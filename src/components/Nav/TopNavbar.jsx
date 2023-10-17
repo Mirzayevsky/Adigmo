@@ -162,12 +162,12 @@ const NavInner = styled.div`
     margin: auto;
     }
   .nav-logo{
-    height: 65px;
+    height: 50px;
     width: fit-content;
     @media screen and (max-width: 800px){
       height: 60px;
       margin-left: 10px;
-      margin-right: 48vw ! important;
+      margin-right: 40vw ;
     }
     svg{
       height: 100%;
