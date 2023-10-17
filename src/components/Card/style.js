@@ -28,7 +28,6 @@ export const Wrapper =styled.div`
     font-weight: 700;
     margin-bottom: 10px;
     color: #fff;
-   
   }
 
   .price {
@@ -105,11 +104,11 @@ export const Wrapper =styled.div`
       -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
       box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
       transition: all 450ms;
-
     }
 
     &:hover {
       cursor: pointer;
+      color: #fff;
 
     }
 

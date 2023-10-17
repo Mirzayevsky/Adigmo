@@ -7,10 +7,12 @@ export default function ProjectBox({ img, title, text, action,link}) {
     <Wrapper>
       {/* onClick={action ? () => action() : null} */}
       <ImgBtn href={link}  target="_blank"  className="aniamte pointer" >
-        <LazyLoadImage className="radius8" src={img}
-        width={"100%"} height={"100%"}
+        {/* <LazyLoadImage className="radius8" src={img}
         alt="Portfolio Item"
-      />
+        effect="blur"
+        width={"100%"} height={"100%"}
+      /> */}
+      <img className="radius8" src={img}  alt="Portfolio Item"/>
       </ImgBtn>
      
       <h3 className="font20 extraBold" >{title}</h3>
@@ -38,26 +40,25 @@ const Wrapper = styled.div`
   }
 `;
 const ImgBtn = styled.a`
-  
   background-color: transparent;
   border: 0px;
   outline: none;
   padding: 0px;
   margin: 0px;
-  height: fit-content;
-  width: fit-content;
-  height: 300px;
   margin: 20px 0;
-
-
+  overflow: hidden;
   @media only screen and (max-width: 1100px) {
     height: fit-content;
   }
   img{
     height: 100%;
     width: 100%;
+    -webkit-box-shadow: -2px 0px 38px -3px rgba(71, 71, 71, 0.37);
+-moz-box-shadow: -2px 0px 38px -3px rgba(71, 71, 71, 0.37);
+box-shadow: -2px 0px 38px -3px rgba(71, 71, 71, 0.37);
+ 
   }
-  :hover > img {
+  &:hover > img {
     opacity: 0.5;
   }
 `;

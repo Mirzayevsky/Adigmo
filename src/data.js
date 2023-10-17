@@ -6,8 +6,8 @@ import img4 from "./assets/main/portfolio/photo_2023-10-15_13-36-01.jpg";
 import img5 from "./assets/main/portfolio/photo_2023-10-15_13-36-05.jpg";
 import img6 from "./assets/main/portfolio/612.png";
 import img7 from "./assets/main/portfolio/02.jpg";
-import img8 from "./assets/main/portfolio/11.jpg";
-import img9 from "./assets/main/portfolio/photo_2023-10-17_15-41-15.jpg";
+import img8 from "./assets/main/portfolio/13.jpg";
+import img9 from "./assets/main/portfolio/12.jpg";
 
 
 
@@ -49,7 +49,7 @@ export const data = {
         img: img8,
         title: "Agro Finans Lizing",
         description:
-          "Используем передовые решения для быстрой и безопасной работы ваших",
+          "Agro Finans Lizing -  лидирующая компания в Узбекистане который занимается лизингом электромобилей.",
         link: "https://agrofinanslizing.uz/",
       },
       {
@@ -66,7 +66,7 @@ export const data = {
           img: img3,
           title: "EXANTE",
           description:
-            "Используем передовые решения для быстрой и безопасной работы ваших",
+            "EXANTE -  wealthtech компания, которая предоставляет централизованные инвестиционные решения и инфраструктуру для финансовых институтов.",
           link: "https://exante.eu/",
         },
         {
@@ -74,7 +74,7 @@ export const data = {
           img: img4,
           title: "AllHDD",
           description:
-            "Используем передовые решения для быстрой и безопасной работы ваших",
+            "ALLHDD.COM —  компания из Нью-Йорка, специализирующаяся на решениях в области серверов и сетевого оборудования, ориентированных на корпоративные дата-центры и сети.",
           link: "https://www.allhdd.com/",
         },
         {
@@ -82,7 +82,7 @@ export const data = {
           img: img5,
           title: "AVATRADE",
           description:
-            "Получите возможность торговать CFD на FX, индивидуальную поддержку, бескомпромиссную безопасность",
+            "AvaTrade - является пионером онлайн-торговли с 2006 года. Компания была создана совместными усилиями финансовых специалистов и экспертов в сфере интернет-коммерции с целью обеспечения наилучших условий работы для частных трейдеров.",
           link: "https://www.avatrade.com/",
         },
         {
@@ -90,7 +90,7 @@ export const data = {
           img: img2,
           title: "CEDRUS",
           description:
-            "Используем передовые решения для быстрой и безопасной работы ваших",
+            "Cedrus Residence -  компания занимается роскошным апартаментами в Швейцарии, расположенные в живописном месте Тичино между берегами озера и зелеными долинами Альп.",
           link: "https://www.cedrus-residence.ch/it/",
         },
         {
@@ -98,7 +98,7 @@ export const data = {
           img: img7,
           title: "SAXO",
           description:
-            "Используем передовые решения для быстрой и безопасной работы ваших",
+            "Saxo Bank - это всемирный инвестиционная банк, которой доверяют более 1 000 000 клиентов по всему миру.",
           link: "https://www.home.saxo/",
         },
         {
@@ -106,7 +106,7 @@ export const data = {
           img: img1,
           title: "UNHCR",
           description:
-            "Используем передовые решения для быстрой и безопасной работы ваших",
+            "UNHCR - Агентство ООН по делам беженцев международная организация, целью которой является спасение жизней.",
           link: "https://www.unhcr.org/",
         },
         {
@@ -114,7 +114,7 @@ export const data = {
           img: img6,
           title: "TRUSTPILOT",
           description:
-            "Используем передовые решения для быстрой и безопасной работы ваших",
+            "Trustpilot была основана в 2007 году с целью создания независимой валюты доверия. Это - цифровая платформа, которая объединяет предприятия и потребителей, укрепляя доверие и вдохновляя на сотрудничество.",
           link: "https://www.trustpilot.com/",
         },
         
