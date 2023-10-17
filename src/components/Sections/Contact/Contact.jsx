@@ -61,11 +61,9 @@ export default Contact
 
 const Wrapper = styled.section`
   width: 100%;
-  @media only screen and (max-width: 600px){
-    label{
+  label{
     font-size: 16px;
     font-weight: 500;
-  }
   }
 `;
 const HeaderInfo = styled.div`

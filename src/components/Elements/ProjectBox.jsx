@@ -1,13 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function ProjectBox({ img, title, text, action,link}) {
   return (
     <Wrapper>
       {/* onClick={action ? () => action() : null} */}
       <ImgBtn href={link}  target="_blank"  className="aniamte pointer" >
-        <img className="radius8" src={img} alt="project"></img>
+        <LazyLoadImage className="radius8" src={img}
+        width={"100%"} height={"100%"}
+        alt="Portfolio Item"
+      />
       </ImgBtn>
+     
       <h3 className="font20 extraBold" >{title}</h3>
       <p className="font13">{text}</p>
     </Wrapper>
