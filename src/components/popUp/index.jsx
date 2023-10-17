@@ -24,9 +24,8 @@ const PopUp = ({setPopUp,popUp}) => {
     return(
         <PopUpWrapper>
             <Cover onClick={() => setPopUp(false)}/>
-
                 <Form onSubmit={handleSubmit} >
-                   <div className="exit-button">
+                   <div className="exit-button" onClick={()=>setPopUp(false)}>
                     <ExitSvg/>
                    </div>
                     <FormContainer>

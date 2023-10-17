@@ -167,6 +167,7 @@ const NavInner = styled.div`
     @media screen and (max-width: 800px){
       height: 45px;
       margin-left: 10px;
+      margin-right: auto;
     }
     svg{
       height: 100%;
