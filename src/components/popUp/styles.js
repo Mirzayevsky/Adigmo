@@ -41,7 +41,7 @@ export const Form = styled.form`
     height: 40px;
     width: fit-content;
     cursor: pointer;
-    margin-left: 65vw;
+    margin-left: 70vw;
     margin-right: 10px;
     svg{
       height: 100%;

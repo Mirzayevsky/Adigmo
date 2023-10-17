@@ -122,6 +122,7 @@ const Wrapper = styled.nav`
    height: 50px;
    width: fit-content;
    @media (max-width: 600px) {
+    margin-right: 200px;
   }
  }
   @media (max-width: 400px) {
@@ -129,7 +130,6 @@ const Wrapper = styled.nav`
   }
 `;
 const SidebarHeader = styled.div`
-background-color: rebeccapurple;
 width: 100%;
 display: flex;
 align-items: center;
