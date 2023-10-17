@@ -10,9 +10,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
   return (
     <Wrapper  className={"animate"} sidebarOpen={sidebarOpen}>
       <SidebarHeader className="flexSpaceCenter">
-        <div className="flexNullCenter">
           <LogoSvg className="sidebar-logo"/>
-        </div>
         <CloseBtn onClick={() => toggleSidebar(!sidebarOpen)} className="animate pointer">
           <CloseIcon />
         </CloseBtn>
@@ -124,7 +122,7 @@ const Wrapper = styled.nav`
    height: 50px;
    width: fit-content;
    @media (max-width: 600px) {
-    margin-right: 50vw;
+margin-right: auto;
   }
  }
   @media (max-width: 400px) {
