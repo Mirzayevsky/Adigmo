@@ -173,6 +173,10 @@ const NavInner = styled.div`
       width: 100%;
     }
   }
+  @media screen and (max-width: 600px){
+    width: 100%;
+    justify-content: space-between ;
+    }
 `
 const BurderWrapper = styled.button`
   outline: none;

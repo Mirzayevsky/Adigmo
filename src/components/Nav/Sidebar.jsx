@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-scroll";
 // Assets
 import CloseIcon from "../../assets/svg/CloseIcon";
-import LogoIcon from "../../assets/logo/adig.png";
+import {ReactComponent as LogoSvg }from "../../assets/logo/adig.svg";
 
 
 export default function Sidebar({ sidebarOpen, toggleSidebar }) {
@@ -11,7 +11,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
     <Wrapper  className={"animate"} sidebarOpen={sidebarOpen}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
-          <img src={LogoIcon} className={"sidebar-logo"} alt={"logo"}/>
+          <LogoSvg className="sidebar-logo"/>
         </div>
         <CloseBtn onClick={() => toggleSidebar(!sidebarOpen)} className="animate pointer">
           <CloseIcon />
@@ -24,7 +24,6 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             onClick={() => toggleSidebar(!sidebarOpen)}
             activeClass="active"
             className="darkColor"
-
             style={{ padding: "10px 15px" }}
             to="home"
             spy={true}

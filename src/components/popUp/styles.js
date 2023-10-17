@@ -39,12 +39,12 @@ export const Form = styled.form`
   }
   .exit-button{
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 10px;
+    right: 10px;
     height: 30px;
     width: fit-content;
     cursor: pointer;
-    img{
+    svg{
       height: 100%;
       width: 100%;
     }

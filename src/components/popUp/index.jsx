@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { PatternFormat } from 'react-number-format';
 import "toastify-js/src/toastify.css"
-import img from '../../assets/main/red-icon.png';
+import {ReactComponent as ExitSvg}from '../../assets/main/red-icon.svg';
 import {Button, Form, FormContainer, FormTitle, Option, SelectInput} from "./styles";
 import {Cover, Input, PopUpWrapper} from "./styles";
 import { HttpRequest } from "../../hooks/httpRequest";
@@ -27,7 +27,7 @@ const PopUp = ({setPopUp,popUp}) => {
 
                 <Form onSubmit={handleSubmit} >
                    <div className="exit-button">
-                   <img src={img} alt={"exit"} className={"exit-btn"} onClick={() => setPopUp(false)}/>
+                    <ExitSvg/>
                    </div>
                     <FormContainer>
                         <FormTitle> Свяжитесь с нами</FormTitle>
