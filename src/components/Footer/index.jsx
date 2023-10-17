@@ -52,19 +52,18 @@ const Footer = () => {
                         <div class="footer-col">
                             <h4>подписаться </h4>
                             <div class="social-links">
-                                <a href="#">
+                                <a href="https://www.instagram.com/adigmo_agency/?igshid=MWI4MTIyMDE%3D">
                                     <InstagramSvg/>
 
                                 </a>
-                                <a href="#">
+                                <a href="https://t.me/adigmouz">
                                     <TelegramSvg/>
 
                                 </a>
-                                <a href="#">
+                                <a href="https://www.linkedin.com/company/adigmo-uz/">
                                     <LinkedinSvg/>
-
                                 </a>
-                                <a href="#">
+                                <a href="https://www.facebook.com/adigmo.uz/">
                                     <FaceBookSvg/>
                                 </a>
                             </div>
