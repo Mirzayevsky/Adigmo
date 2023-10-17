@@ -19,7 +19,6 @@ export default function TopNavbar() {
     };
   }, [y]);
 
-
   return (
     <>
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
@@ -162,7 +161,7 @@ const NavInner = styled.div`
     margin: auto;
     }
   .nav-logo{
-    height: 45px;
+    height: 55px;
     width: fit-content;
     @media screen and (max-width: 800px){
       height: 60px;

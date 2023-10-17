@@ -83,18 +83,18 @@ export const data = {
         {
           id: 6,
           img: img2,
-          title: "LEGEND",
+          title: "CEDRUS",
           description:
             "Используем передовые решения для быстрой и безопасной работы ваших",
-          link: "https://www.legendlondon.co/",
+          link: "https://www.cedrus-residence.ch/it/",
         },
         {
           id: 7,
           img: img7,
-          title: "AllHDD",
+          title: "SAXO",
           description:
             "Используем передовые решения для быстрой и безопасной работы ваших",
-          link: "https://www.allhdd.com/",
+          link: "https://www.home.saxo/",
         },
       
       ]

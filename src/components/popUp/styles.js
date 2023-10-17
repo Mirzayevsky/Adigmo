@@ -36,13 +36,24 @@ export const Form = styled.form`
   position: relative;
   @media screen and (max-width: 800px) {
     width: 90%;
-  }
-  .exit-button{
+    .exit-button{
     height: 40px;
     width: fit-content;
     cursor: pointer;
     margin-left: 73vw;
     margin-right: 10px;
+    svg{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  }
+  .exit-button{
+    height: 30px;
+    width: fit-content;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: auto;
     svg{
       height: 100%;
       width: 100%;

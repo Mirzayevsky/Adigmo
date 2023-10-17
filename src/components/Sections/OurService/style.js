@@ -3,6 +3,8 @@ export const Wrapper = styled.div`
   height: fit-content;
   width: 100%;
   background-color: #ffffff;;
+  padding-top: 80px;
+
   @media screen and (max-width: 900px) {
     height: fit-content;
   }
