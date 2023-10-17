@@ -32,18 +32,25 @@ const Footer = () => {
                                 <li> <Link to="" spy={true} smooth={true} >варианты оплаты</Link></li>
                             </ul>
                         </div>
-                        <div className="footer-col">
+                        {/* <div className="footer-col">
                             <h4>Интернет-магазин</h4>
                             <ul>
-                               
                                 <li> <Link to="" spy={true} smooth={true} >смотреть</Link></li>
                                 <li> <Link to="" spy={true} smooth={true} >Лендинг</Link></li>
                                 <li> <Link to="" spy={true} smooth={true} >Бизнес сайт</Link></li>
                                 <li> <Link to="" spy={true} smooth={true} >Интернет магазин</Link></li>
                             </ul>
+                        </div> */}
+                        <div className="footer-col">
+                            <h4>Местоположение</h4>
+                            <ul>
+                                <li> <Link to="" spy={true} smooth={true} >Manzil: Uzbekistan ,Toshkent sh.</Link></li>
+                                <li> <Link to="" spy={true} smooth={true} >Chilonzor tumani, Zuhur palvon 3-uy</Link></li>
+                                <li> <a href="tel: +998 (97) 753 14 01">Telefon: +998 (97) 753 14 01</a></li>
+                            </ul>
                         </div>
                         <div class="footer-col">
-                            <h4>следуйте за нами</h4>
+                            <h4>подписаться </h4>
                             <div class="social-links">
                                 <a href="#">
                                     <InstagramSvg/>

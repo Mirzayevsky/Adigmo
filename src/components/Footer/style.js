@@ -9,6 +9,7 @@ export const  Wrapper = styled.div`
     @media only screen and (max-width: 600px) {
       width: 80%;
     }
+   
   }
 
   .row {
@@ -18,6 +19,7 @@ export const  Wrapper = styled.div`
 
   ul {
     list-style: none;
+    
   }
 
   .footer {
