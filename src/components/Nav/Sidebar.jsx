@@ -121,8 +121,11 @@ const Wrapper = styled.nav`
   color: #000 !important;
   transition: 0.3s ease;
  .sidebar-logo{
-   height: 45px;
+   height: 50px;
    width: fit-content;
+   @media (max-width: 600px) {
+    margin-right: 50vw;
+  }
  }
   @media (max-width: 400px) {
     width: 100%;

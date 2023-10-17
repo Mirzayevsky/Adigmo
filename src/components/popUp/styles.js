@@ -38,10 +38,10 @@ export const Form = styled.form`
     width: 90%;
   }
   .exit-button{
-    height: 30px;
+    height: 40px;
     width: fit-content;
     cursor: pointer;
-    margin-left: auto;
+    margin-left: 60vw;
     margin-right: 10px;
     svg{
       height: 100%;
