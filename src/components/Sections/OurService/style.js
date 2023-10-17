@@ -6,6 +6,9 @@ export const Wrapper = styled.div`
   @media screen and (max-width: 900px) {
     height: fit-content;
   }
+  @media screen and (max-width: 600px) {
+    padding-top: 80px;
+  }
 `;
 export const Container = styled.div`
   height: 100%;

@@ -5,6 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 import PopUp from "../../popUp";
 import { HttpRequest } from "../../../hooks/httpRequest";
 import { serviceData } from "../../../Constants/serviceType";
+import bgImg from "../../../assets/main/bg.jpg"
 
 import {
   Button,
@@ -39,7 +40,7 @@ const Header = () => {
   }
 
   return (
-    <Wrapper id={"home"}>
+    <Wrapper imgUrl={window.innerWidth <= 600 ? bgImg : ""} id={"home"}>
       {popUp ? <PopUp popUp={popUp} setPopUp={setPopUp} /> : ""}s{" "}
       <Container>
         <LeftSide>
