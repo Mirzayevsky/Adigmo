@@ -18,7 +18,7 @@ const AboutUs = () => {
                 <Title>
                     <h1 className="font40 extraBold flexCenter">Почему выбирают нас ?</h1>
                     <p className={"subtitle"}>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    В компании Adigmo мы предлагаем не только высококачественные услуги по разработке веб-сайтов, но и стремимся к долгосрочному сотрудничеству с нашими клиентами. Вот несколько причин, почему стоит выбрать именно нас:
                     </p>
                 </Title>
                 <Row>

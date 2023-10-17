@@ -39,6 +39,7 @@ export const Container = styled.div`
       width: 90%;
       font-size: 14px;
       font-weight: 500;
+      display: none;
     }
   }
 `;
@@ -91,7 +92,6 @@ export const ServiceBox =styled.div`
     width: 80%;
     margin-top: 0px;
   }
-
   align-items: center;
 
   .svg-wrapper {

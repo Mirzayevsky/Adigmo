@@ -61,6 +61,12 @@ export default Contact
 
 const Wrapper = styled.section`
   width: 100%;
+  @media only screen and (max-width: 600px){
+    label{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  }
 `;
 const HeaderInfo = styled.div`
   padding: 70px 0 30px 0;
@@ -86,6 +92,7 @@ const HeaderInfo = styled.div`
       width: 90%;
       font-size: 14px;
       font-weight: 500;
+      display: none;
     }
   }
 `;

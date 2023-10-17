@@ -80,7 +80,7 @@ export const Title = styled.div`
   }
   @media screen and (max-width: 500px) {
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 30px;
     width: 90%;
     margin-top: 0;

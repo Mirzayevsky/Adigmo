@@ -7,9 +7,8 @@ export const  Wrapper = styled.div`
     max-width: 1200px;
     margin: auto;
     @media only screen and (max-width: 600px) {
-      width: 80%;
+      width: 90%;
     }
-   
   }
 
   .row {
