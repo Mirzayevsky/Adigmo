@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   width: 100%;
   background-color: #fff;
   background: url(${(props)=>props.imgUrl});
-
+ 
   @media screen and (max-width: 900px) {
   }
   @media screen and (max-width: 1100px) {
