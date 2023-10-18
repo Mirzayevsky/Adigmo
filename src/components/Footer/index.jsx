@@ -44,9 +44,9 @@ const Footer = () => {
                         <div className="footer-col">
                             <h4>Местоположение</h4>
                             <ul>
-                                <li> <Link to="" spy={true} smooth={true} >Manzil: Uzbekistan ,Toshkent sh.</Link></li>
-                                <li> <Link to="" spy={true} smooth={true} >Chilonzor tumani, Zuhur palvon 3-uy</Link></li>
-                                <li> <a href="tel: +998 (97) 753 14 01">Telefon: +998 (97) 753 14 01</a></li>
+                                <li> <Link to="" spy={true} smooth={true} >Узбекистан, Тошкент </Link></li>
+                                <li> <Link to="" spy={true} smooth={true} >Чиланзорский район,Зухур Палвон,3-й дом </Link></li>
+                                <li> <a href="tel: +998 (97) 753 14 01">телефон: +998 (97) 753 14 01</a></li>
                             </ul>
                         </div>
                         <div class="footer-col">

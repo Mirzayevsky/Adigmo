@@ -7,6 +7,7 @@ import { HttpRequest } from "../../../hooks/httpRequest";
 import { serviceData } from "../../../Constants/serviceType";
 import bgImg from "../../../assets/main/bg.jpg"
 
+
 import {
   Button,
   Container,
@@ -24,6 +25,8 @@ import {
 } from "./styles";
 const Header = () => {
   const [popUp, setPopUp] = useState(false);
+  const [toggle,setToggle] = useState(false)
+
   const [state, setState] = useState({
     name: "",
     number:null,
@@ -41,7 +44,8 @@ const Header = () => {
 
   return (
     <Wrapper imgUrl={window.innerWidth <= 600 ? bgImg : ""} id={"home"}>
-      {popUp ? <PopUp popUp={popUp} setPopUp={setPopUp} /> : ""}s{" "}
+      {popUp ? <PopUp popUp={popUp} toggle={toggle} setToggle={setToggle} setPopUp={setPopUp} /> : ""}
+
       <Container>
         <LeftSide>
           <Title>

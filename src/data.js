@@ -26,7 +26,7 @@ export const data = {
         {
             id:1,
             title:"Бизнес сайт",
-            price:299,
+            price:499,
             subtitle:"",
             ruleTextOne:"Адаптация под бизнес-цели",
             ruleTextTwo:"Оптимизированная структура сайта",
@@ -35,7 +35,7 @@ export const data = {
         {
             id:2,
             title:"Интернет магазин",
-            price:499,
+            price:899,
             subtitle:"",
             ruleTextOne:"Гибкая система управления товарами",
             ruleTextTwo:"Оптимизированная структура сайта",

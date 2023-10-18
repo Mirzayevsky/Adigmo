@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { NumericFormat } from 'react-number-format';
+import { NumericFormat } from "react-number-format";
 export const PopUpWrapper = styled.div`
   height: 100vh;
   width: 100vw;
@@ -14,21 +14,20 @@ export const PopUpWrapper = styled.div`
   z-index: 999999;
 `;
 export const Cover = styled.div`
-height: 100vh;
-width: 100%;
-backdrop-filter: blur(5px);
+  height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(5px);
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
 `;
 
-
 export const Form = styled.form`
   width: 400px;
   background-color: #fff;
   padding: 15px 0;
-  border-radius:5px;
+  border-radius: 5px;
   margin: auto;
   font-size: 16px;
   font-family: Mozerati, sans-serif !important;
@@ -36,25 +35,25 @@ export const Form = styled.form`
   position: relative;
   @media screen and (max-width: 800px) {
     width: 90%;
-    .exit-button{
-    height: 40px;
-    width: fit-content;
-    cursor: pointer;
-    margin-left: 73vw;
-    margin-right: 10px;
-    svg{
-      height: 100%;
-      width: 100%;
+    .exit-button {
+      height: 40px;
+      width: fit-content;
+      cursor: pointer;
+      margin-left: 73vw;
+      margin-right: 10px;
+      svg {
+        height: 100%;
+        width: 100%;
+      }
     }
   }
-  }
-  .exit-button{
+  .exit-button {
     height: 30px;
     width: fit-content;
     cursor: pointer;
     margin-right: 10px;
     margin-left: auto;
-    svg{
+    svg {
       height: 100%;
       width: 100%;
     }
@@ -86,16 +85,15 @@ export const FormContainer = styled.div`
   }
 `;
 export const FormTitle = styled.div`
-    font-size: 25px;
-    font-weight: 700;
-    font-family: Mozerati,sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: Mozerati, sans-serif;
   text-align: center;
   margin: 20px 0;
-  @media screen and (max-width: 600px){
+  margin-top: 0;
+  @media screen and (max-width: 600px) {
     font-size: 20px;
   }
-  
-  
 `;
 
 export const Input = styled.input`
@@ -104,12 +102,12 @@ export const Input = styled.input`
   border: 0;
   border-radius: 6px;
   border: 1px solid #b9b9b9;
-  
+
   padding: 11px 12px;
   @media screen and (max-width: 800px) {
     width: 100%;
     width: 90%;
-      margin: 7px auto;
+    margin: 7px auto;
   }
   &::placeholder {
     color: #afafaf;
@@ -135,7 +133,7 @@ export const SelectInput = styled.select`
 
   @media screen and (max-width: 800px) {
     width: 98%;
-      margin: 7px auto;
+    margin: 7px auto;
   }
 
   &::placeholder {
@@ -145,7 +143,6 @@ export const SelectInput = styled.select`
   &:focus {
     outline: 1px solid #0080ff;
     max-width: 98%;
-    
   }
 `;
 export const Option = styled.option`
@@ -157,8 +154,8 @@ export const Option = styled.option`
 `;
 
 export const Button = styled.button`
-    background-color: #0080ff;
-    padding: 10px 47px;
+  background-color: #0080ff;
+  padding: 10px 47px;
   border-radius: 15px;
   border: 0;
   width: fit-content;
@@ -170,7 +167,7 @@ export const Button = styled.button`
   font-size: 16px;
   font-weight: 600;
 
-  &:hover{
-    background-color: #49CB86;
+  &:hover {
+    background-color: #49cb86;
   }
 `;

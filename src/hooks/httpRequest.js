@@ -1,11 +1,8 @@
-import Toastify from "toastify-js";
 import {TELEGRAM_API,chatIds} from "../Constants/api"
-
 export const HttpRequest = async ({
   e,
   state,
   setState,
-  setPopUp
 }) => {
   e.preventDefault();
   const { name, number, email, service,text } = state;
@@ -35,15 +32,6 @@ export const HttpRequest = async ({
         });
         const data = await response.json();
         if (data.ok) {
-          
-          Toastify({
-            text: "Данные успешно отправлены",
-            className: "info",
-            style: {
-              background: "linear-gradient(93.12deg, #1F5AFF 1.37%, #392ED6 54.75%, #1A2032 119.16%)",
-            }
-          }).showToast();
-
           setState({
             name: "",
             number:"",
@@ -51,7 +39,6 @@ export const HttpRequest = async ({
             service:"",
             text:""
           })
-          setPopUp(false)
           console.log(`Message sent successfully to chat ID: `);
         } else {
           alert("Данные не отправляются");

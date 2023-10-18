@@ -13,18 +13,14 @@ function App() {
   
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
+     
         <TopNavbar/>
           <Routes>
             <Route path={"/"} element={<Landing />} />
             {/*<Route path="/success" element={</>} />*/}
           </Routes>
           <Footer />
-        </>
-      )}
+      
     </>
   );
 }
