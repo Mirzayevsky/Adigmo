@@ -190,10 +190,7 @@ export const Button = styled.div`
   &:hover::before {
     width: 100%;
   }
-  @media screen and (max-width:1200px){
-    font-size: 18px;
-    padding: 6px 25px;
-  }
+ 
   &:hover{
     background-color: #49CB86;
   }
