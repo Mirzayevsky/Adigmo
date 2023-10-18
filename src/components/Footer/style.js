@@ -10,6 +10,16 @@ export const  Wrapper = styled.div`
       width: 90%;
     }
   }
+  .footer-right{
+    font-size: 18px ;
+    color: #fff;
+    width: fit-content;
+    margin: auto;
+    margin-top: 80px;
+    @media screen and (max-width: 600px){
+      font-size: 15px;
+    }
+  }
 
   .row {
     display: flex;

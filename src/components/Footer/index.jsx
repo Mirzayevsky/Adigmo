@@ -69,6 +69,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="footer-right">© 2023. All rights reserved by Adigmo.uz</div>
                 </div>
             </footer>
         </Wrapper>
