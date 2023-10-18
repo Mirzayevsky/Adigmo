@@ -12,7 +12,7 @@ export const HttpRequest = async ({
     Number: ${number},
     Email: ${email ? email: "unknown" },
     Service: ${service ? service: "unknown" },
-    text: ${text}
+    text: ${text ? text : "none"}
     `;
 
   if ((name === "") | (number === null)) {

@@ -10,7 +10,7 @@ const  Contact = () => {
 
   const [state, setState] = useState({
     name: "",
-    number:null,
+    number:"",
     email:"",
     text:""
   });

@@ -5,7 +5,6 @@ import { TypeAnimation } from "react-type-animation";
 import PopUp from "../../popUp";
 import { HttpRequest } from "../../../hooks/httpRequest";
 import { serviceData } from "../../../Constants/serviceType";
-import bgImg from "../../../assets/main/bg.jpg"
 import {
   Button,
   Container,
@@ -25,8 +24,8 @@ const Header = () => {
   const [popUp, setPopUp] = useState(false);
   const [toggle,setToggle] = useState(false)
   const [state, setState] = useState({
-    name: "",
-    number:null,
+    name:"",
+    number:"",
     email:"",
     service:""
   });
@@ -56,9 +55,6 @@ const Header = () => {
                   "Интернет магазина",
                   4000,
                   // Types 'Three' without deleting 'Two'
-                  () => {
-                    console.log("Sequence completed");
-                  },
                 ]}
                 wrapper="span"
                 speed={7}
@@ -104,7 +100,7 @@ const Header = () => {
                 }
                 >
 
-                {serviceData.map(({id,name}) => (
+                {serviceData?.map(({id,name}) => (
                   <Option key={id} value={`${name}`}>
                     {" "}
                     {name}

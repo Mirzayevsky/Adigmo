@@ -2,16 +2,22 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 // Components
-import Sidebar from "./Sidebar";
-import Backdrop from "../Elements/Backdrop";
+import Sidebar from "../Sidebar/index";
+import { Button, Drawer } from 'antd';
 // Assets
 import {ReactComponent as LogoSvg }from "../../assets/logo/adig.svg";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 
-export default function TopNavbar() {
+const  TopNavbar = () => {
   const [y, setY] = useState(window.scrollY);
-  const [sidebarOpen, toggleSidebar] = useState(false);
 
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
   useEffect(() => {
     window.addEventListener("scroll", () => setY(window.scrollY));
     return () => {
@@ -21,8 +27,10 @@ export default function TopNavbar() {
 
   return (
     <>
-      <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
-      {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
+      <Drawer width={"100vw"}  placement="right"  open={open}>
+       <Sidebar onClose={onClose} />
+      </Drawer>
+
       <Wrapper
           className="flexCenter animate whiteBg"
           style={y > 100 ? { boxShadow: "0 2px 4px 0 rgba(0,0,0,.2)"} : { height: "80px" }}
@@ -33,9 +41,12 @@ export default function TopNavbar() {
               <LogoSvg/>
             </div>
           </Link>
-          <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
+          <BurderWrapper>
+          <Button   onClick={showDrawer}>
             <BurgerIcon />
+            </Button>
           </BurderWrapper>
+          
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="home" spy={true} smooth={true} offset={-80}>
@@ -79,6 +90,8 @@ export default function TopNavbar() {
     </>
   );
 }
+export  default TopNavbar
+
 const NavbarButton = styled.div`
   //background-color: ;
   padding: 11px 30px;
@@ -149,9 +162,14 @@ const Wrapper = styled.nav`
     height: 100px !important;
   }
   @media screen and (max-width: 500px){
-    height: 70px !important;
+    height: 60px !important;
   }
-  
+  .sidebar-button{
+    display: none;
+    @media only screen and (max-width: 600px){
+      display: block;
+    }
+  }
 `;
 const NavInner = styled.div`
   position: relative;
@@ -164,7 +182,7 @@ const NavInner = styled.div`
     height: 55px;
     width: fit-content;
     @media screen and (max-width: 800px){
-      height: 60px;
+      height: 50px;
       margin-left: 10px;
       margin-right: 40vw ;
     }
@@ -178,13 +196,14 @@ const NavInner = styled.div`
     justify-content: space-between ;
     }
 `
-const BurderWrapper = styled.button`
+const BurderWrapper = styled.div`
   outline: none;
   border: 0px;
   background-color: transparent;
   height: 100%;
   padding: 0 15px;
   display: none;
+  padding-top: 15px;
   @media (max-width: 760px) {
     display: block;
   }

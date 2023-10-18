@@ -11,8 +11,40 @@ import img9 from "./assets/main/portfolio/12.jpg";
 
 
 
-
 export const data = {
+    navData:[
+      {
+        id:0,
+        link:"home",
+        name:"Главная"
+    },
+    {
+        id:1,
+        link:"our-service",
+        name:"Услуги"
+    },
+    {
+        id:2,
+        link:"pricing",
+        name:"Цены"
+    },
+    {
+        id:3,
+        link:"projects",
+        name:"Проекты "
+    },
+    {
+        id:4,
+        link:"AboutUs",
+        name:"О нас "
+    },
+    {
+        id:6,
+        link:"contact",
+        name:"Контакты"
+    },
+    ],
+
     price:[
         {
             id:0,
