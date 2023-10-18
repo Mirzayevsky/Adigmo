@@ -6,8 +6,6 @@ import PopUp from "../../popUp";
 import { HttpRequest } from "../../../hooks/httpRequest";
 import { serviceData } from "../../../Constants/serviceType";
 import bgImg from "../../../assets/main/bg.jpg"
-
-
 import {
   Button,
   Container,

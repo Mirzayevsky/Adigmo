@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
   background-color: #fff;
-  background: url(${(props)=>props.imgUrl});
+  /* background: url(${(props)=>props.imgUrl}); */
  
   @media screen and (max-width: 900px) {
   }
@@ -47,9 +47,9 @@ export const Container = styled.div`
     height: 100%;
     margin: auto;
     margin-top: 30px;
-    backdrop-filter: blur(2px);
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,0.23573179271708689) 0%, rgba(9,9,121,0.17130602240896353) 35%, rgba(0,212,255,0.11528361344537819) 100%);
+    /* backdrop-filter: blur(2px); */
+    /* background: rgb(2,0,36); */
+    /* background: linear-gradient(90deg, rgba(2,0,36,0.23573179271708689) 0%, rgba(9,9,121,0.17130602240896353) 35%, rgba(0,212,255,0.11528361344537819) 100%); */
   }
 `;
 

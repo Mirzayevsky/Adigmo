@@ -1,9 +1,9 @@
 import { Box, Container, Title, Wrapper ,Button} from "./style";
 const Success = ({setPopUp,setToggle}) => {
-    setTimeout(()=>{
+    setTimeout(()=> {
         setToggle(false)
         setPopUp(false)
-    },1500)
+    },2000)
     return(
         <Wrapper>
             <Container>

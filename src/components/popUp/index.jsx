@@ -8,6 +8,7 @@ import { HttpRequest } from "../../hooks/httpRequest";
 import { serviceData } from "../../Constants/serviceType";
 import Success from "../SuccessCard";
 const PopUp = ({setPopUp,popUp,setToggle,toggle}) => {
+
     const [state, setState] = useState({
         name: "",
         number:null,
@@ -16,7 +17,6 @@ const PopUp = ({setPopUp,popUp,setToggle,toggle}) => {
       });
      
       const handleSubmit = (e) => {
-
         HttpRequest(
           {
             e,state,setState
@@ -76,7 +76,8 @@ const PopUp = ({setPopUp,popUp,setToggle,toggle}) => {
                   <Button> Отправить </Button>
               </Form>
       </PopUpWrapper>
-        ): <Success setPopUp={setPopUp} setToggle={setToggle}/>}
+        ): ""}
+        {toggle === true ? <Success setPopUp={setPopUp} setToggle={setToggle}/> :""}
         </>
     )
 }
