@@ -3,7 +3,24 @@ export const Wrapper = styled.div`
 width: 100%;
 height: 100%;
 position: fixed;
-z-index: 99999999999 !important;
+z-index: 99999999999;
+top: 0;
+left: 0;
+.ancor{
+  color:#0080ff;
+}
+p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    width: 84%;
+    margin: auto;
+    @media only screen and (max-width: 600px) {
+    width: 90%;
+    text-align: center;
+}
+
+}
 `;
 export const Container = styled.div`
 width: 100%;
@@ -13,6 +30,7 @@ backdrop-filter: blur(12px);
 display: flex;
 align-items: center;
 justify-content: center;
+
 `;
 export const Box = styled.div`
 height: 50%;
@@ -23,29 +41,53 @@ padding: 20px ;
 -webkit-box-shadow: -2px 1px 26px 0px rgba(34, 60, 80, 0.47);
 -moz-box-shadow: -2px 1px 26px 0px rgba(34, 60, 80, 0.47);
 box-shadow: -2px 1px 26px 0px rgba(34, 60, 80, 0.47);
+position: relative;
 @media only screen and (max-width: 600px) {
-    width: 80%;
-    height: 40%;
+    width: 90%;
+    margin: auto;
+    height: fit-content;
+    padding-bottom: 120px;
 }
 `;
 export const Title = styled.div`
- font-size: 18px;
- font-weight: 600;
+ font-size: 24px;
+ font-weight: 700;
  text-align: center;
  margin: 20px 0;
-
-`;
-export const Button = styled.div`
- font-size: 16px;
-padding: 8px 30px;
-border-radius: 30px;
-background-color: green;
-transition: 0.5s ease;
-width: fit-content;
-margin: 20px auto;
-
-&:hover{
+ @media only screen and (max-width: 600px) {
+ font-size: 18px;
 
 }
+
+`;
+export const Icon = styled.div`
+ width: 100%;
+ margin: 20px auto;
+ display: flex;
+ justify-content: center;
+
+`;
+
+export const Button = styled.div`
+background-color: #0080ff;
+  padding: 10px 47px;
+  border-radius: 30px;
+  border: 0;
+  width: fit-content;
+  color: #fff;
+  margin: 10px auto;
+  margin-top: 15px;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 30px ;
+
+  &:hover {
+    background-color: #49cb86;
+  }
 
 `;

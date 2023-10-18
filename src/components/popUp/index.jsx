@@ -8,6 +8,8 @@ import { HttpRequest } from "../../hooks/httpRequest";
 import { serviceData } from "../../Constants/serviceType";
 import Success from "../SuccessCard";
 const PopUp = ({setPopUp,popUp,setToggle,toggle}) => {
+  console.log("popUp",popUp)
+  console.log("toggle",toggle)
 
     const [state, setState] = useState({
         name: "",

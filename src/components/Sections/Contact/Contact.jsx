@@ -2,8 +2,12 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import { HttpRequest } from "../../../hooks/httpRequest";
 import { PatternFormat } from 'react-number-format';
+import Success from "../../SuccessCard";
 
 const  Contact = () => {
+  const [toggle,setToggle] = useState(false)
+
+
   const [state, setState] = useState({
     name: "",
     number:null,
@@ -17,11 +21,13 @@ const  Contact = () => {
         e,state,setState
       }
     )
+    setToggle(true)
   }
 
 
   return (
     <Wrapper id="contact">
+      {toggle ? <Success setToggle={setToggle} /> : ""}
       <div className="lightBg">
         <div className="container">
           <HeaderInfo>

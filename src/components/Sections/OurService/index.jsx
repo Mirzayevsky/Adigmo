@@ -6,12 +6,11 @@ import {ReactComponent as ShopSvg} from "../../../assets/svg/online shopping.svg
 import PopUp from "../../popUp";
 
 const OurService = () => {
-  const [popUp, setPopUp] = useState(false);
-  const [toggle,setToggle] = useState(false)
-
+    const [popUp, setPopUp] = useState(false);
+    const [toggle,setToggle] = useState(false)
     return(
         <Wrapper id={"our-service"}>
-        {popUp ? <PopUp popUp={popUp} toggle={toggle} setToggle={setToggle} setPopUp={setPopUp} /> : ""}
+      {popUp ? <PopUp popUp={popUp} toggle={toggle} setToggle={setToggle} setPopUp={setPopUp} /> : ""}
 
             <Container>
                 <h1 className="font40 extraBold">Создание сайтов <span>от Adigmo!</span></h1>

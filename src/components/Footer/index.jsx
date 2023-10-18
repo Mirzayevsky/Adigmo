@@ -45,13 +45,13 @@ const Footer = () => {
                             <h4>Местоположение</h4>
                             <ul>
                                 <li> <Link to="" spy={true} smooth={true} >Узбекистан, Тошкент </Link></li>
-                                <li> <Link to="" spy={true} smooth={true} >Чиланзорский район,Зухур Палвон,3-й дом </Link></li>
+                                <li> <Link to="" spy={true} smooth={true} >Чиланзорский район, Зухур Палвон, 3-й дом </Link></li>
                                 <li> <a href="tel: +998 (97) 753 14 01">телефон: +998 (97) 753 14 01</a></li>
                             </ul>
                         </div>
-                        <div class="footer-col">
+                        <div className="footer-col">
                             <h4>подписаться </h4>
-                            <div class="social-links">
+                            <div className="social-links">
                                 <a href="https://www.instagram.com/adigmo_agency/?igshid=MWI4MTIyMDE%3D">
                                     <InstagramSvg/>
 

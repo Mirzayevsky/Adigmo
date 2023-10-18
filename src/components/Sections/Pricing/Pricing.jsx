@@ -20,9 +20,10 @@ const Pricing = () => {
         </HeaderInfo>
         <Container>
             {
-                data.price.map(({title,subtitle,price,ruleTextOne,ruleTextThree,ruleTextTwo})=>{
+                data.price.map(({id,title,subtitle,price,ruleTextOne,ruleTextThree,ruleTextTwo})=>{
                     return(
                         <Card
+                            key={id}
                             title={title}
                             price={price}
                             subtitle={subtitle}

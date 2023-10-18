@@ -24,14 +24,12 @@ import {
 const Header = () => {
   const [popUp, setPopUp] = useState(false);
   const [toggle,setToggle] = useState(false)
-
   const [state, setState] = useState({
     name: "",
     number:null,
     email:"",
     service:""
   });
- 
   const handleSubmit = (e) => {
     HttpRequest(
       {
@@ -41,7 +39,7 @@ const Header = () => {
   }
 
   return (
-    <Wrapper imgUrl={window.innerWidth <= 600 ? bgImg : ""} id={"home"}>
+    <Wrapper id={"home"}>
       {popUp ? <PopUp popUp={popUp} toggle={toggle} setToggle={setToggle} setPopUp={setPopUp} /> : ""}
 
       <Container>
