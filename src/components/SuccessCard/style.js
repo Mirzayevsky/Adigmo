@@ -6,6 +6,7 @@ position: fixed;
 z-index: 99999999999;
 top: 0;
 left: 0;
+background-color: #fff;
 .ancor{
   color:#0080ff;
 }
@@ -38,9 +39,6 @@ width: 50%;
 background-color: #fff;
 border-radius: 14px;
 padding: 20px ;
--webkit-box-shadow: -2px 1px 26px 0px rgba(34, 60, 80, 0.47);
--moz-box-shadow: -2px 1px 26px 0px rgba(34, 60, 80, 0.47);
-box-shadow: -2px 1px 26px 0px rgba(34, 60, 80, 0.47);
 position: relative;
 @media only screen and (max-width: 600px) {
     width: 90%;

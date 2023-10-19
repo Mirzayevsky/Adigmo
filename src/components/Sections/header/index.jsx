@@ -20,6 +20,7 @@ import {
   Wrapper,
   MobileBtn,
 } from "./styles";
+import Success from "../../SuccessCard";
 const Header = () => {
   const [popUp, setPopUp] = useState(false);
   const [toggle,setToggle] = useState(false)
@@ -35,10 +36,13 @@ const Header = () => {
         e,state,setState
       }
     )
+    if(window.innerWidth > 800 ) setToggle(true)  
   }
 
   return (
     <Wrapper id={"home"}>
+      {toggle && window.innerWidth > 800 ?  <Success setToggle={setToggle} /> : ""}
+
       {popUp ? <PopUp popUp={popUp} toggle={toggle} setToggle={setToggle} setPopUp={setPopUp} /> : ""}
 
       <Container>
@@ -77,6 +81,7 @@ const Header = () => {
                 value={state.name}
                 type={"Name"}
                 placeholder={"Имя"}
+                required="true"
                 onChange={(e) => setState({ ...state, name: e.target.value })}
               />
 
@@ -85,6 +90,7 @@ const Header = () => {
                 format="+998(##)###-##-##"
                 placeholder={"Телефон"}
                 value={state.number}
+                required="true"
                 onChange={(e) => setState({ ...state, number: e.target.value })}
               />
               <Input
