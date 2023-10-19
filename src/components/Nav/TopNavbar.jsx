@@ -42,7 +42,7 @@ const  TopNavbar = () => {
             </div>
           </Link>
           <BurderWrapper>
-          <Button   onClick={showDrawer}>
+          <Button  className="humberger-btn"  onClick={showDrawer}>
             <BurgerIcon />
             </Button>
           </BurderWrapper>
@@ -157,6 +157,7 @@ const Wrapper = styled.nav`
   left: 0;
   z-index: 999;
   background-color: #fff;
+
  
   @media screen and (min-width: 1600px){
     height: 100px !important;
@@ -169,6 +170,9 @@ const Wrapper = styled.nav`
     @media only screen and (max-width: 600px){
       display: block;
     }
+  }
+  .humberger-btn{
+    border: none;
   }
 `;
 const NavInner = styled.div`

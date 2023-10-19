@@ -10,15 +10,18 @@ background-color: #fff;
 .ancor{
   color:#0080ff;
 }
+
 p{
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
     line-height: 24px;
-    width: 84%;
-    margin: auto;
-    @media only screen and (max-width: 600px) {
     width: 90%;
+    margin: 10px auto;
+    @media only screen and (max-width: 600px) {
+    width: 100%;
+    font-size: 16px;
     text-align: center;
+    padding: 10px 0;
 }
 
 }
@@ -34,7 +37,7 @@ justify-content: center;
 
 `;
 export const Box = styled.div`
-height: 50%;
+height: fit-content;
 width: 50%;
 background-color: #fff;
 border-radius: 14px;
@@ -44,7 +47,6 @@ position: relative;
     width: 90%;
     margin: auto;
     height: fit-content;
-    padding-bottom: 120px;
 }
 `;
 export const Title = styled.div`
@@ -63,6 +65,7 @@ export const Icon = styled.div`
  margin: 20px auto;
  display: flex;
  justify-content: center;
+ 
 
 `;
 
@@ -79,10 +82,7 @@ background-color: #0080ff;
   display: block;
   font-size: 16px;
   font-weight: 600;
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 30px ;
+  margin: 30px auto;
 
   &:hover {
     background-color: #49cb86;
