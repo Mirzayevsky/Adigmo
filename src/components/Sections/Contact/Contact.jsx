@@ -2,11 +2,9 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import { HttpRequest } from "../../../hooks/httpRequest";
 import { PatternFormat } from 'react-number-format';
-import Success from "../../SuccessCard";
+import {useNavigate} from "react-router-dom";
 
 const  Contact = () => {
-  const [toggle,setToggle] = useState(false)
-
 
   const [state, setState] = useState({
     name: "",
@@ -14,6 +12,7 @@ const  Contact = () => {
     email:"",
     text:""
   });
+  const navigate = useNavigate()
  
   const handleSubmit = (e) => {
     HttpRequest(
@@ -21,13 +20,18 @@ const  Contact = () => {
         e,state,setState
       }
     )
-    setToggle(true)
+        .then(()=> {
+          navigate('/success')
+          console.log(('Request sent successfully'))
+        })
+        .catch((err)=>{
+          console.log(err)
+        })
   }
 
 
   return (
     <Wrapper id="contact">
-      {toggle ? <Success setToggle={setToggle} /> : ""}
       <div className="lightBg">
         <div className="container">
           <HeaderInfo>

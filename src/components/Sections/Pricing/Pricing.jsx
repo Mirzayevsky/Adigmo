@@ -7,10 +7,9 @@ import {data} from "../../../data"
 
 const Pricing = () => {
     const [popUp, setPopUp] = useState(false);
-    const [toggle,setToggle] = useState(false)
   return (
     <Wrapper id="pricing">
-        {popUp ? <PopUp popUp={popUp} toggle={toggle} setToggle={setToggle} setPopUp={setPopUp} /> : ""}
+        {popUp ? <PopUp popUp={popUp} setPopUp={setPopUp} /> : ""}
 
         <HeaderInfo>
             <h1 className="font40 extraBold">Ознакомьтесь с нашими ценами</h1>

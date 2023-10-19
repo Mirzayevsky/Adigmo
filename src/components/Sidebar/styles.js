@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
   }
 `;
 export const SidebarHeader = styled.div`
-width: 80%;
+width: 90%;
 margin: auto;
 display: flex;
 align-items: center;

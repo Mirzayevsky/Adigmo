@@ -1,9 +1,11 @@
-import MessageTik from "../MessageTik";
+import MessageTik from "../../components/MessageTik";
 import { Box, Container, Title, Wrapper, Button, Icon } from "./style";
-const Success = ({ setPopUp = () => {}, setToggle }) => {
+import  {useNavigate} from "react-router-dom";
+
+const Success = () => {
+  const navigate = useNavigate()
   setTimeout(() => {
-    setToggle(false);
-    setPopUp(false);
+    navigate('/')
   }, 20500);
   return (
     <Wrapper>
@@ -28,8 +30,7 @@ const Success = ({ setPopUp = () => {}, setToggle }) => {
 
           <Button
             onClick={() => {
-              setToggle(false);
-              setPopUp(false);
+              navigate('/')
             }}
           >
             хорошо

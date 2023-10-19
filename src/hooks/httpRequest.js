@@ -1,4 +1,5 @@
 import {TELEGRAM_API,chatIds} from "../Constants/api"
+
 export const HttpRequest = async ({
   e,
   state,
@@ -10,8 +11,8 @@ export const HttpRequest = async ({
   const FormData = `
     Name: ${name},
     Number: ${number},
-    Email: ${email ? email: "unknown" },
-    Service: ${service ? service: "unknown" },
+    Email: ${email},
+    Service: ${service},
     text: ${text ? text : "none"}
     `;
 
@@ -31,6 +32,8 @@ export const HttpRequest = async ({
           }),
         });
         const data = await response.json();
+
+
         if (data.ok) {
           setState({
             name: "",

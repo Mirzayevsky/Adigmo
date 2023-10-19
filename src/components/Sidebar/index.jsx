@@ -10,7 +10,6 @@ import {ReactComponent as LogoSvg }from "../../assets/logo/adig.svg";
 import { data } from "../../data";
 
 const  Sidebar = ({ onClose}) => {
-
   return (
     <Wrapper  className={"animate"} >
       <SidebarHeader >

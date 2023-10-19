@@ -5,6 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 import PopUp from "../../popUp";
 import { HttpRequest } from "../../../hooks/httpRequest";
 import { serviceData } from "../../../Constants/serviceType";
+import {useNavigation} from "react-router-dom";
 import {
   Button,
   Container,
@@ -20,31 +21,34 @@ import {
   Wrapper,
   MobileBtn,
 } from "./styles";
-import Success from "../../SuccessCard";
+import {useNavigate} from "react-router-dom";
 const Header = () => {
   const [popUp, setPopUp] = useState(false);
-  const [toggle,setToggle] = useState(false)
   const [state, setState] = useState({
     name:"",
     number:"",
     email:"",
-    service:""
+    service:"Лендинг"
   });
+  const navigate = useNavigate()
+
   const handleSubmit = (e) => {
     HttpRequest(
       {
         e,state,setState
       }
-    )
-    if(window.innerWidth > 800 ) setToggle(true)  
+    ).then(()=> {
+      navigate('/success')
+      console.log(('Request sent successfully'))
+    })
+     .catch((err)=>{
+          console.log(err)
+        })
   }
 
   return (
     <Wrapper id={"home"}>
-      {toggle && window.innerWidth > 800 ?  <Success setToggle={setToggle} /> : ""}
-
-      {popUp ? <PopUp popUp={popUp} toggle={toggle} setToggle={setToggle} setPopUp={setPopUp} /> : ""}
-
+      {popUp ? <PopUp popUp={popUp}  setPopUp={setPopUp} /> : ""}
       <Container>
         <LeftSide>
           <Title>
@@ -101,15 +105,14 @@ const Header = () => {
                 value={state.email}
                 onChange={(e) => setState({ ...state, email: e.target.value })}
               />
-              <SelectInput 
+              <SelectInput
+                  required={true}
                onChange={(e) =>
                   setState({ ...state, service: e.target.value })
                 }
                 >
-
                 {serviceData?.map(({id,name}) => (
-                  <Option key={id} value={`${name}`}>
-                    {" "}
+                  <Option key={id}  value={name}>
                     {name}
                   </Option>
                 ))}
