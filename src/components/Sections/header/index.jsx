@@ -81,7 +81,7 @@ const Header = () => {
                 value={state.name}
                 type={"Name"}
                 placeholder={"Имя"}
-                required="true"
+                required={true} 
                 onChange={(e) => setState({ ...state, name: e.target.value })}
               />
 
@@ -90,7 +90,8 @@ const Header = () => {
                 format="+998(##)###-##-##"
                 placeholder={"Телефон"}
                 value={state.number}
-                required="true"
+                required={true} 
+
                 onChange={(e) => setState({ ...state, number: e.target.value })}
               />
               <Input

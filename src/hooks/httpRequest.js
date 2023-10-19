@@ -39,7 +39,6 @@ export const HttpRequest = async ({
             service:"",
             text:""
           })
-          console.log(`Message sent successfully to chat ID: `);
         } else {
           alert("Данные не отправляются");
           console.log(

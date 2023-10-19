@@ -39,14 +39,14 @@ const  Contact = () => {
               <Form onSubmit={handleSubmit} >
                 <label className="font13">Имя и фамилия:</label>
                 <input 
-                type="text" id="fname" name="fname"  required className="font20 extraBold" 
+                type="text" id="fname" name="fname"  required={true} className="font20 extraBold" 
                 value={state.name} 
                 onChange={(e) => setState({ ...state, name: e.target.value })}
                 />
 
                 <label className="font13">Номер телефона :</label>
                  <PatternFormat
-                 required 
+                 required={true} 
                   className="font20 extraBold"
                             format="+998(##)###-##-##"
                             value={state.number}
