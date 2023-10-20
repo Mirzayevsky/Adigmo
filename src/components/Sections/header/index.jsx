@@ -42,9 +42,7 @@ const Header = () => {
 
   useEffect(() => {
 
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(state);
-    }
+
   }, [formErrors]);
 
   const validate = (values,e) => {
@@ -55,7 +53,7 @@ const Header = () => {
     } else if (values.name.length < 4){
       errors.name = "Имя должно содержать не менее 4 символов!";
     }
-    if (values.number.length == "") {
+    else if (values.number.length == "") {
       errors.number = "Номер обязательно ";
     }
     else if (values.number.length < 9) {
@@ -119,7 +117,7 @@ const Header = () => {
                      type={"Name"}
                      placeholder={"Имя"}
                      maxLength={30}
-                     onChange={(e) => setState({ ...state, name: e.target.value })}
+                     onChange={(e) => setState({ ...state, name: e.target.value.trim() })}
               />
               <p style={formErrors.number ? { color: 'red' } :{ color: 'black' } }>{formErrors.number ? formErrors.number : "Номер телефона"}</p>
               <NumericFormat

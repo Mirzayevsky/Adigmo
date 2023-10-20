@@ -99,8 +99,8 @@ export const Form = styled.form`
   font-family: Mozerati, sans-serif !important;
   font-weight: 500 !important;
   p{
-    font-size: 13px;
-    font-weight: normal;
+    font-size: 14px;
+    font-weight: 600;
     padding-left: 5px;
   }
   @media screen and (max-width: 1400px) {

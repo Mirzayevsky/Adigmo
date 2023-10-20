@@ -41,12 +41,10 @@ const  TopNavbar = () => {
               <LogoSvg/>
             </div>
           </Link>
-          <BurderWrapper>
           <Button  className="humberger-btn"  onClick={showDrawer}>
-            <BurgerIcon />
+            <BurgerIcon className={"icon-one"} />
             </Button>
-          </BurderWrapper>
-          
+
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="home" spy={true} smooth={true} offset={-80}>
@@ -172,7 +170,15 @@ const Wrapper = styled.nav`
     }
   }
   .humberger-btn{
-    border: none;
+    display: none;
+    @media (max-width: 760px) {
+      display: block;
+      border: none;
+    }
+    
+    .icon-one{
+      
+    }
   }
 `;
 const NavInner = styled.div`
@@ -200,18 +206,7 @@ const NavInner = styled.div`
     justify-content: space-between ;
     }
 `
-const BurderWrapper = styled.div`
-  outline: none;
-  border: 0px;
-  background-color: transparent;
-  height: 100%;
-  padding: 0 15px;
-  display: none;
-  padding-top: 15px;
-  @media (max-width: 760px) {
-    display: block;
-  }
-`;
+
 const UlWrapper = styled.ul`
   display: flex;
   li{

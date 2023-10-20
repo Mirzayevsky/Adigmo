@@ -34,8 +34,8 @@ export const Form = styled.form`
   font-weight: 500 !important;
   position: relative;
   p{
-    font-size: 13px;
-    font-weight: normal;
+    font-size: 14px;
+    font-weight: 600;
   }
   @media screen and (max-width: 800px) {
     width: 90%;
