@@ -33,6 +33,10 @@ export const Form = styled.form`
   font-family: Mozerati, sans-serif !important;
   font-weight: 500 !important;
   position: relative;
+  p{
+    font-size: 13px;
+    font-weight: normal;
+  }
   @media screen and (max-width: 800px) {
     width: 90%;
     .exit-button {

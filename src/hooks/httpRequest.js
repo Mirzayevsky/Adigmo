@@ -10,13 +10,13 @@ export const HttpRequest = async ({
 
   const FormData = `
     Name: ${name},
-    Number: ${number},
+    Number: +998${number},
     Email: ${email},
     Service: ${service},
     text: ${text ? text : "none"}
     `;
 
-  if ((name === "") | (number === null)) {
+  if ((name.length < 4) && (number.length < 17)) {
     console.log("formData is Empty");
   } else {
     try {
@@ -32,8 +32,6 @@ export const HttpRequest = async ({
           }),
         });
         const data = await response.json();
-
-
         if (data.ok) {
           setState({
             name: "",
