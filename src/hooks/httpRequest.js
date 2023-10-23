@@ -10,7 +10,7 @@ export const HttpRequest = async ({
 
   const FormData = `
     Name: ${name},
-    Number: +998${number},
+    Number:${number},
     Email: ${email},
     Service: ${service},
     text: ${text ? text : "none"}
