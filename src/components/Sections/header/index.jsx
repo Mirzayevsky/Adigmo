@@ -22,7 +22,10 @@ import {
   MobileBtn,
 } from "./styles";
 const Header = () => {
+  // don't  edit this code
   const [popUp, setPopUp] = useState(false);
+
+  //  you can edit this code and it connected with form below
   const [state, setState] = useState({
     name: "",
     number:"",
@@ -76,6 +79,7 @@ const Header = () => {
 
     return errors;
   };
+  
 
   return (
     <Wrapper id={"home"}>
@@ -108,6 +112,11 @@ const Header = () => {
         </LeftSide>
 
         <RightSide>
+
+          // this form allows to clients send their data to company
+          // it placed in components > sections > header
+          // you can adit here
+          
           <Form onSubmit={handleSubmit}>
             <FormContainer>
               <FormTitle> Свяжитесь с нами</FormTitle>
@@ -154,6 +163,9 @@ const Header = () => {
             </FormContainer>
             <Button> Отправить </Button>
           </Form>
+
+
+          
         </RightSide>
       </Container>
     </Wrapper>
