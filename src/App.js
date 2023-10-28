@@ -1,9 +1,11 @@
 import React from "react";
-import Landing from "./screens/Landing";
 import Footer from "./components/Footer";
 import Navbar from "./components/Nav/Navbar";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import SuccessCard from "./screens/SuccessCard";
+import Home from "./pages/Home";
+import Success from "./pages/Success";
+
+
 function App() {
 
   
@@ -12,8 +14,8 @@ function App() {
         <Navbar/>
                <BrowserRouter>
                    <Routes>
-                       <Route path={"/"} element={<Landing />}/>
-                       <Route path="/success" element={ <SuccessCard/>} />
+                       <Route path={"/"} element={<Home/>}/>
+                       <Route path="/success" element={ <Success/>} />
                    </Routes>
                </BrowserRouter>
           <Footer />

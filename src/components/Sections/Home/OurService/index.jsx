@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import {Button, Container, ServiceBox, ServiceWrapper, Title, Wrapper} from "./style";
-import {ReactComponent as ScreenSvg} from "../../../assets/svg/idea.svg";
-import {ReactComponent as TopSvg} from "../../../assets/svg/to top.svg";
-import {ReactComponent as ShopSvg} from "../../../assets/svg/online shopping.svg";
-import PopUp from "../../popUp";
+import {ReactComponent as ScreenSvg} from "../../../../assets/svg/idea.svg";
+import {ReactComponent as TopSvg} from "../../../../assets/svg/to top.svg";
+import {ReactComponent as ShopSvg} from "../../../../assets/svg/online shopping.svg";
+import PopUp from "../../../popUp";
 
 const OurService = () => {
     const [popUp, setPopUp] = useState(false);

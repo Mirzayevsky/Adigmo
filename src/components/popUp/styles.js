@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { NumericFormat } from "react-number-format";
 export const PopUpWrapper = styled.div`
   height: 100vh;
   width: 100vw;
@@ -53,7 +52,7 @@ export const Form = styled.form`
   }
   .exit-button {
     height: 30px;
-    width: fit-content;
+    width: 40px;
     cursor: pointer;
     margin-right: 10px;
     margin-left: auto;

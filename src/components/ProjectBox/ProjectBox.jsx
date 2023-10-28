@@ -1,20 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function ProjectBox({ img, title, text, action,link}) {
   return (
     <Wrapper>
-      {/* onClick={action ? () => action() : null} */}
       <ImgBtn href={link}  target="_blank"  className="aniamte pointer" >
-        {/* <LazyLoadImage className="radius8" src={img}
-        alt="Portfolio Item"
-        effect="blur"
-        width={"100%"} height={"100%"}
-      /> */}
       <img className="radius8" src={img}  alt="Portfolio Item"/>
       </ImgBtn>
-     
       <h3 className="font20 extraBold" >{title}</h3>
       <p className="font13">{text}</p>
     </Wrapper>
@@ -43,8 +35,7 @@ const ImgBtn = styled.a`
   background-color: transparent;
   border: 0px;
   outline: none;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
   margin: 20px 0;
   overflow: hidden;
   @media only screen and (max-width: 1100px) {

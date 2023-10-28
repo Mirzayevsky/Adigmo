@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 // Components
-import ProjectBox from "../../Elements/ProjectBox";
+import ProjectBox from "../../../ProjectBox/ProjectBox";
 // Assets
 import { HeaderInfo, Wrapper, Button } from "./styles";
-import {data} from "../../../data"
+import {data} from "../../../../data"
 
 const Projects = () => {
   const [visible, setVisible] = useState(6);

@@ -14,9 +14,14 @@ export const Wrapper = styled.div`
  .sidebar-logo{
    height: 45px;
    width: fit-content;
+   svg{
+     height: 100%;
+     width: 100%;
+   }
    @media (max-width: 600px) {
-    margin-right: 130px;
-
+     margin-right: auto;
+     width: 100px;
+     
   }
  }
   @media (max-width: 400px) {
@@ -37,13 +42,14 @@ export const CloseBtn = styled.button`
   outline: none;
   background-color: transparent;
   padding: 15px;
-  padding-right: 0;
 `;
 
 export const UlStyle = styled.ul`
   padding: 40px;
   li {
     margin: 20px 0;
+    font-weight: 700 !important;
+    font-size: 20px;
     @media only screen and (max-width:600px) {
       font-size: 18px;
       font-weight: 600;

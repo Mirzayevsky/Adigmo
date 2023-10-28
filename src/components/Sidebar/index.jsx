@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 import { Wrapper,SidebarHeader,UlStyle,CloseBtn } from "./styles";
 import { Link } from "react-scroll";
@@ -22,7 +21,7 @@ const  Sidebar = ({ onClose}) => {
         {
             data.navData.map(({id,link,name})=>{
                 return(
-                    <li key={id} className="semiBold font15 pointer">
+                    <li key={id} className="pointer">
                 <Link
                 onClick={onClose}
                     activeClass="active"

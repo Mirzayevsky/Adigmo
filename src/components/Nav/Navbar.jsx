@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
 import { Link } from "react-scroll";
 // Components
 import Sidebar from "../Sidebar/index";
 // Assets
 import {ReactComponent as LogoSvg }from "../../assets/logo/adig.svg";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
+import {Button, Drawer, NavbarButton, NavInner, UlWrapper,Wrapper} from "./styles";
 
 const  Navbar = () => {
   const [y, setY] = useState(window.scrollY);
@@ -27,14 +27,15 @@ const  Navbar = () => {
   return (
     <>
       <Drawer  open={open}>
-       <Sidebar onClose={onClose} />
+        <Sidebar onClose={onClose} />
       </Drawer>
 
       <Wrapper
           className="flexCenter animate whiteBg"
           style={y > 100 ? { boxShadow: "0 2px 4px 0 rgba(0,0,0,.2)"} : { height: "80px" }}>
 
-        <NavInner className="container flexSpaceCenter">
+        <NavInner>
+
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             <div className="nav-logo">
               <LogoSvg/>
@@ -42,7 +43,7 @@ const  Navbar = () => {
           </Link>
           <Button  className="humberger-btn"  onClick={showDrawer}>
             <BurgerIcon className={"icon-one"} />
-            </Button>
+          </Button>
 
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">
@@ -75,7 +76,7 @@ const  Navbar = () => {
             </li>
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="contact" spy={true} smooth={true} offset={-80}>
-              Контакты
+                Контакты
               </Link>
             </li>
           </UlWrapper>
@@ -88,149 +89,4 @@ const  Navbar = () => {
   );
 }
 export  default Navbar
-
-const NavbarButton = styled.div`
-  //background-color: ;
-  padding: 11px 30px;
-  border: unset;
-  border-radius: 20px;
-  color: #fff;
-  z-index: 1;
-  background: #0080ff;
-  position: relative;
-  font-weight: 600;
-  font-size: 17px;
-  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-  overflow: hidden;
-  transition: all 450ms;
-  letter-spacing: .5px;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: rgb(0, 89, 255);
-    //background-color: #222222;
-    background-color: #0dc569;
-
-    width: 0;
-    border-radius: 15px;
-    z-index: -1;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-    transition: all 450ms;
-
-  }
-
-  &:hover {
-    cursor: pointer;
-
-  }
-
-  &:hover::before {
-    width: 100%;
-  }
-  a{
-    color: #fff ;
-  }
-  &:hover {
-    background-color: #49CB86;
-  }
-  @media screen and (max-width: 800px){
-    
-  }
-  @media screen and (max-width: 800px){
-    display: none;
-  }
-`;
-
-const Wrapper = styled.nav`
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  background-color: #fff;
-
- 
-  @media screen and (min-width: 1600px){
-    height: 100px !important;
-  }
-  @media screen and (max-width: 500px){
-    height: fit-content;
-    padding: 10px 0;
-  }
-  .sidebar-button{
-    display: none;
-    @media only screen and (max-width: 600px){
-      display: block;
-    }
-  }
-  .humberger-btn{
-    display: none;
-    @media (max-width: 760px) {
-      display: block;
-      border: none;
-    }
-    
-    .icon-one{
-      
-    }
-  }
-`;
-const NavInner = styled.div`
-  position: relative;
-  height: 100%;
-   @media screen and (min-width: 1600px){
-    width: 73%;
-    margin: auto;
-    }
-    
-  .nav-logo{
-    height: 55px;
-    width: fit-content;
-    @media screen and (max-width: 800px){
-      height: 50px;
-      margin-left: 10px;
-      margin-right: 40vw ;
-    }
-    svg{
-      height: 100%;
-      width: 100%;
-    }
-  }
-  @media screen and (max-width: 600px){
-    width: 100%;
-    justify-content: space-between ;
-
-    }
-`
-
-const UlWrapper = styled.ul`
-  display: flex;
-  li{
-    font-size: 16px;
-  }
-  
-  @media (max-width: 760px) {
-    display: none;
-  }
-`;
- const Drawer = styled.div`
-height: 100%;
-width: 100%;
-right: ${({ open }) => (!open ? "-100vw" : "0")};
-position: fixed;
-top: 0;
-z-index: 99999999999999;
-`;
-
-
- const Button = styled.div`
- margin-right: 15px;
-
-`;
 

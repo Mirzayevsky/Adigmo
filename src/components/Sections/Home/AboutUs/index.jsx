@@ -1,14 +1,11 @@
 import React from "react";
 import {Box, Container, Row, SvgContainer, Title, Wrapper} from "./style";
-import {ReactComponent as TechSvg} from "../../assets/serviceItems/technology.svg";
-import {ReactComponent as AdoptionSvg} from "../../assets/serviceItems/responsive.svg";
-import {ReactComponent as DesignSvg} from "../../assets/serviceItems/creative.svg";
-import {ReactComponent as SettingSvg} from "../../assets/serviceItems/web sey.svg";
-import {ReactComponent as LoopSvg} from "../../assets/serviceItems/loop.svg";
-import {ReactComponent as BoxSvg} from "../../assets/serviceItems/box.svg";
-
-
-
+import {ReactComponent as TechSvg} from "../../../../assets/serviceItems/technology.svg";
+import {ReactComponent as AdoptionSvg} from "../../../../assets/serviceItems/responsive.svg";
+import {ReactComponent as DesignSvg} from "../../../../assets/serviceItems/creative.svg";
+import {ReactComponent as SettingSvg} from "../../../../assets/serviceItems/web sey.svg";
+import {ReactComponent as LoopSvg} from "../../../../assets/serviceItems/loop.svg";
+import {ReactComponent as BoxSvg} from "../../../../assets/serviceItems/box.svg";
 
 
 const AboutUs = () => {

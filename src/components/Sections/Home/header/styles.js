@@ -78,10 +78,10 @@ export const Title = styled.div`
     width: 100%;
   }
   @media screen and (max-width: 500px) {
-    font-size: 26px;
+    font-size: 27.5px;
     font-weight: 700;
     line-height: 30px;
-    width: 90%;
+    width: 85%;
     margin-top: 0;
   }
   span {
@@ -260,6 +260,6 @@ export const MobileBtn = styled.div`
     font-size: 20px;
     padding: 11px 60px;
     margin-top: 27px;
-    margin-left: 16px;
+    margin-left: 30px;
   }
 `;

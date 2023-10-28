@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import "toastify-js/src/toastify.css";
 import { PatternFormat } from "react-number-format";
 import { TypeAnimation } from "react-type-animation";
-import PopUp from "../../popUp";
-import { HttpRequest } from "../../../hooks/httpRequest";
-import { serviceData } from "../../../Constants/serviceType";
+import PopUp from "../../../popUp";
+import { HttpRequest } from "../../../../hooks/httpRequest";
+import { serviceData } from "../../../../Constants/serviceType";
 import { useNavigate } from "react-router-dom";
 import {
   Button,
@@ -21,11 +21,11 @@ import {
   Wrapper,
   MobileBtn,
 } from "./styles";
+
 const Header = () => {
   // don't  edit this code
   const [popUp, setPopUp] = useState(false);
 
-  //  you can edit this code and it connected with form below
   const [state, setState] = useState({
     name: "",
     number: "",
@@ -54,7 +54,7 @@ const Header = () => {
       errors.name = "Имя обязательно!";
     } else if (values.name.length < 4) {
       errors.name = "Имя должно содержать не менее 4 символов!";
-    } else if (values.number.length == "" || values.number.length == '+998(__)___-__-__') {
+    } else if (values.number.length == "" ) {
       errors.number = "Номер обязательно ";
     } else if (currentNumber.length < 12) {
     

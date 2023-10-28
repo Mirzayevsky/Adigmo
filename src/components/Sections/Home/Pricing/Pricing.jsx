@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 // Components
 import {Container, HeaderInfo, Wrapper} from "./styles";
-import Card from "../../Card";
-import PopUp from "../../popUp";
-import {data} from "../../../data"
+import Card from "../../../Card";
+import PopUp from "../../../popUp";
+import {data} from "../../../../data"
 
 const Pricing = () => {
     const [popUp, setPopUp] = useState(false);

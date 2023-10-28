@@ -1,34 +1,60 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import styled from "styled-components";
-import { HttpRequest } from "../../../hooks/httpRequest";
+import { HttpRequest } from "../../../../hooks/httpRequest";
 import { PatternFormat } from 'react-number-format';
 import {useNavigate} from "react-router-dom";
 
 const  Contact = () => {
 
-  const [state, setState] = useState({
-    name: "",
-    number:"",
-    email:"",
-    text:""
-  });
-  const navigate = useNavigate()
- 
-  const handleSubmit = (e) => {
-    HttpRequest(
-      {
-        e,state,setState
-      }
-    )
-        .then(()=> {
-          navigate('/success')
-          console.log(('Request sent successfully'))
-        })
-        .catch((err)=>{
-          console.log(err)
-        })
-  }
+    const [state, setState] = useState({
+        name: "",
+        number: ""
+    });
+    const [formErrors, setFormErrors] = useState({});
+    const [isSubmit, setIsSubmit] = useState(false);
+    const navigate = useNavigate();
 
+    const handleSubmit = (e) => {
+
+        e.preventDefault();
+        setFormErrors(validate(state, e));
+        setIsSubmit(true);
+    };
+
+    useEffect(() => {}, [formErrors]);
+
+    const validate = (values, e) => {
+        const currentNumber = values.number.replace(/\D/g, '');
+
+        console.log(values)
+        const errors = {};
+        if (!values.name) {
+            errors.name = "Имя обязательно!";
+        } else if (values.name.length < 4) {
+            errors.name = "Имя должно содержать не менее 4 символов!";
+        } else if (values.number.length == "" ) {
+            errors.number = "Номер обязательно ";
+        } else if (currentNumber.length < 12) {
+
+            errors.number =
+                "Номер телефона должен состоять не менее чем из 12 символов!";
+        } else {
+            HttpRequest({
+                e,
+                state,
+                setState,
+            })
+                .then(() => {
+                    navigate("/success");
+                    console.log("Request sent successfully");
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        }
+
+        return errors;
+    };
 
   return (
     <Wrapper id="contact">
@@ -41,20 +67,34 @@ const  Contact = () => {
             </p>
           </HeaderInfo>
               <Form onSubmit={handleSubmit} >
-                <label className="font13">Имя и фамилия:</label>
+                  <p
+                      style={formErrors.name ? { color: "red" } : { color: "black" }}
+                  >
+                      {formErrors.name ? formErrors.name : "Имя и фамилия:"}
+                  </p>
                 <input 
-                type="text" id="fname" name="fname"  required={true} className="font20 extraBold" 
+                type="text" id="fname" name="fname"   className="font20 extraBold"
                 value={state.name} 
                 onChange={(e) => setState({ ...state, name: e.target.value })}
                 />
 
-                <label className="font13">Номер телефона :</label>
+                  <p
+                      style={
+                          formErrors.number ? { color: "red" } : { color: "black" }
+                      }
+                  >
+                      {formErrors.number ? formErrors.number : "Номер телефона"}
+                  </p>
                  <PatternFormat
-                 required={true} 
                   className="font20 extraBold"
-                            format="+998(##)###-##-##"
-                            value={state.number}
-                            onChange={(e) => setState({ ...state, number: e.target.value })}
+                 value={state.number}
+                 type={"tel"}
+                 placeholder={"Номер телефона"}
+                 format="+998(##)###-##-##"
+                 allowEmptyFormatting
+                 mask="_"
+                 data-cy="phone"
+                 onChange={(e) => setState({ ...state, number: e.target.value })}
                         />
                 <SumbitWrapper className="flex">
                   <Button >Отправить </Button>
