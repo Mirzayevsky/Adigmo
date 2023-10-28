@@ -6,6 +6,8 @@ import PopUp from "../../../popUp";
 import { HttpRequest } from "../../../../hooks/httpRequest";
 import { serviceData } from "../../../../Constants/serviceType";
 import { useNavigate } from "react-router-dom";
+
+import videoFile from "../../../../assets/hero.mp4"
 import {
   Button,
   Container,
@@ -20,6 +22,7 @@ import {
   Title,
   Wrapper,
   MobileBtn,
+  HeaderVideo,
 } from "./styles";
 
 const Header = () => {
@@ -82,6 +85,7 @@ const Header = () => {
     <Wrapper id={"home"}>
       {popUp ? <PopUp popUp={popUp} setPopUp={setPopUp} /> : ""}
       <Container>
+        <HeaderVideo src={`${videoFile}`} autoPlay muted loop={true} />
         <LeftSide>
           <Title>
             Экспертное создание
@@ -113,12 +117,12 @@ const Header = () => {
             <FormContainer>
               <FormTitle> Свяжитесь с нами</FormTitle>
               <p
-                style={formErrors.name ? { color: "red" } : { color: "black" }}
+                style={formErrors.name ? { color: "red" } : { color: "#fff" }}
               >
                 {formErrors.name ? formErrors.name : "Имя"}
               </p>
               <Input
-                className={"numb"}
+                className={"input-numb"}
                 value={state.name}
                 type={"Name"}
                 placeholder={"Имя"}
@@ -129,7 +133,7 @@ const Header = () => {
               />
               <p
                 style={
-                  formErrors.number ? { color: "red" } : { color: "black" }
+                  formErrors.number ? { color: "red" } : { color: "#fff" }
                 }
               >
                 {formErrors.number ? formErrors.number : "Номер телефона"}

@@ -2,21 +2,28 @@ import styled from "styled-components";
 export const  Wrapper = styled.div`
   height: fit-content;
   width: 100%;
-  font-family: Mozerati,sans-serif !important;
+  font-family: Mozerati, sans-serif !important;
+
+  .footer {
+    background: #0080FF !important;
+  }
+
   .container {
     max-width: 1200px;
     margin: auto;
+
     @media only screen and (max-width: 600px) {
       width: 90%;
     }
   }
-  .footer-right{
-    font-size: 18px ;
+
+  .footer-right {
+    font-size: 18px;
     color: #fff;
     width: fit-content;
     margin: auto;
     margin-top: 80px;
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 600px) {
       font-size: 15px;
     }
   }
@@ -28,7 +35,7 @@ export const  Wrapper = styled.div`
 
   ul {
     list-style: none;
-    
+
   }
 
   .footer {
@@ -55,7 +62,7 @@ export const  Wrapper = styled.div`
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: #0080ff;
+    background-color: #e7e7e7;
     height: 2px;
     box-sizing: border-box;
     width: 50px;
@@ -71,9 +78,10 @@ export const  Wrapper = styled.div`
     color: #ffffff;
     text-decoration: none;
     font-weight: 300;
-    color: #bbbbbb;
+    color: #fff;
     display: block;
     transition: all 0.3s ease;
+    cursor: default;
   }
 
   .footer-col ul li a:hover {
@@ -92,7 +100,8 @@ export const  Wrapper = styled.div`
     border-radius: 50%;
     color: #ffffff;
     transition: all 0.5s ease;
-    svg{
+
+    svg {
       height: 100%;
       width: 100%;
     }

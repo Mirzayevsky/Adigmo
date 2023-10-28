@@ -6,22 +6,21 @@ export const Wrapper = styled.nav`
   top: 0;
   left: 0;
   z-index: 999;
-  background-color: #fff;
-  
-  @media screen and (min-width: 1600px){
-    height: 100px !important;
+  @media screen and (min-width: 1600px) {
+    height: 90px !important;
   }
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px) {
     height: fit-content;
     height: 70px;
   }
-  .sidebar-button{
+
+  .sidebar-button {
     display: none;
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 600px) {
       display: block;
     }
   }
-  
+
 `;
 export const NavInner = styled.div`
   position: relative;
@@ -58,6 +57,7 @@ export const UlWrapper = styled.ul`
   display: flex;
   li{
     font-size: 16px;
+    
   }
   
   @media (max-width: 760px) {
@@ -83,6 +83,7 @@ export const Button = styled.div`
   }
 `;
 export const NavbarButton = styled.div`
+
   //background-color: ;
   padding: 11px 30px;
   border: unset;
@@ -98,6 +99,9 @@ export const NavbarButton = styled.div`
   overflow: hidden;
   transition: all 450ms;
   letter-spacing: .5px;
+  @media screen and (min-width: 1000px) {
+   display: none;
+  }
 
   &:before {
     content: "";

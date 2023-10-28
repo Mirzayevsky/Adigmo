@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
-  background-color: #fff;
- 
   @media screen and (max-width: 900px) {
   }
   @media screen and (max-width: 1100px) {
@@ -17,6 +15,17 @@ export const Wrapper = styled.div`
     padding-bottom: 50px;
     background-size: contain;
   }
+`;
+export const HeaderVideo = styled.video`
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+	top: 0;
+    left: 0;
+	position: absolute;
+  z-index: -1;
+  filter: blur(0.5px);
 `;
 export const Container = styled.div`
   height: 100%;
@@ -66,6 +75,7 @@ export const RightSide = styled.div`
 
 export const Title = styled.div`
   font-size: 56px;
+  color: #fff;
   font-weight: 700;
   width: 90%;
   margin: auto;
@@ -91,18 +101,21 @@ export const Title = styled.div`
 
 export const Form = styled.form`
   width: 400px;
-  background-color: #e8e7e7;
+  background-color: rgba(2, 54, 147, 0.89);
   padding: 15px 0;
   border-radius: 20px;
   margin: auto;
   font-size: 16px;
   font-family: Mozerati, sans-serif !important;
   font-weight: 500 !important;
-  p{
+
+  p {
+    color: #fff;
     font-size: 14px;
     font-weight: 600;
     padding-left: 5px;
   }
+
   @media screen and (max-width: 1400px) {
     width: 350px;
   }
@@ -113,14 +126,16 @@ export const Form = styled.form`
 export const FormContainer = styled.div`
   width: 80%;
   margin: auto;
-  
+
 
   .input-numb {
+    color: #fff !important;
     width: 295px;
     margin: 10px 0;
     border: 0;
     border-radius: 6px;
     padding: 11px 12px;
+    background-color: rgb(42, 83, 162);
     @media screen and (max-width: 1500px) {
       width: 250px;
       padding-left: 10px;
@@ -131,7 +146,7 @@ export const FormContainer = styled.div`
     }
 
     &::placeholder {
-      color: #afafaf;
+      color: #fff;
       font-size: 15px;
     }
 
@@ -142,6 +157,7 @@ export const FormContainer = styled.div`
 `;
 export const FormTitle = styled.div`
   font-size: 25px;
+  color: #fff;
   font-weight: 700;
   font-family: Mozerati, sans-serif;
   text-align: center;
@@ -149,11 +165,13 @@ export const FormTitle = styled.div`
 `;
 
 export const Input = styled.input`
+  color: #fff !important;
   width: 295px;
   margin: 7px 0;
   border: 0;
   border-radius: 5px;
   padding: 11px 12px;
+  background-color: rgb(42, 83, 162);
   @media screen and (max-width: 1500px) {
     width: 250px;
   }
@@ -163,7 +181,7 @@ export const Input = styled.input`
     margin: 7px auto;
   }
   &::placeholder {
-    color: #afafaf;
+    color: #fff;
     font-size: 15px;
   }
 
@@ -172,6 +190,8 @@ export const Input = styled.input`
   }
 `;
 export const SelectInput = styled.select`
+  color: #fff;
+  background-color: rgb(42, 83, 162);
   margin-bottom: 10px;
   border: 0px;
   height: fit-content;
