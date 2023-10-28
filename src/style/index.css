@@ -17,6 +17,16 @@
     vertical-align: baseline;
     box-sizing: border-box;
   }
+  @font-face {
+    font-family: Mozerati;
+    src: url(../assets/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+*{
+    font-family: Mozerati,sans-serif !important;
+    transition: 0.5s ease;
+  
+}
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
   footer, header, hgroup, menu, nav, section {

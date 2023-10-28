@@ -1,8 +1,7 @@
 import React from "react";
 import Landing from "./screens/Landing";
-import "./App.css";
 import Footer from "./components/Footer";
-import TopNavbar from "./components/Nav/TopNavbar";
+import Navbar from "./components/Nav/Navbar";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import SuccessCard from "./screens/SuccessCard";
 function App() {
@@ -10,7 +9,7 @@ function App() {
   
   return (
     <>
-        <TopNavbar/>
+        <Navbar/>
                <BrowserRouter>
                    <Routes>
                        <Route path={"/"} element={<Landing />}/>

@@ -3,12 +3,11 @@ import styled from "styled-components";
 import { Link } from "react-scroll";
 // Components
 import Sidebar from "../Sidebar/index";
-import { Button, Drawer } from 'antd';
 // Assets
 import {ReactComponent as LogoSvg }from "../../assets/logo/adig.svg";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 
-const  TopNavbar = () => {
+const  Navbar = () => {
   const [y, setY] = useState(window.scrollY);
 
   const [open, setOpen] = useState(false);
@@ -27,14 +26,14 @@ const  TopNavbar = () => {
 
   return (
     <>
-      <Drawer width={"100vw"}  placement="right"  open={open}>
+      <Drawer  open={open}>
        <Sidebar onClose={onClose} />
       </Drawer>
 
       <Wrapper
           className="flexCenter animate whiteBg"
-          style={y > 100 ? { boxShadow: "0 2px 4px 0 rgba(0,0,0,.2)"} : { height: "80px" }}
-      >
+          style={y > 100 ? { boxShadow: "0 2px 4px 0 rgba(0,0,0,.2)"} : { height: "80px" }}>
+
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             <div className="nav-logo">
@@ -88,7 +87,7 @@ const  TopNavbar = () => {
     </>
   );
 }
-export  default TopNavbar
+export  default Navbar
 
 const NavbarButton = styled.div`
   //background-color: ;
@@ -161,7 +160,8 @@ const Wrapper = styled.nav`
     height: 100px !important;
   }
   @media screen and (max-width: 500px){
-    height: 60px !important;
+    height: fit-content;
+    padding: 10px 0;
   }
   .sidebar-button{
     display: none;
@@ -188,6 +188,7 @@ const NavInner = styled.div`
     width: 73%;
     margin: auto;
     }
+    
   .nav-logo{
     height: 55px;
     width: fit-content;
@@ -204,6 +205,7 @@ const NavInner = styled.div`
   @media screen and (max-width: 600px){
     width: 100%;
     justify-content: space-between ;
+
     }
 `
 
@@ -217,6 +219,18 @@ const UlWrapper = styled.ul`
     display: none;
   }
 `;
+ const Drawer = styled.div`
+height: 100%;
+width: 100%;
+right: ${({ open }) => (!open ? "-100vw" : "0")};
+position: fixed;
+top: 0;
+z-index: 99999999999999;
+`;
 
 
+ const Button = styled.div`
+ margin-right: 15px;
+
+`;
 

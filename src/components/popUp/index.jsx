@@ -6,7 +6,7 @@ import {Cover, Input, PopUpWrapper} from "./styles";
 import { HttpRequest } from "../../hooks/httpRequest";
 import { serviceData } from "../../Constants/serviceType";
 import  {useNavigate} from "react-router-dom";
-import { NumericFormat } from 'react-number-format';
+import {PatternFormat} from 'react-number-format';
 const PopUp = ({setPopUp,popUp}) => {
 
     const [state, setState] = useState({
@@ -28,15 +28,12 @@ const PopUp = ({setPopUp,popUp}) => {
           }
 
     useEffect(() => {
-
-        if (Object.keys(formErrors).length === 0 && isSubmit) {
-            console.log(state);
-        }
+        
     }, [formErrors]);
 
     const validate = (values,e) => {
+        const currentNumber = values.number.replace(/\D/g, '');
         const errors = {};
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
         if (!values.name) {
             errors.name = "Имя обязательно!";
         } else if (values.name.length < 4){
@@ -45,8 +42,8 @@ const PopUp = ({setPopUp,popUp}) => {
         else if (values.number.length == "") {
             errors.number = "Номер обязательно ";
         }
-        else if (values.number.length < 9) {
-            errors.number = "Номер телефона должен состоять не менее чем из 9 символов!";
+        else if (currentNumber.length < 12) {
+            errors.number = "Номер телефона должен состоять не менее чем из 12 символов!";
         } else {
             HttpRequest(
                 {
@@ -86,14 +83,17 @@ const PopUp = ({setPopUp,popUp}) => {
                            onChange={(e) => setState({ ...state, name: e.target.value.trim() })}
                     />
                     <p style={formErrors.number ? { color: 'red' } :{ color: 'black' } }>{formErrors.number ? formErrors.number : "Номер телефона"}</p>
-                    <NumericFormat
-                        className={"input-numb"}
-                        value={state.number}
-                        type={'tel'}
-                        maxLength={9}
-                        placeholder={'Номер телефона'}
-                        onChange={(e) => setState({ ...state, number: e.target.value })}
-                     />
+                    <PatternFormat
+                className={"input-numb"}
+                value={state.number}
+                type={"tel"}
+                placeholder={"Номер телефона"}
+                format="+998(##)###-##-##"
+                allowEmptyFormatting
+                mask="_"
+                data-cy="phone"
+                onChange={(e) => setState({ ...state, number: e.target.value })}
+              />
                     <p>Электронная почта</p>
                     <Input
                         className={"numb"}
