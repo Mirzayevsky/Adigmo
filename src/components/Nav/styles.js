@@ -88,9 +88,9 @@ export const NavbarButton = styled.div`
   padding: 11px 30px;
   border: unset;
   border-radius: 20px;
-  color: #fff;
+  color: #000;
   z-index: 1;
-  background: #0080ff;
+  background: #fff;
   position: relative;
   font-weight: 600;
   font-size: 17px;
