@@ -272,13 +272,13 @@ export const MobileBtn = styled.div`
   display: none;
   @media only screen and (max-width: 600px) {
     display: block;
-    color: #fff;
+    color: #000;
     font-weight: 600;
     width: fit-content;
-    background-color: #0080ff;
-    border-radius: 20px;
+    background-color: #fff;
+    border-radius: 30px;
     font-size: 20px;
-    padding: 11px 60px;
+    padding: 10px 55px;
     margin-top: 27px;
     margin-left: 30px;
   }
