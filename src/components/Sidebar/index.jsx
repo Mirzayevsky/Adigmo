@@ -25,7 +25,6 @@ const  Sidebar = ({ onClose}) => {
                 <Link
                 onClick={onClose}
                     activeClass="active"
-                    className="darkColor"
                     style={{ padding: "10px 15px" }}
                     to={link}
                     spy={true}

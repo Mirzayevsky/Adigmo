@@ -1,11 +1,8 @@
 import styled from "styled-components";
 export const Wrapper = styled.div`
-  background-color: #fff;
-  color: #000 !important;
+  background-color: #0080FF;
+  color: #fff !important;
   transition: 0.3s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
   @media (max-width: 400px) {
@@ -14,9 +11,13 @@ export const Wrapper = styled.div`
  .sidebar-logo{
    height: 45px;
    width: fit-content;
+   
    svg{
      height: 100%;
      width: 100%;
+     g{
+       fill: #222;
+     }
    }
    @media (max-width: 600px) {
      margin-right: auto;

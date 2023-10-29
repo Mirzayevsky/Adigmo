@@ -24,8 +24,8 @@ export const HeaderVideo = styled.video`
 	top: 0;
     left: 0;
 	position: absolute;
-  z-index: -1;
-  filter: blur(0.5px);
+    z-index: -1;
+    filter: blur(0.5px);
 `;
 export const Container = styled.div`
   height: 100%;
