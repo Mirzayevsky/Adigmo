@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
+  position: relative;
+
   @media screen and (max-width: 900px) {
   }
   @media screen and (max-width: 1100px) {
@@ -24,7 +26,7 @@ export const HeaderVideo = styled.video`
 	top: 0;
     left: 0;
 	position: absolute;
-    z-index: -1;
+  z-index: -1;
     filter: blur(0.5px);
 `;
 export const Container = styled.div`
@@ -34,6 +36,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 160px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
   @media screen and (min-width: 1600px) {
     width: 70%;
   }

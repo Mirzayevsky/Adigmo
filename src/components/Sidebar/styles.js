@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const Wrapper = styled.div`
-  background-color: #000;
+  background-color: #0080ff;
   color: #fff !important;
   transition: 0.3s ease;
   height: 100%;

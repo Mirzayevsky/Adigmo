@@ -32,7 +32,7 @@ const  Navbar = () => {
 
       <Wrapper
           className="flexCenter animate "
-          style={y > 100 ? { boxShadow: "0 2px 4px 0 rgba(0,0,0,.2)",backgroundColor:"#000"} : { height: "80px" }}>
+          style={y > 100 ? { boxShadow: "0 2px 4px 0 rgba(0,0,0,.2)",backgroundColor:"#0080ff"} : { height: "80px" }}>
 
         <NavInner>
 

@@ -5,7 +5,7 @@ export const  Wrapper = styled.div`
   font-family: Mozerati, sans-serif !important;
 
   .footer {
-    background: #000000 !important;
+    background: #222 !important;
   }
 
   .container {

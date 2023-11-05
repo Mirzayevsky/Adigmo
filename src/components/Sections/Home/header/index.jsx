@@ -84,8 +84,8 @@ const Header = () => {
   return (
     <Wrapper id={"home"}>
       {popUp ? <PopUp popUp={popUp} setPopUp={setPopUp} /> : ""}
+      <HeaderVideo src={`${videoFile}`} autoPlay muted loop={true} />
       <Container>
-        <HeaderVideo src={`${videoFile}`} autoPlay muted loop={true} />
         <LeftSide>
           <Title>
             Экспертное создание
