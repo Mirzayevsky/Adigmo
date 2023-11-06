@@ -80,9 +80,6 @@ const  Navbar = () => {
               </Link>
             </li>
           </UlWrapper>
-          <NavbarButton>
-            <a href="tel:+998977531401">Связаться</a>
-          </NavbarButton>
         </NavInner>
       </Wrapper>
     </>

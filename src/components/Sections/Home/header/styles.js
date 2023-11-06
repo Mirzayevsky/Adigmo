@@ -5,10 +5,8 @@ export const Wrapper = styled.div`
   width: 100%;
   position: relative;
 
-  @media screen and (max-width: 900px) {
-  }
   @media screen and (max-width: 1100px) {
-    height: fit-content;
+    height: 130vh;
     padding-bottom: 50px;
   }
   
