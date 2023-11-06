@@ -86,7 +86,7 @@ const  Contact = () => {
                       {formErrors.number ? formErrors.number : "Номер телефона"}
                   </p>
                  <PatternFormat
-                  className="font20 extraBold"
+                  className="font20 extraBold patternof"
                  value={state.number}
                  type={"tel"}
                  placeholder={"Номер телефона"}
@@ -152,7 +152,8 @@ const Form = styled.form`
   input,
   textarea {
     width: 100%;
-    background-color: transparent;
+    background-color: transparent !important;
+    -webkit-text-fill-color:#222;
     border: 0px;
     outline: none;
     box-shadow: none;
@@ -160,6 +161,9 @@ const Form = styled.form`
     height: 30px;
     margin-bottom: 30px;
     font-weight: 500 !important;
+}
+  .patternof{
+    -webkit-text-fill-color:#222;
   }
   textarea {
     min-height: 100px;
@@ -170,7 +174,6 @@ const Form = styled.form`
 `;
 
 const Button = styled.button`
-  //background-color: ;
   padding: 13px 30px;
   border: unset;
   border-radius: 20px;

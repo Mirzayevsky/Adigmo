@@ -72,6 +72,7 @@ export const FormContainer = styled.div`
     border: 1px solid #b9b9b9;
     border-radius: 6px;
     padding: 11px 12px;
+    -webkit-text-fill-color:#222;
     @media screen and (max-width: 800px) {
       width: 90%;
       margin: 7px auto;
@@ -105,7 +106,7 @@ export const Input = styled.input`
   border: 0;
   border-radius: 6px;
   border: 1px solid #b9b9b9;
-
+  -webkit-text-fill-color:#222;
   padding: 11px 12px;
   @media screen and (max-width: 800px) {
     width: 100%;
@@ -133,6 +134,7 @@ export const SelectInput = styled.select`
   line-height: 70px;
   font-size: 15px;
   font-weight: 500;
+  -webkit-text-fill-color:#222;
 
   @media screen and (max-width: 800px) {
     width: 98%;

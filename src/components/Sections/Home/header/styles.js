@@ -179,6 +179,7 @@ export const Input = styled.input`
   border-radius: 5px;
   padding: 11px 12px;
   background-color: rgb(42, 83, 162);
+  -webkit-text-fill-color:#fff;
   @media screen and (max-width: 1500px) {
     width: 250px;
   }
@@ -210,6 +211,8 @@ export const SelectInput = styled.select`
   line-height: 70px;
   font-size: 15px;
   font-weight: 500;
+  -webkit-text-fill-color:#fff;
+
   @media screen and (max-width: 1500px) {
     width: 98%;
   }
@@ -228,6 +231,8 @@ export const SelectInput = styled.select`
 export const Option = styled.option`
   cursor: pointer;
   font-size: 16px;
+  -webkit-text-fill-color:#fff;
+
 `;
 
 export const Button = styled.button`
